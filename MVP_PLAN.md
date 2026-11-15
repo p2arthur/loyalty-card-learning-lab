@@ -120,7 +120,7 @@ Questions to answer: What problem does the card solve? What should a first-time 
 
 ### Architecture checkpoint: requirements that shape design
 
-- [ ] Identify the system boundary, its users, and external dependencies. Draw a small context view.
+- [x] Identify the system boundary, its users, and external dependencies. Draw a small context view. Evidence: [learner logical context sketch](docs/learning/milestone-01-product-definition/artifacts/02-system-context-sketch.md); simulated roles are labeled and implementation remains unverified.
 - [ ] Write measurable quality scenarios for correctness, access control, and changeability. For example, describe what must happen when a purchase is retried, then state how you will observe success.
 
 Study: [arc42 quality requirements](https://docs.arc42.org/section-10/). Explain which requirements influence your design and which can wait.

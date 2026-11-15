@@ -2,7 +2,7 @@
 
 Milestone: **1. Product definition**
 
-Status: **in progress; learner interaction-flow draft reviewed, system context view pending**
+Status: **in progress; first logical context sketch recorded, dependency-failure review next**
 
 This workbook starts the next activity after the [initial requirements discovery pass](01-requirements-elicitation-and-analysis.md). It turns the discussed behavior into an explicit product boundary and, through later focused steps, a brief that someone else can implement without inventing the rules.
 
@@ -18,9 +18,9 @@ For reusable background, read [system boundaries, ownership, and trust](../../co
 
 ## Learner artifact
 
-The learner supplied a detailed [registration and points-use interaction flow](artifacts/02-customer-interaction-flow.md). It shows customer/application exchanges, required and optional fields, card scanning, discount preview, payment confirmation by the customer, and receipt/balance feedback. A high-level context view is still pending.
+The learner supplied a detailed [registration and points-use interaction flow](artifacts/02-customer-interaction-flow.md). It shows customer/application exchanges, required and optional fields, card scanning, discount preview, payment confirmation by the customer, and receipt/balance feedback. The learner subsequently supplied a [logical system context sketch](artifacts/02-system-context-sketch.md), consolidated from their own arrows.
 
-The immediate review distinction is the level of abstraction: an interaction flow describes what happens in sequence; a context view identifies connected people and systems. The learner's artifact has not yet included the simulated payment/email message exchanges. Its next revision adds just the payment exchange before simplifying the full view.
+The review distinguished an interaction flow from a context view. The newer sketch includes the customer, application, simulated payment/email roles, and the payment provider's confirmation or denial tied to an order ID. Dependency failure behavior is the next review; no implementation guarantee is inferred from the sketch.
 
 Initial discussion identified payment confirmation and order creation/status as responsibilities. The learner chose to create basic order handling within the demo itself, rather than depend on an existing café ordering system. Order handling therefore belongs inside the demo's system boundary for this view.
 
@@ -28,7 +28,7 @@ The learner asked whether production would require a separate ordering service. 
 
 The learner also identified email delivery as an external-provider role and chose to simulate it in this demo. Payment confirmation is simulated too. No real payment or email-provider connection has been chosen or implemented.
 
-For the first sketch, label payment confirmation and email delivery as simulated interactions. State that it is a logical study view, not evidence of actual external calls or separately deployed mock services. The placement of mock implementation details belongs to later design work. The customer/application interactions are now drafted; the simulated-provider relationships and the simplified overview remain to be drawn.
+For the first sketch, label payment confirmation and email delivery as simulated interactions. State that it is a logical study view, not evidence of actual external calls or separately deployed mock services. The placement of mock implementation details belongs to later design work. The learner has now drafted the customer/application and simulated-provider relationships. The sketch is a logical view; provider contracts and mock implementation details remain later work.
 
 Do not fill this section with a completed tutor-designed architecture before the learner's first attempt.
 
@@ -54,7 +54,7 @@ After the context exercise, create separate numbered step documents as the learn
 
 The milestone's remaining deliverables are:
 
-- [ ] Learner-drawn context sketch and reviewed system boundary.
+- [x] Learner-drawn context sketch and reviewed system boundary (logical study view; implementation unverified).
 - [ ] Main screen sketches, including error and success states.
 - [ ] Consolidated one-page product brief.
 - [ ] Acceptance criteria for each main user action.
@@ -65,6 +65,6 @@ Some requirement decisions are already made in step 01. These unchecked items tr
 
 ## Resume with one question
 
-**Can you add the loyalty app's exchange with the simulated payment provider to your checkout flow, with arrows labeling what they send and return?**
+**If payment succeeds but the confirmation email cannot be delivered, should the order still be confirmed?**
 
 Wait for the learner's answer before supplying a diagram or introducing another question.

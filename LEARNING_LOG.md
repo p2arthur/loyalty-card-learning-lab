@@ -4,14 +4,14 @@ This file carries learning context between Codex chats. Record observed evidence
 
 ## Current position
 
-- Session status: milestone 1 step 02 in progress; learner's registration/checkout interaction flow reviewed. Simulated-provider message exchanges and high-level context view remain pending.
+- Session status: milestone 1 step 02 in progress; first learner logical context sketch recorded; dependency-failure review next.
 - Current milestone: 1. Define the product.
 - Study framework: `LEARNING_FRAMEWORK.md`; navigate via `docs/learning/README.md`. Use one numbered Markdown file per substantive step within its milestone.
 - Reusable concept library: `docs/concepts/README.md` indexes ten general product engineering guides with non-demo examples and transfer exercises. Maintain relevant guides alongside every milestone and step. Broader transfer and new adjacent topics remain unassessed until learner attempts provide evidence.
 - Completed study step: `docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md`.
 - Current study step: `docs/learning/milestone-01-product-definition/02-product-definition.md`; learner draft saved in `artifacts/02-customer-interaction-flow.md` within that milestone directory.
-- Next learner task: add the simulated payment-provider exchange to the drafted checkout flow; then add the email interaction and simplify toward the context view.
-- Next tutoring question: can you add the loyalty app's exchange with the simulated payment provider to your checkout flow, with arrows labeling what they send and return?
+- Next learner task: reason about email-delivery failure after successful payment, then formulate relevant quality scenarios and continue the remaining product-definition artifacts.
+- Next tutoring question: if payment succeeds but the confirmation email cannot be delivered, should the order still be confirmed?
 - Support by concept: points calculations at independent-with-feedback after a successful changed example; context boundaries at coached practice after learner reported confusion about external responsibilities. Module versus deployment versus system boundary distinction needs transfer assessment. Implementation skills remain unassessed.
 - Implementation evidence: no application implementation has been verified during tutor setup.
 - Architecture task: learner draws a context sketch and defines observable quality scenarios.
@@ -258,3 +258,11 @@ Earlier concept to revisit:
 - Terminology clarification prepared with Apple's primary reference: Apple Wallet stores the eligible loyalty pass; Apple Pay concerns payments. Wallet issuance remains a later milestone. Do not treat a QR code alone as the completed Wallet integration.
 - Extended reusable journey guide 02 with distinctions among journey maps, user flows, interaction sequences, and system context views, including a non-demo example. No learner mastery of those distinctions claimed yet.
 - Next small task: add just the app/simulated-payment-provider exchange, then review it before adding email or drawing the simplified context. No implementation or application tests performed.
+
+### 2026-11-15 — First logical system context sketch
+
+- Learner summarized customer/application, application/payment-provider, application/email-service, and email-service/customer relationships, then added: payment provider returns confirmation or denial for the order ID.
+- Consolidated only learner-supplied relationships into artifacts/02-system-context-sketch.md, normalizing provider names to the agreed simulated scope. Basic order handling remains inside the app. No deployment design or real provider integration is implied.
+- Evidence supports the basic context-sketch item in step 02 and milestone 1. Quality scenarios, architecture tradeoffs/verification, screen sketches, complete brief, and remaining criteria remain unfinished.
+- Support: feedback about abstraction level and a targeted prompt for the payment reply. Broader production-boundary transfer remains unassessed. No code or application checks performed; React hooks practice remains deferred.
+- Next question: if payment succeeds but confirmation-email delivery fails, should the order still be confirmed? Elicit the learner's reasoning before stating the desired failure policy.

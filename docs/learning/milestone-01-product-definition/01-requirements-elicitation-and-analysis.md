@@ -10,6 +10,19 @@ The purpose of this step was to turn a loyalty-card idea into rules another pers
 
 ## What the process is called
 
+For broader explanations that stand alone from this demo, use the [product engineering concept library](../../concepts/README.md):
+
+| Technique in this step | General study guide |
+| --- | --- |
+| Requirements elicitation and analysis | [Discovery and requirements](../../concepts/product-engineering/01-discovery-and-requirements.md) |
+| User journey mapping | [Journeys across time and channels](../../concepts/product-engineering/02-user-journey-mapping.md) |
+| Business-rule analysis | [Policies, invariants, and decision tables](../../concepts/product-engineering/03-business-rules-and-decisions.md) |
+| Scenario and boundary analysis | [Examples that expose gaps](../../concepts/product-engineering/04-scenarios-and-boundaries.md) |
+| Domain modeling | [Concepts, identity, and behavior](../../concepts/product-engineering/05-domain-modeling.md) |
+| Acceptance criteria | [Observable outcomes and BDD](../../concepts/product-engineering/06-acceptance-criteria-and-bdd.md) |
+
+The library also covers scope, boundaries, failures, and quality requirements. Its additional examples and exercises are study references; they do not imply that broader understanding has already been assessed.
+
 **Requirements elicitation** means drawing out what people need and expect from the system. **Requirements analysis** means checking those expectations for ambiguity, consistency, scope, and consequences. Asking what happens on a failed payment is requirements analysis; choosing a database transaction mechanism to enforce it comes later.
 
 Our teaching method was Socratic questioning. We began with the customer benefit, asked for concrete behavior, changed the examples to expose assumptions, compared alternative policies, and let the learner revise the design. The learner then explained the rules through an acceptance criterion.

@@ -10,6 +10,9 @@ The learner writes the application. The tutor asks one question at a time, revie
 2. [Study index](docs/learning/README.md): milestones, completed steps, and the next exercise.
 3. [Requirements elicitation and analysis](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md): concepts, product decisions, worked scenarios, and unresolved questions from the first discovery pass.
 4. [Product definition workbook](docs/learning/milestone-01-product-definition/02-product-definition.md): the next step, starting with the system context sketch.
+5. [Product engineering concept library](docs/concepts/README.md): ten reusable guides with non-demo examples and transfer exercises, starting with discovery, journeys, rules, scenarios, domain modeling, and acceptance criteria.
+
+Each milestone and learning step maintains both its project notes and related general concept guides. The [concept template](docs/concepts/TEMPLATE.md) makes this a recurring study practice. Creating those references does not mark the topics mastered.
 
 ## Current position
 

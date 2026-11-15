@@ -10,7 +10,7 @@ When the learner is stuck, increase support progressively: a conceptual hint, a 
 
 Use concrete scenarios to surface assumptions. Ask for predictions before meaningful experiments, review what happened, and check understanding with explanations and a changed example. Accept sound alternatives and name their tradeoffs. Keep architecture connected to responsibilities, data ownership, dependencies, and failure behavior.
 
-## Two levels of organization
+## Milestones, steps, and reusable concepts
 
 A **milestone** is a curriculum outcome, such as product definition. A **step** is one focused activity within it, such as requirements elicitation and analysis or a system context exercise. Finishing a step does not automatically finish its milestone.
 
@@ -27,6 +27,26 @@ docs/learning/
 Create a separate numbered Markdown file for each new substantive step as it begins. Continue the numbering within its milestone. Add future milestone directories when work reaches them. Do not prefill exercises with finished solutions.
 
 The current step 02 file is a product-definition workbook beginning with system context. Later focused activities, such as screen sketches and quality scenarios, receive their own step files when they start; the workbook can link to those artifacts.
+
+Keep a separate [concept library](docs/concepts/README.md) under `docs/concepts/`. These guides explain product engineering broadly, with examples outside the demo. The project step records a particular application's decisions; its linked concept guides explain the reusable ideas behind that work.
+
+```text
+docs/concepts/
+  README.md
+  TEMPLATE.md
+  product-engineering/
+    01-discovery-and-requirements.md
+    02-user-journey-mapping.md
+    ...
+```
+
+## Required habit at every milestone and step
+
+At each meaningful checkpoint, maintain both the project artifact and its relevant general study material. Identify the transferable concepts, then extend existing concept guides or add a focused new guide when needed. Link those guides from the project step and keep the concept index current. Apply this practice to future language, frontend, backend, data, testing, and deployment topics as well as product design.
+
+General guides should include a plain explanation, important distinctions, a practical method, a worked example from another domain, common mistakes, one transfer exercise with a success criterion, and a few primary references. Use `docs/concepts/TEMPLATE.md`. Do not fill a general guide with only the demo's rules or duplicate an existing topic under every milestone.
+
+Reference creation and demonstrated understanding are separate. New adjacent topics can be published as preparation without adding them as unannounced prerequisites or marking them mastered. When the learner studies a guide, diagnose first and introduce its exercise as one task. Record their explanation and transfer evidence after it occurs.
 
 ## What each step records
 
@@ -50,6 +70,7 @@ For a fresh exercise, leave the learner's artifact section open. A tutor may sum
 - `MVP_PLAN.md` defines the curriculum and current scope. Check tasks only when evidence supports them.
 - Each step document is the study explanation and current decision record for that topic.
 - `docs/learning/README.md` is the navigation and status index.
+- `docs/concepts/README.md` indexes the reusable study guides; project steps link to the concepts relevant to their decisions.
 - `LEARNING_LOG.md` records the chronology, support used, demonstrated understanding, gaps, and next task. It is not the only place concepts should live.
 - `AGENTS.md` requires future sessions to follow this structure.
 

@@ -44,6 +44,8 @@ For guided practice in Codex, use `TUTOR_GUIDE.md`. The project's `AGENTS.md` se
 
 Follow [LEARNING_FRAMEWORK.md](LEARNING_FRAMEWORK.md) and the [study index](docs/learning/README.md): each substantive learning step has its own numbered Markdown file within its milestone. Milestone 1 step 01 has completed its initial requirements discovery pass; step 02 begins product definition with the system context exercise. Completing that first step does not complete milestone 1.
 
+At each milestone and step, also maintain linked general study guides in the separate [concept library](docs/concepts/README.md). Explain principles beyond the demo using other domains, common mistakes, and transfer exercises. Reuse existing guides and record mastery only after learner evidence, following the persistent learning framework.
+
 For each milestone, write your proposed approach, read the relevant documentation, and make your own first attempt. Use AI for a hint, review, or counterexample after you have something to discuss. Finish by explaining the result aloud without reading your code.
 
 Keep a short decision log using the template at the end. Add focused tests as behavior appears; milestone 8 brings those checks together. Establish the shared checks below as soon as you scaffold the project, complete the server and client steps in milestones 5a and 6a, and connect the checks to CI in milestone 8a. You can start CI earlier and expand it alongside features.

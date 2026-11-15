@@ -14,6 +14,8 @@ Success criterion: another person can identify what the project owns, what lies 
 
 The [C4 system context guide](https://c4model.com/diagrams/system-context) is the reference for this exercise. Its focus is the system's relationship with people and other systems.
 
+For reusable background, read [system boundaries, ownership, and trust](../../concepts/product-engineering/08-boundaries-ownership-and-trust.md). Later quality work connects to [quality requirements and decision records](../../concepts/product-engineering/10-quality-and-decision-records.md). These references leave the learner's demo sketch open.
+
 ## Learner artifact
 
 Not started. The learner supplies the sketch; the tutor reviews the boundaries and asks about the highest-impact gap. A text diagram is sufficient.

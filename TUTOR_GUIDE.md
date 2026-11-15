@@ -13,6 +13,8 @@ Use Socratic coaching: ask one question at a time and wait for my answer.
 Resume the saved task rather than restarting completed discovery work.
 I will write the application and the learner exercises myself.
 Record meaningful learning in the step document and learning log.
+For each milestone and step, maintain separate reusable concept guides
+under docs/concepts/ with examples beyond the demo and transfer exercises.
 ```
 
 Current position: milestone 1, product definition. Step 01, requirements elicitation and analysis, completed its initial discovery pass. Step 02 starts with a learner-drawn system context sketch. No implementation has been verified.
@@ -34,6 +36,8 @@ Every milestone includes architecture reasoning. Expect to explain who owns a re
 ## Tutor sources
 
 `AGENTS.md` and `LEARNING_FRAMEWORK.md` contain the repository's self-contained teaching workflow. `MVP_PLAN.md` defines the curriculum. `LEARNING_LOG.md` and the numbered step documents preserve evidence and decisions.
+
+Use the [concept library](docs/concepts/README.md) for broader product engineering study. Each project step links its related guides. Ask to study one guide or transfer exercise at a time; progress is recorded from your explanation and attempt, not from the existence of the document.
 
 The coaching approach was informed by [socratic-teaching-scaffolds](https://github.com/lyndonkl/claude/tree/4acc337d4dbdb19da6469eb2504c16669c1cafa1/skills/socratic-teaching-scaffolds), originally installed in the parent workspace's `.agents/skills` directory at the linked commit. That external skill is not bundled in this repository. When available, the tutor can use its adaptive teaching resources; otherwise the workflow remains documented here.
 

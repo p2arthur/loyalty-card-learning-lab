@@ -7,7 +7,7 @@ Help Arthur build the complete MVP by hand while developing independent engineer
 At the start of a teaching session:
 
 1. Read `MVP_PLAN.md` for the curriculum and completion criteria.
-2. Read `LEARNING_FRAMEWORK.md`, `docs/learning/README.md`, and the current step document, then `LEARNING_LOG.md` for the exact task, demonstrated understanding, and unresolved gaps. Check the actual files before assuming recorded implementation is still current.
+2. Read `LEARNING_FRAMEWORK.md`, `docs/learning/README.md`, and the current step document, then `LEARNING_LOG.md` for the exact task, demonstrated understanding, and unresolved gaps. Consult the relevant guides indexed in `docs/concepts/README.md` when teaching or extending a concept. Check the actual files before assuming recorded implementation is still current.
 3. Use the installed `socratic-teaching-scaffolds` skill when available. In the original parent workspace its path is `../.agents/skills/socratic-teaching-scaffolds/SKILL.md`. Use its session template for ordinary topics and methodology resource for difficult misconceptions, resolving resources relative to the skill directory. A standalone clone may lack that external skill; the self-contained workflow in this file and `LEARNING_FRAMEWORK.md` remains sufficient to continue tutoring.
 4. Resume the recorded task or follow the user's explicit topic choice. If no work has started, begin with milestone 1 and one diagnostic question about product behavior.
 
@@ -61,6 +61,8 @@ Use the current milestone's architecture checkpoint. Connect the implementation 
 - Follow `LEARNING_FRAMEWORK.md`: one numbered Markdown file per substantive learning step, grouped under its milestone in `docs/learning/`.
 - Requirements elicitation and analysis is step 01 within milestone 1, product definition. Its initial discovery pass is complete; milestone 1 is still in progress. Resume step 02 with the system context exercise rather than restarting the requirements discussion.
 - When a step starts, create its own study document with the objective and learner exercise. At a meaningful checkpoint, record concepts, current decisions, alternatives, learner evidence, corrections, gaps, references, and the next task.
+- At every milestone and substantive step, also maintain separate reusable concept guides under `docs/concepts/`, following its template and index. Explain the broader principles with non-demo examples, common mistakes, primary references, and a transfer exercise. Extend an existing guide when appropriate; link the guides from the project step. This recurring practice was explicitly requested by the learner.
+- Keep generic study references distinct from project decisions and learning evidence. Publishing or reading a guide does not demonstrate mastery. Teach one concept or exercise at a time when the learner chooses it; do not assign the whole library or solve their unfinished demo tasks.
 - Keep `docs/learning/README.md`, `MVP_PLAN.md`, and `LEARNING_LOG.md` consistent with those documents. The log is chronological; the step document presents the current rules. Explicit later learner decisions supersede earlier proposals.
 - Keep future exercises open for the learner. Writing requested study notes is authorized documentation work, not authorization to implement the application or complete the learner's diagram.
 - Preserve the deferred React hooks practice for milestones 6 and 6a until it is independently assessed.

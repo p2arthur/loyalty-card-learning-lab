@@ -7,6 +7,7 @@ This file carries learning context between Codex chats. Record observed evidence
 - Session status: milestone 1 step 01 initial requirements discovery pass complete and documented; step 02 product definition starts with the system context sketch. Milestone 1 remains in progress.
 - Current milestone: 1. Define the product.
 - Study framework: `LEARNING_FRAMEWORK.md`; navigate via `docs/learning/README.md`. Use one numbered Markdown file per substantive step within its milestone.
+- Reusable concept library: `docs/concepts/README.md` indexes ten general product engineering guides with non-demo examples and transfer exercises. Maintain relevant guides alongside every milestone and step. Broader transfer and new adjacent topics remain unassessed until learner attempts provide evidence.
 - Completed study step: `docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md`.
 - Current study step: `docs/learning/milestone-01-product-definition/02-product-definition.md` (learner artifact pending).
 - Next learner task: draw a simple system context sketch showing the customer, the application being built, and outside services, marking simulations. Then consolidate the revised brief and remaining acceptance criteria.
@@ -220,3 +221,13 @@ Earlier concept to revisit:
 - Codex verification: all 25 local Markdown links resolve; code fences and final newlines checked; documented monetary examples checked using decimal arithmetic. The six authored/rewritten study documents passed the prose scanner after one wording adjustment. These are documentation checks, not application tests.
 - GitHub destination authorized by the user: p2arthur/loyalty-card-learning-lab, public. User explicitly confirmed p2arthur as the intended account after the CLI could not read account emails. Repository publication is an explicitly requested setup action, not learner implementation work.
 - Next learner objective remains the step 02 context sketch: identify the customer, the application boundary, and external systems, marking simulations. Preserve the React hooks practice for milestones 6 and 6a.
+
+### 2026-11-15 — Reusable product engineering concept library
+
+- User explicitly requested expanded, broadly applicable study artifacts separate from the demo, covering journey mapping, business rules, scenarios/boundaries, domain modeling, acceptance criteria, and adjacent product engineering concepts. Requested this as a recurring habit for every milestone and part.
+- Created docs/concepts/README.md, a reusable concept template, and ten standalone guides: discovery/requirements, journeys, business rules/decisions, scenarios/boundaries, domain modeling, acceptance criteria/BDD, scope/prioritization, boundaries/ownership/trust, state/failures/retries, and quality requirements/decision records.
+- Each guide explains distinctions and a practical method, uses a worked example outside the café domain, identifies common mistakes, and includes a transfer exercise and primary references. These are references for study, not evidence that the learner has mastered the new material.
+- Updated the learning framework, AGENTS.md, tutor guide, MVP plan, study index, project README, and milestone 1 step documents to require linked project-specific and general concept artifacts at meaningful checkpoints. Reuse and extend existing concepts rather than duplicating them under each milestone.
+- Verified the previously interrupted initial GitHub publication completed: p2arthur/loyalty-card-learning-lab is public and main contains the first documentation commit, c88e3cf. The same authorized repository is the destination for the concept-library update.
+- Codex checks: 21 Markdown files and all 80 local links checked; code fences and final newlines valid. The concept-library scanner checked 12 files with no high-severity findings. Reviewed source distinctions and corrected the aggregate reference to the accessible primary documentation. No application tests or implementation work performed.
+- Next demo task remains milestone 1 step 02, system context sketch. General study exercises can be selected one at a time without marking reference creation as mastery. Deferred React hooks practice remains unchanged.

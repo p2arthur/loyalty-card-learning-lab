@@ -13,6 +13,12 @@ Status: **in progress**. No application implementation has been verified.
 
 Later focused steps will cover screen sketches, the consolidated brief, remaining acceptance criteria, and quality scenarios. Create a separate numbered Markdown file when each step starts, and link it here.
 
+## Reusable concepts alongside the project
+
+The separate [product engineering library](../concepts/README.md) expands the ideas beyond this demo. Step 01 links to discovery, journeys, business rules, scenario analysis, domain modeling, acceptance criteria, and related topics. Step 02 links to boundaries and quality requirements. General transfer exercises remain unassessed until the learner attempts them.
+
+For every future milestone and step, maintain both the project notes and relevant reusable guides. Extend existing topics rather than copying the same concept into several milestone folders.
+
 ## Future milestones
 
 Follow the sequence in the MVP plan: language and HTTP practice; system boundaries and API contracts; PostgreSQL and Prisma; backend features and checks; React and client checks; purchases and concurrency; access control; CI; Wallet; and deployment. Add study files as these activities begin.

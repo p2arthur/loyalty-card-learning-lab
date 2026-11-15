@@ -51,7 +51,7 @@ Apple Wallet card issuance remains a later curriculum milestone. Automatic updat
 
 ## Registration and card reissuance
 
-The learner proposed first and second name, email, and phone number. Phone is **optional** because its stated purpose is future promotional messaging. Detailed naming/validation requirements still need to be settled. Promotional messaging is outside the current demo.
+Registration requires first and second name and email, as explicitly stated in the learner's later interaction-flow draft. Phone is **optional** because its stated purpose is future promotional messaging. Detailed naming/validation requirements still need to be settled. Promotional messaging is outside the current demo.
 
 If an email already belongs to an account, do not immediately create another account or issue a card. Require email verification before issuing another card linked to the **existing account and balance**.
 
@@ -63,7 +63,7 @@ The architectural idea is to keep the account separate from its cards:
 - A card refers to that continuing account.
 - Issuing another card preserves the account; it does not copy points from an old card into a new one.
 
-Email verification establishes access to the registered inbox. The full authentication and recovery design remains open. We have not decided whether an older card remains valid, whether first-time registration also requires verification, or whether verification delivery is real or simulated.
+Real email verification establishes access to the registered inbox. For the current demo, the learner chose to simulate email delivery; a simulated flow does not prove access to a real inbox. The full authentication and recovery design remains open, including whether an older card remains valid and whether first-time registration also requires verification.
 
 ## Two different point conversions
 
@@ -201,7 +201,7 @@ Still to assess or decide:
 - Main screens and the consolidated one-page brief.
 - Remaining acceptance criteria for registration, reissuance, checkout, and failure recovery.
 - Measurable quality scenarios for correctness, access control, and changeability.
-- Account access, verification delivery, old-card validity, and first-purchase enrollment timing.
+- Account access, the simulated verification interaction, old-card validity, and first-purchase enrollment timing.
 - Unknown checkout outcomes, retry identity, concurrency, and atomicity.
 - Invalid amounts, technical response contracts, and the exact money representation.
 

@@ -6,6 +6,19 @@ A journey map describes an actor's experience over time while pursuing a goal. I
 
 A journey can cross software, people, physical spaces, and waiting periods. A user flow usually focuses more narrowly on the routes through an interface. A technical request sequence describes interactions between components. These views answer different questions and can complement one another.
 
+### Choose the view for the question
+
+| View | Main question | Useful level of detail |
+| --- | --- | --- |
+| Journey map | How does one person experience achieving a goal over time? | Phases, actions, needs, difficulties, evidence, and opportunities across channels |
+| User flow | What choices and paths can a person take through the product? | Steps, decisions, branches, and alternative outcomes |
+| Interaction sequence | Who sends what to whom, and in what order? | Messages and responses among people and software participants |
+| System context | Which people and other systems interact with the system in scope? | System boundary, connected participants, and labeled relationships |
+
+A written series of arrows can be a useful interaction flow without being a formal sequence diagram. A rich interaction flow may have more detail than a context view needs; that detail can still inform later screens and acceptance criteria. The [C4 context guide](https://c4model.com/diagrams/system-context) explains the higher-level focus on people and software systems.
+
+For example, a detailed library-loan flow might list finding a book, selecting a copy, confirming a loan, and displaying a reference. A context view instead shows who uses the lending system and which other systems it communicates with. Summarize repeated exchanges at that level while retaining the detailed flow as another artifact.
+
 ## Choose a point of view
 
 Use one actor and a specific situation to make the map coherent. A renter collecting equipment and an employee preparing it have related but different goals. Separate their views before connecting them.

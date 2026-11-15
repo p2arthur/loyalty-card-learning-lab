@@ -4,15 +4,15 @@ This file carries learning context between Codex chats. Record observed evidence
 
 ## Current position
 
-- Session status: milestone 1 step 01 initial requirements discovery pass complete and documented; step 02 product definition starts with the system context sketch. Milestone 1 remains in progress.
+- Session status: milestone 1 step 02 in progress; learner's registration/checkout interaction flow reviewed. Simulated-provider message exchanges and high-level context view remain pending.
 - Current milestone: 1. Define the product.
 - Study framework: `LEARNING_FRAMEWORK.md`; navigate via `docs/learning/README.md`. Use one numbered Markdown file per substantive step within its milestone.
 - Reusable concept library: `docs/concepts/README.md` indexes ten general product engineering guides with non-demo examples and transfer exercises. Maintain relevant guides alongside every milestone and step. Broader transfer and new adjacent topics remain unassessed until learner attempts provide evidence.
 - Completed study step: `docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md`.
-- Current study step: `docs/learning/milestone-01-product-definition/02-product-definition.md` (learner artifact pending).
-- Next learner task: draw a simple system context sketch showing the customer, the application being built, and outside services, marking simulations. Then consolidate the revised brief and remaining acceptance criteria.
-- Next tutoring question: can you sketch the customer, our application, and the outside services it communicates with, marking anything simulated?
-- Support by concept: points calculations at independent-with-feedback after a successful changed example; architecture sketch unassessed, start with the learner's own model. Implementation skills remain unassessed.
+- Current study step: `docs/learning/milestone-01-product-definition/02-product-definition.md`; learner draft saved in `artifacts/02-customer-interaction-flow.md` within that milestone directory.
+- Next learner task: add the simulated payment-provider exchange to the drafted checkout flow; then add the email interaction and simplify toward the context view.
+- Next tutoring question: can you add the loyalty app's exchange with the simulated payment provider to your checkout flow, with arrows labeling what they send and return?
+- Support by concept: points calculations at independent-with-feedback after a successful changed example; context boundaries at coached practice after learner reported confusion about external responsibilities. Module versus deployment versus system boundary distinction needs transfer assessment. Implementation skills remain unassessed.
 - Implementation evidence: no application implementation has been verified during tutor setup.
 - Architecture task: learner draws a context sketch and defines observable quality scenarios.
 - Known misconceptions: none assessed; do not invent them.
@@ -231,3 +231,30 @@ Earlier concept to revisit:
 - Verified the previously interrupted initial GitHub publication completed: p2arthur/loyalty-card-learning-lab is public and main contains the first documentation commit, c88e3cf. The same authorized repository is the destination for the concept-library update.
 - Codex checks: 21 Markdown files and all 80 local links checked; code fences and final newlines valid. The concept-library scanner checked 12 files with no high-severity findings. Reviewed source distinctions and corrected the aggregate reference to the accessible primary documentation. No application tests or implementation work performed.
 - Next demo task remains milestone 1 step 02, system context sketch. General study exercises can be selected one at a time without marking reference creation as mastery. Deferred React hooks practice remains unchanged.
+
+### 2026-11-15 — System context: order responsibility and deployment boundaries
+
+- Learner initially identified payment confirmation and an order system returning status/ID as possible integrations, then reported uncertainty about other systems and context boundaries.
+- Support used: a one-box explanation distinguishing responsibilities inside the chosen application from systems it communicates with, followed by a question comparing internal order handling with an existing café platform.
+- Accepted demo decision: learner chose to create basic order handling within the demo itself. This is inside the demo system boundary; it is not a commitment to a separate service or a finished module design.
+- Learner asked whether production would normally require a separate ordering service. Treat this as an open architecture question, not evidence of a persistent misconception.
+- Extended reusable guide 08 with the distinction between module, deployment, and system context boundaries, plus the tradeoffs of separate services and primary references. Contextual production choices remain open; the project still starts from one backend with explicit responsibilities.
+- Next task: use an existing café ordering platform as a changed context example, then identify the people and remaining external interactions before the learner draws the sketch. No code, application checks, or completed architecture checkpoint claimed.
+
+### 2026-11-15 — System context: simulated email delivery
+
+- Learner asked whether payment was the only external interaction. Tutor retrieved the earlier card-reissuance email requirement and asked whether delivery should be real or simulated.
+- Accepted decision: simulate email delivery in the current demo. Learner recognized the external-provider role in a real integration. Payment confirmation was already simulated; basic order handling remains inside the application.
+- Clarification added to reusable concept guide 08 and project notes: a logical sketch may show provider roles marked simulated, but this does not imply actual external calls or separately deployed mock services. Simulated verification does not establish control of a real inbox.
+- Understanding limits: no learner context diagram or production-boundary transfer artifact has been assessed yet. Do not mark the context checkpoint complete or infer deployed services from the discussion.
+- Next learner artifact: a small text sketch with customer, application, and simulated payment/email interactions, with arrows naming what is exchanged. No implementation supplied or application checks run. React hooks practice remains deferred.
+
+### 2026-11-15 — Learner registration and checkout interaction-flow draft
+
+- Learner independently supplied registration and points-use message flows and requested assessment of the artifact and its place in product design. Saved a faithful formatted draft under milestone 1 artifacts and linked it from step 02.
+- Correctly included required name/email and optional phone fields, registration choice, card scanning, discount selection, original/discounted price, expected earnings, and final receipt/balance feedback. QR-code card identification is a new learner proposal; security and pass implementation remain unassessed.
+- Review classification: customer interaction flow expressed as a message sequence. It is useful behavioral input within milestone 1 step 02, product definition. A system context view has a higher-level focus on the system boundary and connected people/systems; this artifact does not yet establish that view.
+- Highest-impact current gap: all drafted exchanges are customer/application messages. The simulated payment/email roles are absent, and customer payment confirmation has not yet been distinguished explicitly from provider-confirmed success in this flow. The no-points branch is also not detailed; leave it in the backlog rather than asking several questions at once.
+- Terminology clarification prepared with Apple's primary reference: Apple Wallet stores the eligible loyalty pass; Apple Pay concerns payments. Wallet issuance remains a later milestone. Do not treat a QR code alone as the completed Wallet integration.
+- Extended reusable journey guide 02 with distinctions among journey maps, user flows, interaction sequences, and system context views, including a non-demo example. No learner mastery of those distinctions claimed yet.
+- Next small task: add just the app/simulated-payment-provider exchange, then review it before adding email or drawing the simplified context. No implementation or application tests performed.

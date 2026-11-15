@@ -2,7 +2,7 @@
 
 Milestone: **1. Product definition**
 
-Status: **next step; learner artifact pending**
+Status: **in progress; learner interaction-flow draft reviewed, system context view pending**
 
 This workbook starts the next activity after the [initial requirements discovery pass](01-requirements-elicitation-and-analysis.md). It turns the discussed behavior into an explicit product boundary and, through later focused steps, a brief that someone else can implement without inventing the rules.
 
@@ -18,7 +18,17 @@ For reusable background, read [system boundaries, ownership, and trust](../../co
 
 ## Learner artifact
 
-Not started. The learner supplies the sketch; the tutor reviews the boundaries and asks about the highest-impact gap. A text diagram is sufficient.
+The learner supplied a detailed [registration and points-use interaction flow](artifacts/02-customer-interaction-flow.md). It shows customer/application exchanges, required and optional fields, card scanning, discount preview, payment confirmation by the customer, and receipt/balance feedback. A high-level context view is still pending.
+
+The immediate review distinction is the level of abstraction: an interaction flow describes what happens in sequence; a context view identifies connected people and systems. The learner's artifact has not yet included the simulated payment/email message exchanges. Its next revision adds just the payment exchange before simplifying the full view.
+
+Initial discussion identified payment confirmation and order creation/status as responsibilities. The learner chose to create basic order handling within the demo itself, rather than depend on an existing café ordering system. Order handling therefore belongs inside the demo's system boundary for this view.
+
+The learner asked whether production would require a separate ordering service. The related concept guide now distinguishes internal modules, independent deployment, and external systems. Production topology is not decided by this question. Understanding of that distinction still needs a transfer example.
+
+The learner also identified email delivery as an external-provider role and chose to simulate it in this demo. Payment confirmation is simulated too. No real payment or email-provider connection has been chosen or implemented.
+
+For the first sketch, label payment confirmation and email delivery as simulated interactions. State that it is a logical study view, not evidence of actual external calls or separately deployed mock services. The placement of mock implementation details belongs to later design work. The customer/application interactions are now drafted; the simulated-provider relationships and the simplified overview remain to be drawn.
 
 Do not fill this section with a completed tutor-designed architecture before the learner's first attempt.
 
@@ -55,6 +65,6 @@ Some requirement decisions are already made in step 01. These unchecked items tr
 
 ## Resume with one question
 
-**Which people and external systems should appear around the loyalty application in the context sketch?**
+**Can you add the loyalty app's exchange with the simulated payment provider to your checkout flow, with arrows labeling what they send and return?**
 
 Wait for the learner's answer before supplying a diagram or introducing another question.

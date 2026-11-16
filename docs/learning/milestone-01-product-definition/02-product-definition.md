@@ -2,7 +2,7 @@
 
 Milestone: **1. Product definition**
 
-Status: **in progress; first logical context sketch recorded, dependency-failure review next**
+Status: **in progress; context and verification recovery rules recorded; expiry acceptance criterion next**
 
 This workbook starts the next activity after the [initial requirements discovery pass](01-requirements-elicitation-and-analysis.md). It turns the discussed behavior into an explicit product boundary and, through later focused steps, a brief that someone else can implement without inventing the rules.
 
@@ -20,7 +20,7 @@ For reusable background, read [system boundaries, ownership, and trust](../../co
 
 The learner supplied a detailed [registration and points-use interaction flow](artifacts/02-customer-interaction-flow.md). It shows customer/application exchanges, required and optional fields, card scanning, discount preview, payment confirmation by the customer, and receipt/balance feedback. The learner subsequently supplied a [logical system context sketch](artifacts/02-system-context-sketch.md), consolidated from their own arrows.
 
-The review distinguished an interaction flow from a context view. The newer sketch includes the customer, application, simulated payment/email roles, and the payment provider's confirmation or denial tied to an order ID. Dependency failure behavior is the next review; no implementation guarantee is inferred from the sketch.
+The review distinguished an interaction flow from a context view. The newer sketch includes the customer, application, simulated payment/email roles, and the payment provider's confirmation or denial tied to an order ID. The learner then chose to preserve order confirmation when email delivery fails; no implementation guarantee is inferred from the sketch.
 
 Initial discussion identified payment confirmation and order creation/status as responsibilities. The learner chose to create basic order handling within the demo itself, rather than depend on an existing café ordering system. Order handling therefore belongs inside the demo's system boundary for this view.
 
@@ -39,6 +39,20 @@ Use the current decisions in [step 01](01-requirements-elicitation-and-analysis.
 The proposed starting stack is recorded in the [MVP plan](../../../MVP_PLAN.md). A context diagram describes people and systems; the stack does not by itself settle the system boundary.
 
 ## Questions to resolve through the sketch
+
+### Email failure decision
+
+The learner subsequently added a [registration verification flow](artifacts/02-registration-verification-flow.md): the app generates the link, the simulated email service delivers it, and the customer follows the link back to the app. Initial card issuance now requires verification, as well as reissuance. The app owns the verification decision. A provider delivery report does not establish completed verification.
+
+Registration verification and the order-confirmation email below have different purposes. A successful paid order can remain confirmed while its notification fails; a loyalty-card registration can still await its required verification. The customer may correct a pending registration's address, which requires a new verification link. The old address's link cannot verify the updated registration. Each link expires after five minutes, and an unverified customer can request another verification email. The timing of first-purchase points and detailed retry/resend policy remain open.
+
+The learner chose to confirm a successful checkout even when its confirmation email cannot be delivered. Show the receipt and order ID in the application so the customer can proceed independently of email delivery. Email processing can continue in the background.
+
+The learner proposed three background retries, then scheduling additional retries. This is a proposal requiring a stopping rule and retry timing; it is not a finalized unlimited-retry policy. Handling permanent failures, attempt limits, scheduling, and durable work remains open. This scenario assumes a successfully completed checkout; payment-provider success alone does not establish that local order creation committed.
+
+General background is already covered in [state, failures, and safe retries](../../concepts/product-engineering/09-state-failures-and-retries.md). The next question tests when retrying remains useful before selecting implementation mechanisms.
+
+### Remaining context questions
 
 These are a backlog for the tutor, not a questionnaire to ask all at once:
 
@@ -65,6 +79,6 @@ Some requirement decisions are already made in step 01. These unchecked items tr
 
 ## Resume with one question
 
-**If payment succeeds but the confirmation email cannot be delivered, should the order still be confirmed?**
+**Using Given/When/Then, how would you describe a customer following a verification link six minutes after it was issued?**
 
 Wait for the learner's answer before supplying a diagram or introducing another question.

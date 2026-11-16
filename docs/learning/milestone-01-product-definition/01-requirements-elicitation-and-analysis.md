@@ -63,7 +63,7 @@ The architectural idea is to keep the account separate from its cards:
 - A card refers to that continuing account.
 - Issuing another card preserves the account; it does not copy points from an old card into a new one.
 
-Real email verification establishes access to the registered inbox. For the current demo, the learner chose to simulate email delivery; a simulated flow does not prove access to a real inbox. The full authentication and recovery design remains open, including whether an older card remains valid and whether first-time registration also requires verification.
+Real email verification establishes access to the registered inbox under the chosen verification mechanism. For the current demo, the learner chose to simulate email delivery; a simulated flow does not prove access to a real inbox. During step 02, the learner required verification before initial card issuance and proposed an app-generated link returning to the app. The link expires after five minutes; a customer can correct a pending registration's email and receive a new link, while the old link cannot verify the changed address. Offer another email when verification is not completed. Old-card validity, verification-request validation, and detailed retry/resend behavior remain open.
 
 ## Two different point conversions
 

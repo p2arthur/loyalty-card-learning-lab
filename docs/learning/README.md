@@ -9,7 +9,7 @@ Status: **in progress**. No application implementation has been verified.
 | Step | Status | Study document |
 | --- | --- | --- |
 | 01. Requirements elicitation and analysis | Initial discovery pass complete; remaining questions carried forward | [Concepts, decisions, and examples](milestone-01-product-definition/01-requirements-elicitation-and-analysis.md) |
-| 02. Product definition | First logical context sketch recorded; dependency-failure review next | [Product-definition workbook](milestone-01-product-definition/02-product-definition.md) |
+| 02. Product definition | Context sketch and verification recovery recorded; expiry acceptance criterion next | [Product-definition workbook](milestone-01-product-definition/02-product-definition.md) |
 
 Later focused steps will cover screen sketches, the consolidated brief, remaining acceptance criteria, and quality scenarios. Create a separate numbered Markdown file when each step starts, and link it here.
 
@@ -29,4 +29,4 @@ Milestones 6 and 6a include `useState`, `useMemo`, and `useCallback`. Practice s
 
 ## Resume here
 
-Open step 02 and the learner's [context sketch](milestone-01-product-definition/artifacts/02-system-context-sketch.md). Next, reason about an email-delivery failure after successful payment. The basic context artifact is recorded; quality scenarios and the rest of milestone 1 remain unfinished.
+Open step 02 and the learner's [verification-flow draft](milestone-01-product-definition/artifacts/02-registration-verification-flow.md). Next, write an acceptance criterion for following a verification link six minutes after issuance. The [context sketch](milestone-01-product-definition/artifacts/02-system-context-sketch.md) is recorded; full quality scenarios and the rest of milestone 1 remain unfinished.

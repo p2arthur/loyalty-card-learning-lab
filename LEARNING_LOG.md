@@ -4,14 +4,14 @@ This file carries learning context between Codex chats. Record observed evidence
 
 ## Current position
 
-- Session status: milestone 1 step 02 in progress; first learner logical context sketch recorded; dependency-failure review next.
+- Session status: milestone 1 step 02 in progress; learner chose pending-email correction, a new link on address change, and five-minute expiry; an expiry acceptance criterion is next.
 - Current milestone: 1. Define the product.
 - Study framework: `LEARNING_FRAMEWORK.md`; navigate via `docs/learning/README.md`. Use one numbered Markdown file per substantive step within its milestone.
 - Reusable concept library: `docs/concepts/README.md` indexes ten general product engineering guides with non-demo examples and transfer exercises. Maintain relevant guides alongside every milestone and step. Broader transfer and new adjacent topics remain unassessed until learner attempts provide evidence.
 - Completed study step: `docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md`.
 - Current study step: `docs/learning/milestone-01-product-definition/02-product-definition.md`; learner draft saved in `artifacts/02-customer-interaction-flow.md` within that milestone directory.
-- Next learner task: reason about email-delivery failure after successful payment, then formulate relevant quality scenarios and continue the remaining product-definition artifacts.
-- Next tutoring question: if payment succeeds but the confirmation email cannot be delivered, should the order still be confirmed?
+- Next learner task: write a Given/When/Then criterion for a verification link followed six minutes after issuance; then continue the remaining product-definition artifacts while tracking open retry/resend rules.
+- Next tutoring question: using Given/When/Then, how would you describe a customer following a verification link six minutes after it was issued?
 - Support by concept: points calculations at independent-with-feedback after a successful changed example; context boundaries at coached practice after learner reported confusion about external responsibilities. Module versus deployment versus system boundary distinction needs transfer assessment. Implementation skills remain unassessed.
 - Implementation evidence: no application implementation has been verified during tutor setup.
 - Architecture task: learner draws a context sketch and defines observable quality scenarios.
@@ -266,3 +266,29 @@ Earlier concept to revisit:
 - Evidence supports the basic context-sketch item in step 02 and milestone 1. Quality scenarios, architecture tradeoffs/verification, screen sketches, complete brief, and remaining criteria remain unfinished.
 - Support: feedback about abstraction level and a targeted prompt for the payment reply. Broader production-boundary transfer remains unassessed. No code or application checks performed; React hooks practice remains deferred.
 - Next question: if payment succeeds but confirmation-email delivery fails, should the order still be confirmed? Elicit the learner's reasoning before stating the desired failure policy.
+
+### 2026-11-15 — Email failure independent of checkout confirmation
+
+- Learner explained that the order should remain confirmed when payment succeeds and email fails. Receipt and order ID should be shown in the app; email delivery continues in the background.
+- Retry proposal: retry background delivery three times, then schedule more attempts. Retry timing, maximum age/attempts, permanent failure handling, and stopping conditions remain undecided; do not interpret this as an accepted infinite-retry requirement.
+- Evidence: learner independently separated the core order outcome from a notification dependency and provided a customer recovery route in the app. This scenario assumes checkout completed; payment success by itself does not establish a local commit.
+- Reused general concept guide 09 for failure/retry background. No new reference creation or learner implementation was needed. No application checks run.
+- Next diagnostic: whether to continue scheduling retries when the recipient address does not exist. Assess the distinction before introducing retry mechanisms or completing a quality scenario.
+
+### 2026-11-15 — Registration verification responsibility and link flow
+
+- Learner responded to the invalid-address case by requiring email confirmation before initial loyalty-card issuance. This extends the earlier reissuance-only verification decision; delivery remains simulated.
+- Initial proposed arrow made the email provider report user verification. After a prompt about the customer's action, learner revised the flow to an app-generated link delivered by the provider and followed by the customer back to the app. Saved that learner-proposed flow as an artifact.
+- Correctly placed link generation and the customer return interaction with the app. Actual verification validation and token behavior remain unassessed; the learner's phrase that the provider confirms the email was received needs a delivery-versus-verification distinction.
+- Checked primary SES event definitions and OWASP verification guidance. Added the general distinction between dependency-reported delivery evidence and application-owned verification to reusable guide 08. This does not implement a real provider or authentication mechanism.
+- Open product issue: verification does not itself help someone receive mail at a mistyped/nonexistent address. Retry stopping, customer correction/resend behavior, and points timing while registration is pending remain undecided. The earlier post-checkout notification policy and registration gate have different purposes.
+- Next question: what should the app let a customer do if they mistyped their email and cannot receive the verification link? No application implementation or tests performed.
+
+### 2026-11-15 — Email correction, proof scope, and verification expiry
+
+- Learner chose to allow a customer to input another email while registration is pending. Later explicitly rejected using a link for address A to verify changed address B and stated that changing the address generates a new link.
+- Learner-defined link policy: expires after five minutes; offer another verification email if confirmation is not completed. Resend timing/limits and old-link behavior after a resend to the same address remain undecided.
+- Learner also proposed a provider pre-check of whether an email is valid. Tutor distinguished validation of format/deliverability from verification of inbox access, then used an unexpired old-address link as a counterexample. No real provider-validation API or guaranteed-deliverability design has been accepted.
+- Evidence: learner applied the address-specific proof principle after a concrete changed-address example. No secure token generation, storage, single-use behavior, or implementation has been assessed; do not infer those properties from the unique-identifier proposal.
+- Updated current project rules and the registration artifact; extended reusable guide 08 with proof scope/lifetime using a non-demo example. Order-notification retries and registration verification retain separate purposes. Open retry stopping rules and first-purchase points timing are preserved.
+- Next task: learner writes an expiry acceptance criterion for a link opened six minutes after issuance. No application implementation or tests performed. React hooks practice remains deferred.

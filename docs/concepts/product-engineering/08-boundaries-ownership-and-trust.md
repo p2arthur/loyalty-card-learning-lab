@@ -30,6 +30,20 @@ Also distinguish identity from permission. Authentication establishes who a call
 
 An unguessable booking identifier does not by itself authorize access. A disabled control does not stop a crafted request. Product requirements should say who may act and what must remain protected when an interface is bypassed.
 
+### Delivery evidence and verification authority
+
+Separate the fact a dependency reports from the decision your application needs to make. A messaging service can report delivery without establishing that a student completed an account-verification flow. For example, [SES defines delivery](https://docs.aws.amazon.com/ses/latest/dg/monitor-using-event-publishing.html) as successful delivery to the recipient's mail server.
+
+In an application-owned verification flow, the app creates a verification link, the messaging service transports it, and the student follows it back to the app. The app validates the request before changing its account state. An external identity platform could instead own this flow, but that would be a different responsibility assignment.
+
+[OWASP's email-verification guidance](https://cheatsheetseries.owasp.org/cheatsheets/Email_Validation_and_Verification_Cheat_Sheet.html) covers the verification mechanism. Delivery events, an open-tracking event, and the account's verified state are different kinds of evidence. A completed email check also does not establish every aspect of a person's identity or grant permission to every resource.
+
+### Bind evidence to the claim it proves
+
+Verification evidence has a scope and a lifetime. Suppose a student changes the email on a pending equipment-service registration. A link sent to the previous inbox cannot establish access to the new inbox, even if that link is still within its original expiry period. The application needs to relate the verification request to the current pending claim before updating account state.
+
+Expiry, address changes, and resends are distinct cases. A product must decide which earlier requests remain usable and what recovery is offered. A new link does not by itself specify how the implementation handles the old one. Record the intended behavior and test it independently of the delivery mechanism. Secure generation, storage, and validation are later implementation responsibilities, not properties established by drawing the flow.
+
 ## Source dependencies and runtime calls
 
 One component can call another at runtime while the code dependency points in a different direction through an interface. Keep diagram arrows labeled so readers know whether they mean a request, a data flow, or an import.

@@ -71,13 +71,13 @@ References: [ownership and trust](../concepts/product-engineering/08-boundaries-
 
 ## G06. Turning requirements into working code and checks
 
-Evidence: no application implementation, runtime demonstration, automated application test, build, or deployment has been assessed. Documentation checks and correct written arithmetic do not establish those skills. This is expected unfinished curriculum work, not evidence of inability.
+Evidence: early scaffolding now has learner-supplied client browser/build/lint and server compiler results, inspected artifacts, and a Codex-run compiled-entry start check. The learner explained source/artifact freshness and chose a development pipeline with reasons. Compiler settings, module/target distinctions, CLI forwarding, and package scripts required coaching; later retention and independent transfer remain pending. No business-feature implementation, behavior test suite, HTTP listener, persistence integration, or deployment has been assessed. This is unfinished curriculum work, not evidence of inability.
 
-Practice when milestone 2 begins: write a small points calculation from the agreed rules, explain units and rounding, and choose normal, boundary, and invalid cases. Later, implement one complete feature and trace its request, validation, persistence, and user-visible outcome.
+Practice when language/HTTP work resumes after product definition: write a small points calculation from the agreed rules, explain units and rounding, and choose normal, boundary, and invalid cases. Later, implement one complete feature and trace its request, validation, persistence, and user-visible outcome.
 
 Success criterion: the learner writes and explains the work, existing appropriate checks provide recorded results, and a changed example still behaves correctly. Do not invent package scripts, passing tests, or prerequisites that have not been created.
 
-References: [scenario analysis](../concepts/product-engineering/04-scenarios-and-boundaries.md), [acceptance criteria](../concepts/product-engineering/06-acceptance-criteria-and-bdd.md), [MVP plan](../../MVP_PLAN.md).
+References: [scaffolding evidence](milestone-02-language-and-http/01-project-scaffolding.md), [build/type/lint distinctions](../concepts/software-engineering/01-builds-types-lint-and-tests.md), [scenario analysis](../concepts/product-engineering/04-scenarios-and-boundaries.md), [acceptance criteria](../concepts/product-engineering/06-acceptance-criteria-and-bdd.md), [MVP plan](../../MVP_PLAN.md).
 
 ## G07. Retention and transfer across products
 

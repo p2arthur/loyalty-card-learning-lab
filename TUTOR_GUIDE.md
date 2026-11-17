@@ -17,7 +17,9 @@ For each milestone and step, maintain separate reusable concept guides
 under docs/concepts/ with examples beyond the demo and transfer exercises.
 ```
 
-Current position: milestone 1, product definition. Step 01, requirements elicitation and analysis, completed its initial discovery pass. The current context and public simulated-checkout role are recorded; step 03 begins with a learner mobile-screen inventory. Resume the exact next task in the learning log and workbook; do not restart that sketch. No implementation has been verified.
+Current position: return to milestone 1 product definition after the saved scaffolding checkpoint. Requirements discovery and the context/role pass are recorded. Resume step 03 by asking for essential customer mobile screens, each with one purpose. The learner's inventory is still blank. Review that attempt before further sketches, the consolidated brief/criteria, and the first agreed implementation slice. Do not restart completed discovery or automatically resume compiler exercises.
+
+The scaffolding workbook records the generated client, server dependencies/configuration/scripts, comment-only entry, and check evidence. The learner chose to retain compiler emission on errors; preserve the current default. Module/configuration concepts remain coached, and React hooks practice remains deferred. Use the [five-technique toolkit](docs/concepts/product-engineering/00-requirements-analysis-toolkit.md) for focused study without treating reference creation as mastery.
 
 ## Useful session requests
 

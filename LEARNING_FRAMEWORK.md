@@ -41,6 +41,8 @@ docs/concepts/
     ...
 ```
 
+The [five-technique requirements toolkit](docs/concepts/product-engineering/00-requirements-analysis-toolkit.md) preserves our core definitions for journeys, business rules, scenarios and boundaries, domain modeling, and acceptance criteria. Use these iteratively within a broader product process rather than treating them as a universal checklist.
+
 ## Required habit at every milestone and step
 
 At each meaningful checkpoint, maintain both the project artifact and its relevant general study material. Identify the transferable concepts, then extend existing concept guides or add a focused new guide when needed. Link those guides from the project step and keep the concept index current. Apply this practice to future language, frontend, backend, data, testing, and deployment topics as well as product design.

@@ -2,35 +2,67 @@
 
 A hands-on software engineering study project: build a café loyalty demo while learning to explain its product rules, architecture, implementation, and failures.
 
-The learner writes the application. The tutor asks one question at a time, reviews attempts, and records evidence of understanding. The repository currently contains the curriculum and study documentation; application implementation has not started.
+The learner writes the application. The tutor asks one question at a time, reviews attempts, and records evidence of understanding. This repository contains the curriculum, study references, a generated React/TypeScript client, and a Node/TypeScript server scaffold. Loyalty features have not been implemented.
 
 ## Start reading
 
-1. [Learning framework](LEARNING_FRAMEWORK.md): how sessions work and how each learning step is documented.
-2. [Study index](docs/learning/README.md): milestones, completed steps, and the next exercise.
-3. [Requirements elicitation and analysis](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md): concepts, product decisions, worked scenarios, and unresolved questions from the first discovery pass.
-4. [Product definition workbook](docs/learning/milestone-01-product-definition/02-product-definition.md): context decisions and remaining milestone deliverables.
-5. [Screen inventory and sketches](docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md): the current learner exercise.
-6. [Product engineering concept library](docs/concepts/README.md): ten reusable guides with non-demo examples and transfer exercises, starting with discovery, journeys, rules, scenarios, domain modeling, and acceptance criteria.
+1. [Learning framework](LEARNING_FRAMEWORK.md): the tutoring workflow and study-artifact habit.
+2. [Study index](docs/learning/README.md): milestones, artifacts, and the saved next task.
+3. [Five-technique requirements toolkit](docs/concepts/product-engineering/00-requirements-analysis-toolkit.md): the core definitions for journeys, rules, scenarios, domain modeling, and acceptance criteria.
+4. [Requirements study](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md): demo decisions and worked examples.
+5. [Product-definition workbook](docs/learning/milestone-01-product-definition/02-product-definition.md): context, roles, and unfinished deliverables.
+6. [Screen-planning workbook](docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md): the next learner exercise.
+7. [Concept library](docs/concepts/README.md): broader product and software engineering guides with non-demo examples and transfer exercises.
 
-Each milestone and learning step maintains both its project notes and related general concept guides. The [concept template](docs/concepts/TEMPLATE.md) makes this a recurring study practice. Creating those references does not mark the topics mastered.
+Each substantive learning step maintains project notes and separate reusable concept guides. References preserve learning material; they do not establish mastery. [LEARNING_LOG.md](LEARNING_LOG.md) records learner explanations, support, checks, corrections, and gaps.
 
 ## Current position
 
-Milestone 1 is **product definition**. Its first step, requirements elicitation and analysis, has completed an initial discovery pass. The revised context and public demo-checkout role are recorded. Step 03 begins with the mobile screen inventory; further product-definition artifacts remain unfinished. The milestone remains in progress; the learning log records the exact next task.
+Next session returns to **milestone 1: product definition**, beginning with the essential customer mobile screens and one purpose per screen. Initial discovery and the revised context/checkout roles are recorded; screen sketches, the consolidated brief, remaining acceptance criteria, and quality scenarios are unfinished. Continue product design before implementing the first agreed feature slice.
 
-The demo pairs a mobile web loyalty app with a separate cashier/kiosk checkout screen. Customers register and display their cards on a phone; the sales-point screen scans cards and hosts points selection. Products, payment, and email are simulated. Customers earn points on paid amounts and can choose a discount at checkout. Apple Wallet issuance belongs to a later milestone; automatic pass updates are a stretch goal.
+The demo pairs a mobile web loyalty app with a separate cashier/kiosk checkout screen. Customers register and display their cards on a phone; the sales-point screen scans cards and hosts points selection. Products, payment, and email are simulated. Points accrue on paid amounts after loyalty discounts. Apple Wallet issuance belongs to a later milestone; automatic pass updates are a stretch goal.
+
+The [scaffolding checkpoint](docs/learning/milestone-02-language-and-http/01-project-scaffolding.md) records the early setup practice, alternatives, and evidence. Both npm workspaces share one root lockfile. The learner chose the existing compiler pipeline for development and retained emission on compiler errors. Further setup is deferred; this does not complete the later implementation or quality milestones.
+
+## Run the scaffold
+
+Select the Node version recorded in .nvmrc using fnm or nvm, then install from the repository root:
+
+```sh
+npm ci
+```
+
+Start the generated client:
+
+```sh
+npm run dev -w client
+```
+
+For the server development loop, keep the compiler running in one terminal:
+
+```sh
+npm run dev:build -w server
+```
+
+After its initial compilation, run the compiled-file watcher in another terminal:
+
+```sh
+npm run dev -w server
+```
+
+The server entry currently contains only a comment, so execution does not create an HTTP listener. One-shot server scripts are typecheck, build, and start. Compiler errors remain errors even when JavaScript is emitted; emitted output does not establish correct behavior. The generated test scripts are still placeholders, and there is no behavior test suite.
+
+## Recorded checks and study gaps
+
+The learner reported the client starter in the browser, successful client build/lint, successful server compiler checks/build, and reactions from both watchers. Codex inspected artifacts and ran the compiled entry and final server typecheck under Node 24 with exit code 0. Exact errors from the learner's temporary failure experiment were not captured. The learning log distinguishes who ran each check and what remains unverified; clean-machine installation, CI, business behavior, and deployment remain open.
+
+Use the [study-gap backlog](docs/learning/STUDY_GAPS.md) for later review. React practice distinguishing useState, useMemo, and useCallback remains deferred to milestones 6 and 6a; the generated counter is not an assessment of learner hooks implementation.
 
 ## Project references
 
 | File | Purpose |
 | --- | --- |
-| [MVP_PLAN.md](MVP_PLAN.md) | Curriculum, scope, milestone checks, and technical references |
-| [LEARNING_LOG.md](LEARNING_LOG.md) | Chronological evidence, gaps, and exact next task |
-| [Study gaps](docs/learning/STUDY_GAPS.md) | Evidence-based review topics, exercises, and success criteria |
+| [MVP_PLAN.md](MVP_PLAN.md) | Curriculum, scope, milestone criteria, and technical references |
+| [LEARNING_LOG.md](LEARNING_LOG.md) | Chronological learning evidence and exact next task |
 | [AGENTS.md](AGENTS.md) | Persistent tutor instructions |
-| [TUTOR_GUIDE.md](TUTOR_GUIDE.md) | How to start and resume a session |
-
-React practice distinguishing `useState`, `useMemo`, and `useCallback` is preserved for milestones 6 and 6a. It has not yet been assessed.
-
-No application tests, build, or deployment have been completed. Documented behavior is a specification to implement and verify later.
+| [TUTOR_GUIDE.md](TUTOR_GUIDE.md) | How to start and resume sessions |

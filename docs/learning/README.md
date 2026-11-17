@@ -4,7 +4,7 @@ Start with the [learning framework](../../LEARNING_FRAMEWORK.md). The [MVP plan]
 
 ## Milestone 1: product definition
 
-Status: **in progress**. No application implementation has been verified.
+Status: **in progress; next session resumes product design**. Starter/tooling checks are recorded below; no loyalty feature has been implemented.
 
 | Step | Status | Study document |
 | --- | --- | --- |
@@ -16,7 +16,7 @@ Step 03 covers screen planning. Later focused steps will cover the consolidated 
 
 ## Reusable concepts alongside the project
 
-For focused later review, use the [study gaps and practice backlog](STUDY_GAPS.md). It distinguishes coached concepts, skills not yet assessed, retention checks, and product decisions. Each entry has evidence, references, a practice task, and a success criterion. The live task remains step 03 unless a review topic is chosen.
+For focused later review, use the [study gaps and practice backlog](STUDY_GAPS.md). It distinguishes coached concepts, skills not yet assessed, retention checks, and product decisions. Each entry has evidence, references, a practice task, and a success criterion. The next live task is the mobile screen inventory. Setup notes and review exercises remain available for later.
 
 The separate [product engineering library](../concepts/README.md) expands the ideas beyond this demo. Step 01 links to discovery, journeys, business rules, scenario analysis, domain modeling, acceptance criteria, and related topics. Step 02 links to boundaries and quality requirements. General transfer exercises remain unassessed until the learner attempts them.
 
@@ -30,6 +30,12 @@ Follow the sequence in the MVP plan: language and HTTP practice; system boundari
 
 Milestones 6 and 6a include `useState`, `useMemo`, and `useCallback`. Practice source state versus derived values, functional updates, dependency identity, stale closures, memoized children, and evidence for performance changes. These are requested practice needs; understanding has not been assessed.
 
+## Setup checkpoint
+
+The learner chose [early scaffolding practice](milestone-02-language-and-http/01-project-scaffolding.md) before completing milestone 1. Both npm workspaces, one root lockfile, and the Node version record are verified. The learner generated the React/TypeScript/Vite client and reported its browser/build/lint checks. The server has Express/compiler dependencies, a tailored config, scripts, and a comment-only entry; learner compiler checks and a Codex-run start check are recorded. The learner reported watch reactions and chose to retain emission on compiler errors. Exact error diagnostics and a controlled type-only-error experiment remain unassessed.
+
+Remaining tooling is deferred at the learner's request. This is a saved checkpoint, not completion of the language/HTTP, backend, or quality milestones.
+
 ## Resume here
 
-Open [step 03](milestone-01-product-definition/03-screen-inventory-and-sketches.md). First list essential mobile screens and one purpose for each. The [current context](milestone-01-product-definition/artifacts/02-current-system-context.md) and public demo-checkout role are recorded. Milestone 1 remains unfinished.
+Open [step 03 screen planning](milestone-01-product-definition/03-screen-inventory-and-sketches.md). Ask the learner for the essential customer mobile screens, with one purpose each, and wait for their attempt. Continue product design before the first agreed implementation slice. The [five-technique toolkit](../concepts/product-engineering/00-requirements-analysis-toolkit.md) is a study reference, not another prerequisite assignment. Do not restart completed discovery/context work or mark milestone 1 complete.

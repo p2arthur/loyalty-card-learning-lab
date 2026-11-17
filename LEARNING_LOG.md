@@ -4,20 +4,21 @@ This file carries learning context between Codex chats. Record observed evidence
 
 ## Current position
 
-- Session status: milestone 1 context/checkout-role pass complete; step 03 screen inventory is ready to start. The full milestone remains in progress.
-- Current milestone: 1. Define the product.
-- Study framework: `LEARNING_FRAMEWORK.md`; navigate via `docs/learning/README.md`. Use one numbered Markdown file per substantive step within its milestone.
-- Reusable concept library: `docs/concepts/README.md` indexes ten general product engineering guides with non-demo examples and transfer exercises. Maintain relevant guides alongside every milestone and step. Broader transfer and new adjacent topics remain unassessed until learner attempts provide evidence.
-- Personal review backlog: `docs/learning/STUDY_GAPS.md` records eight evidence-based topics, references, exercises, and success criteria. It separates coached concepts, unassessed skills, retention, and open decisions. Review one chosen entry at a time; the next live task remains the mobile screen inventory.
-- Completed study step: `docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md`.
-- Current study step: `docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md`. Latest context evidence: `artifacts/02-current-system-context.md` within that milestone directory.
-- Next learner task: list the essential customer mobile screens with one purpose each. Review this first attempt before designing layouts or inventorying the sales-point view.
+- Session status: ended on 2026-11-16 at the learner's request. Next session returns to product design; additional setup practice is deferred.
+- Current milestone: 1. Define the product. Initial requirements discovery and the revised context/roles are recorded; the full milestone is unfinished.
+- Current study step: docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md. The learner has not supplied its mobile screen inventory yet.
+- Next learner task: list the essential screens for the customer's mobile web app, with one purpose per screen. Review that attempt before sales-point screens, sketches, the remaining brief/criteria, and the first agreed implementation slice.
 - Next tutoring question: can you list the essential screens for the customer's mobile web app, giving each one a single purpose?
-- Support by concept: points calculations at independent-with-feedback after a successful changed example; context boundaries at coached practice after learner reported confusion about external responsibilities. Module versus deployment versus system boundary distinction needs transfer assessment. Implementation skills remain unassessed.
-- Implementation evidence: no application implementation has been verified during tutor setup.
-- Architecture task: learner draws a context sketch and defines observable quality scenarios.
-- Known misconceptions: no persistent misconception diagnosed. Observed coached distinctions and unassessed areas are recorded in the study backlog; do not infer failure or mastery beyond the evidence.
-- Review topics for later sessions: retrieve the price-cap-before-balance rule and idempotency reasoning; assess atomicity and unknown checkout outcomes before implementation.
+- Setup checkpoint: docs/learning/milestone-02-language-and-http/01-project-scaffolding.md records the learner-built workspace/client/server scaffold, checks, guided corrections, decisions, and remaining setup. Do not resume another compiler exercise as the next live task.
+- Emission decision: learner chose to keep emitting JavaScript despite compiler errors. Preserve the current unset noEmitOnError option (documented default false). Error diagnostics do not become passing checks; a controlled type-only-error experiment and future CI acceptance policy remain unassessed.
+- Study framework: LEARNING_FRAMEWORK.md and docs/learning/README.md. Use a numbered document per substantive step and separate reusable concept guides.
+- Reusable references: docs/concepts/README.md includes the requested five-technique requirements overview, ten detailed product-engineering guides, and software-engineering foundations with non-demo examples. These are references, not mastery claims.
+- Personal review backlog: docs/learning/STUDY_GAPS.md separates coached concepts, unassessed skills, retention, and open decisions. Keep the saved product-design task unless the learner chooses a review topic.
+- Support by concept: independent changed-example points arithmetic, source/artifact freshness, and a reasoned development-pipeline preference are recorded. Compiler configuration, module/target distinctions, CLI forwarding, and script writing were coached and need retention/transfer. Business-feature implementation remains unassessed.
+- Implementation evidence: Codex inspected manifests/lockfile, runtime record, generated client, tailored server config, scripts, and comment-only source/output. Learner supplied client browser/build/lint and server no-emit/build results; Codex ran compiled-entry start and a final publication-preparation no-emit typecheck under Node 24 with exit 0. Learner reported watch reactions; exact introduced-error diagnostics were not captured. No loyalty features, behavior tests, or HTTP listener exist.
+- Architecture task: translate the established mobile/sales-point boundary into screen responsibilities, then finish the remaining quality scenarios and first feature slice. Do not restart the completed context/role discussion.
+- React practice: useState/useMemo/useCallback and related needs remain deferred to milestones 6 and 6a; the generated counter is not an assessment of learner hooks implementation.
+- Known misconceptions: no persistent misconception diagnosed. Keep specific coached corrections separate from product decisions and unassessed future curriculum.
 
 ## Requested focused practice
 
@@ -40,7 +41,7 @@ Track implementation and understanding separately. Replace “Not assessed” wi
 | Milestone | Implementation / artifacts | Understanding / transfer |
 | --- | --- | --- |
 | 1. Product definition | Requirements, revised context/role artifacts, and study backlog recorded; step 03 screen inventory ready; full brief pending | Independent checkout arithmetic and scope reflection recorded; context/verification distinctions were coached; transfer, implementation, screens, and remaining criteria need further evidence |
-| 2. Language and HTTP fundamentals | Not verified | Not assessed |
+| 2. Language and HTTP fundamentals | Early scaffold: workspaces/client/server config, scripts, generated artifacts, and recorded checks; no business implementation | Source/artifact distinction and pipeline preference explained; CLI/config/scripts coached; broader language/HTTP skills remain unassessed |
 | 3. System boundaries and API contract | Not verified | Not assessed |
 | 4. PostgreSQL and Prisma modeling | Not verified | Not assessed |
 | 5. First backend feature | Not verified | Not assessed |
@@ -337,3 +338,144 @@ Earlier concept to revisit:
 - Updated the study index, concept index, project README, learning framework, tutor guide, and AGENTS.md so the backlog is discoverable and maintained at meaningful checkpoints. Product decisions remain separate from learner understanding; the current demo policies were not changed.
 - This was a documentation task, not a new teaching assessment. Current task remains milestone 1 step 03: list essential mobile screens with one purpose each. Review topics can be selected one at a time later; no reminders or new prerequisite sequence created. No application code or tests were run.
 - Also recorded tutor-process improvements: consolidate demonstrated learning sooner, reduce repetitive follow-ups, park later implementation detail, and ask live questions directly in chat. These are not learner weaknesses. Codex documentation checks passed for 28 Markdown files, 138 local links, eight review entries, and the React-practice reference; the initial backlog prose scan had no high-severity findings.
+
+### 2026-11-16 — Early scaffolding practice selected
+
+- User explicitly requested scaffolding practice with the agreed technologies and no feature implementation. Started a separate study document for this setup activity; no application directories or package configuration have been generated yet.
+- Read-only tool checks found the local Node/npm/Corepack/Docker CLI versions recorded in the scaffolding workbook. Supported project runtime, package versions, daemon readiness, and setup scripts remain unverified.
+- Next diagnostic is a learner-proposed client/server folder layout. Continue hands-on with one question or setup task at a time. This records a topic change, not new demonstrated understanding. Milestone 1 remains incomplete and React hooks practice stays deferred.
+
+### 2026-11-16 — Package manifests and first npm workspace
+
+- Learner proposed client/server directories and completed the guided initialization commands. Codex verified empty client/server directories initially, then root and server manifests and root workspace registration for server. No client scaffold was found or claimed.
+- Learner predicted manifest location from the working directory and independently assigned Express to the server because it handles servers/APIs. Tutor explained root coordination, per-package dependency declarations, shared dependency storage, and the independent-package alternative.
+- Learner stated that applications in a workspace can still run separately. Record this as a coached boundary distinction, not independent far transfer or completed architecture mastery.
+- Updated the scaffolding workbook and general boundaries guide with package/repository/process distinctions and a non-demo example. Generated test scripts remain placeholders; no application tests or services were run. React hooks practice remains deferred and milestone 1 remains unfinished.
+- Next task: learner adds the boolean private field to the root coordinator package. Supported runtime selection and client generation remain pending. Package privacy governs npm publication and does not change the public GitHub repository.
+
+### 2026-11-16 — Root package privacy and runtime preparation
+
+- Learner added the root private field, initially as the string true. Tutor showed the JSON boolean correction; learner edited it and Codex verified `private is True` with the server workspace intact. This single correction is not evidence of a persistent misconception.
+- Clarified that the field prevents npm publication of that package; it does not restrict GitHub cloning or govern downloads of an already published package.
+- Codex observed Node v25.8.2 active, fnm available, and Node v24.22.3 already installed through fnm. Checked official Node release status (25 EOL, 24 LTS) and Vite runtime guidance. Next task is selecting installed Node 24 and checking its version in the learner terminal. No version switch, client scaffold, or application dependency installation has been performed by Codex.
+
+### 2026-11-16 — Runtime selected and client scaffold generated
+
+- Learner supplied terminal output showing fnm selected Node v24.22.3 and node reported that version. Codex sessions may still use a different runtime; no project pin has been created.
+- Learner ran create-vite 9.3.4 with the react-ts template and supplied the resulting client file list. Codex read the client package manifest, Vite and ESLint configurations, source filenames, and root/client lockfile metadata. The generated client has dependencies installed locally. No build or lint checks have run.
+- Tutor explained fnm versus Node/npm and its overlap with nvm. Discussed Oxlint versus ESLint using current official documentation; ESLint was recommended for the planned lessons, without claiming Oxlint cannot support the project.
+- Learner noticed the root description matches the README. Tutor checked npm's installed extraction code and explained inferred defaults, acceptance with -y, and lack of automatic synchronization. No teach-back of this mechanism has been assessed.
+- Next task: learner adds client to the root workspace array. Then consolidate root installation/lockfile handling, pin the runtime, and review actual setup checks. Preserve learner implementation ownership, deferred React practice, and unfinished milestone 1.
+
+### 2026-11-16 — Root installation and first client startup
+
+- Codex verified the learner registered both client and server, retaining the boolean root private field. Learner predicted root installation would not make React a server-declared dependency; subsequent manifests confirmed that prediction.
+- Learner ran npm install at root and reported a successful install and zero audit findings. Codex verified React installed at root, workspace symlinks, and root lockfile registration. Root and client lockfiles both remain; cleanup is pending.
+- Read-only review confirmed the reported unreviewed fsevents installation script warning under Node 24 npm. It is an optional macOS dependency; no approval/denial was made. Codex's default shell used a different npm without install-scripts, so the successful inspection used fnm exec with Node 24. Do not assume terminal version selection applies globally.
+- After guidance to run npm run dev -w client, learner stated they see a basic React app with a counter. Record as learner-observed startup evidence; no Codex browser check, production build, lint, feature, or backend verification occurred.
+- Next small objective: explain dev versus build, run the generated production build, and review its actual output. Deferred hooks practice is preserved; interacting with a generated counter does not assess hooks understanding. Milestone 1 remains unfinished.
+
+### 2026-11-16 — Production build and behavior distinction
+
+- Learner predicted that build creates a separate directory with JavaScript compiled from TSX. Tutor clarified scope across the application graph, tsc type checking with noEmit, and Vite output generation gated by &&.
+- Learner ran npm run build -w client and provided a successful tsc/Vite build output with 20 transformed modules and emitted dist assets. Codex inspected actual dist files; no build was rerun by Codex and no browser inspection of production artifacts occurred.
+- In a changed points-rule scenario, learner correctly explained that build success does not establish actual behavior, then requested more technical wording. Tutor refined the statement: configured static checking and bundling can succeed while validly typed business logic is wrong. This is near-transfer evidence; independent test implementation is unassessed.
+- Created a separate general study guide on installation, types, lint, builds, and behavior tests, with a non-demo example and a later transfer exercise. Next live task is the existing client lint script, not the guide's extra exercise.
+- Runtime pinning, client lockfile cleanup, root/server generated defaults, server tooling, and the unreviewed optional fsevents script remain open. Deferred hooks practice and incomplete product definition remain recorded.
+
+### 2026-11-16 — Static checks, counter scenario, and client lint
+
+- Learner asked for static-check terminology. Tutor explained source analysis versus executing behavior and supplied isolated type-check examples. Learner then described a counter behavior check: start at zero, click, expect one. Tutor named Arrange/Act/Assert and clarified the UI assertion should inspect the displayed result. No test code or hooks implementation was authored or assessed.
+- Learner ran npm run lint -w client and supplied eslint . output with no diagnostics or failure reported. Together with the previous production build and browser observation, this establishes the generated client's initial checks, not completion of the frontend quality milestone or full scaffolding.
+- Codex inspected the root lockfile and verified both workspace links and client dependency metadata. The redundant client lockfile remains. Next bounded learner task is deleting only that client lockfile; preserve the root lockfile and installed packages. Runtime pinning and server tooling follow.
+
+### 2026-11-16 — Lockfile cleanup and Node version record verified
+
+- Learner removed the redundant client/package-lock.json. Codex verified absence and the root lockfile still covers server and client.
+- Learner asked how to create .nvmrc and its purpose. Tutor supplied a bounded shell command and explained runtime selection versus dependency locking, with fnm/nvm reading the file rather than the file installing Node. Learner reported completion; Codex verified the exact content 24.22.3 and final newline. No auto-switch or CI enforcement was tested.
+- Read-only inspection found server/package.json as the server's only file. No backend code, server dependencies, or server tool configuration is present.
+- Next small objective: distinguish runtime dependencies from development tools for a compiled JavaScript backend. Ask which of Express and the TypeScript compiler must remain available while that compiled server runs, then proceed with learner-run installation. Do not implement a server endpoint or loyalty feature on the learner's behalf.
+
+### 2026-11-16 — Server runtime and development dependencies verified
+
+- Learner correctly chose Express as the runtime requirement for a compiled JavaScript server, explaining TypeScript source has already been compiled. Tutor named dependencies versus devDependencies; this is scoped reasoning, not an implemented deployment.
+- Learner installed Express in the server workspace, then TypeScript and Express/Node type declarations as devDependencies. Codex verified server manifest placement and the root lockfile entries. Node declarations use major 24 to match the selected runtime. Learner reported the second install added 9 packages, audited 239, and found zero vulnerabilities.
+- Tutor explained declaration packages and the -D flag. Independent declaration-file understanding, server compiler configuration, and actual server execution remain unassessed.
+- Verified no server tsconfig or source directory exists. Next task: ask the learner what tsconfig.json controls compared with package.json, then guide config initialization. Continue scaffolding without writing an application, endpoint, or loyalty behavior. Milestone 1 and later hooks practice remain unfinished.
+
+### 2026-11-16 — Compiler configuration and argument forwarding
+
+- Learner identified TypeScript compilation/static-analysis configuration as the role of tsconfig. Tutor narrowed the scope to TypeScript compiler inputs/checks/output and separated ESLint configuration.
+- Learner asked about the standalone -- delimiter in npm commands. Tutor checked current npm documentation and explained forwarding to launched tools. In a changed dev-script example, learner identified the client dev script as the recipient; tutor clarified that Vite receives the port flag. Record as coached command-forwarding evidence.
+- Learner generated server/tsconfig.json via npm exec -w server -- tsc --init. Codex inspected the actual generic configuration, including commented rootDir/outDir examples, NodeNext module setting, and strict options. No server source or build result exists.
+- Next question: what different responsibilities do rootDir and outDir have? Continue with learner edits, one small setting group at a time, without writing server implementation. Other generic compiler defaults need review; do not mark all server scaffolding or TypeScript skills complete.
+
+### 2026-11-16 — Source layout and include placement corrected
+
+- Learner identified outDir correctly and initially treated rootDir as input selection. Tutor clarified the distinction using official TypeScript docs and an output-path example. Learner activated rootDir src and outDir dist; Codex verified both.
+- Learner added include inside compilerOptions. Tutor showed it belongs at project top level; learner recognized the distinction and moved it. Codex read the updated file and verified sibling placement with the src/**/*.ts pattern.
+- These are coached corrections with verified edits. No far transfer, persistent misconception, server code, or compiler run has been established. Next task is a diagnostic on browser globals in a Node server, followed by Node environment config. Keep existing strict options while reviewing generic defaults; no application implementation requested.
+
+### 2026-11-16 — Node environment and fixed target reasoning
+
+- Learner explained browser DOM ownership versus the Node/HTTP backend. Tutor introduced separate target, lib, and global types responsibilities.
+- Learner challenged ESNext and asked whether a fixed target was best practice. Tutor consulted TypeScript target/lib/types docs and the community Node 24 preset; refined the conservative ES2023 proposal to ES2024. Record the evidence-based adjustment and that runtime compatibility is contextual, not a universal ban on ESNext.
+- First edit had retained ES2023, missed a comma, and omitted module. After a small replacement example, learner corrected target/lib to ES2024 and types to node. Codex read the actual file and confirmed those fields and input/layout settings. Module is now esnext rather than the proposed nodenext, so it remains under review.
+- Next question: what does module control compared with target? No compiler run, server code, package module mode, or execution strategy has been verified. Continue learner-written configuration; preserve unfinished product definition and React hooks practice.
+
+### 2026-11-16 — NodeNext and ES-module package metadata verified
+
+- Learner explicitly said module versus target was unknown. Tutor explained imports/exports, ES modules versus CommonJS, and NodeNext's integration with package metadata, using primary TypeScript guidance. Keep this concept coached with independent explanation pending.
+- Learner set module nodenext and then added type module to server/package.json. Codex inspected both actual files and verified the pair, with ES2024 language/library settings and Node globals intact. Tutor proposed ES modules for this project; no claim that CommonJS is invalid or that the learner independently chose the architecture.
+- No source directory or backend code exists; server still contains only its manifest and config. Next small task is removing generic jsx, declaration, and declarationMap settings that are not needed for the current application scaffold. Preserve sourceMap and strict checks. No server compilation or runtime result has been established.
+
+### 2026-11-16 — Server template cleanup and no-emit check
+
+- Learner removed the unused jsx/declaration/declarationMap options. Codex read the file and verified cleanup with the selected environment and strict options preserved.
+- Learner created the empty server source placeholder and supplied tsc --noEmit output returning silently to the prompt. Record as a learner-run static-check success for the minimal scaffold, not an Express integration or behavior test.
+- Codex verified server/src/index.ts exists and is zero bytes, no server/dist exists, and server scripts still contain only the generated test placeholder. Codex did not rerun the learner's compiler check.
+- Next task: learner writes typecheck/build package-script entries from previously practiced commands, with review before execution. This fades syntax support slightly; no independent script-writing competence is claimed before the attempt. Emitted build, metadata cleanup, server quality tools, and later integration work remain open.
+
+### 2026-11-16 — Guided scripts and first server emitted build
+
+- Learner needed help turning compiler commands into package scripts. Tutor showed a typecheck entry and supplied a partial hint for build. Learner wrote typecheck as tsc --noEmit and build as tsc; Codex verified both. This is supported script-writing evidence, not independent fluency.
+- Learner predicted server/dist/index.ts; tutor confirmed the directory and corrected the JavaScript suffix to .js. Learner then ran npm run build -w server and listed index.js and index.js.map without diagnostics.
+- Codex inspected the empty source, generated JavaScript, and map source path. These match the corrected prediction. No compiler rerun, Express import, HTTP listener, or behavior test was performed.
+- Consolidated the scaffolding workbook into current decisions, evidence, unresolved gaps, and the exact next task, avoiding competing historical settings in the step document. Chronology remains here in the log; generalized study guides remain separate.
+- Next exercise: learner adds a start script that executes compiled JavaScript with Node, using a partial node path/to/file.js hint. Review before running. Expected empty-module execution would validate basic loading only, not a running backend service.
+
+### 2026-11-16 — Compiled entry script and Node loading verified
+
+- Learner initially added dev with node ./dist/index.js. The command/path were valid; tutor clarified the project naming convention and learner renamed it to start. Codex verified the updated script and the still-empty compiled entry's export marker and source-map comment.
+- Learner reported completion without runtime output. Codex then ran fnm exec --using=24 npm start -w server and observed exit code 0. Attribute this runtime check to Codex, not the learner. No compiler checks were repeated.
+- Basic module loading now has evidence. There is still no Express initialization, HTTP listener, business implementation, or behavior suite. This does not complete the backend milestone or all scaffolding tools.
+- Next question: after editing server/src/index.ts and running npm start -w server without rebuilding, would Node execute the updated source or the previous compiled file, and why? Assess before choosing a development watcher. Preserve the learner's no-feature scope and unfinished product definition/hooks practice.
+
+### 2026-11-16 — Artifact freshness and development workflow chosen
+
+- Learner independently explained that start uses the existing compiled index.js and source edits need rebuilding to appear there. This supports source-versus-artifact understanding; it does not establish wider module-system fluency.
+- Tutor compared compiler watch plus Node watch, tsx watch with a separate type check, and native Node TypeScript/watch. Current primary docs were consulted. Learner chose the existing compiler pipeline because alternatives add a runner dependency or have native TypeScript restrictions. Record the preference and tradeoff, not a universal rejection of the alternatives.
+- Next task: learner adds dev:build and dev watcher scripts, preserving one-shot scripts, followed by review and a two-command watch check. No runner was installed, watcher started, code changed, or new check claimed. Emission-on-error policy remains an open quality decision.
+
+### 2026-11-16 — Watch scripts and learner change experiment
+
+- Learner initially used build --watch for dev:build. Tutor explained a package-script label is not automatically a shell executable. Learner identified tsc and corrected the entry. Codex verified dev:build uses tsc --watch and dev uses Node watch on dist/index.js, retaining the one-shot scripts.
+- Learner reported both commands worked after a comment edit and both failed after introducing an error, interpreting the reactions as evidence of watching. Codex read source and output and found the comment in both; the introduced error was already removed. Exact compiler/runtime errors and whether the watcher processes remained active were not verified.
+- Current compiler config does not set noEmitOnError. Tutor consulted its primary documentation: emission despite diagnostics is allowed by default. Do not conclude that the introduced error was a type-only error or that compilation stopped emission.
+- Next question is the desired emission policy when type checking fails: replace generated artifacts or leave existing output untouched. A controlled type-only-error test and runtime/watcher distinction remain pending. No watcher process was started or stopped by Codex, no source edited, and no extra runner installed.
+
+### 2026-11-16 — Session close, emission choice, and return to product definition
+
+- Learner chose to keep compiler emission despite errors. Current configuration already uses the documented default false for noEmitOnError, so no application or compiler setting was changed. This is a development-scaffold preference; compiler diagnostics remain failures and do not certify emitted behavior.
+- Learner ended the session to rest and explicitly chose product design next, followed by implementing features in the scaffold. Restored milestone 1 step 03 as the exact resume point: essential mobile screens, one purpose per screen. Keep the unfinished product brief, remaining criteria/quality work, and first implementation slice visible; do not automatically continue tooling exercises.
+- Learner requested five commits and publication to the existing public GitHub repository. The additional request to save the five requirements definitions is part of this same session-close work, not a cancellation of publication.
+- Added a separate five-technique requirements toolkit preserving the requested definitions, connections, a non-demo example, detailed-guide links, and an unanswered transfer exercise. Saving this reference is not evidence of independent application.
+- Updated the study backlog to distinguish verified scaffold practice from unassessed business implementation. Preserved deferred React hooks needs and all unanswered learner screen exercises.
+- Qualitative tutor review against the teaching skill: diagnosis and artifact inspection exposed concrete configuration/command gaps; partial examples helped after learner difficulty; source/output prediction and workflow tradeoffs supplied useful near-transfer evidence. Improve pacing by batching documentation, grouping related settings, and revisiting coached concepts later rather than extending each tiny edit into another lesson. No rubric scores or retention claims were assigned.
+
+### 2026-11-16 — Publication preparation checks
+
+- Confirmed the existing public repository is p2arthur/loyalty-card-learning-lab and GitHub CLI identity is p2arthur, the account previously authorized by the learner. Five scoped commits will preserve workspace/runtime declarations, generated client, server compiler scaffold, study artifacts, and session continuity.
+- Codex ran the current server typecheck script under Node 24 after the temporary error had been removed; exit code 0. The client source was not changed during session-close documentation, so prior learner-run client build/lint evidence was retained rather than represented as new checks.
+- Documentation validation checked 32 Markdown files and 164 relative links with no missing targets or unbalanced fences. Package JSON, the Node version record, single-lockfile setup, and generated-output ignore rules were checked. The new definitions guide's prose scanner reported no findings; this is a style aid, not proof of teaching quality.
+- The first next-session task remains the learner's mobile screen inventory. No reminder, implementation exercise, or extra setup prerequisite was created for tomorrow.

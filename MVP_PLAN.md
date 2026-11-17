@@ -21,6 +21,12 @@ Automatic updates to an installed Wallet pass are a stretch goal. Keep real paym
 
 The learner revised the initial operator-led, fixed-product-reward idea during milestone 1. The current demo uses a customer-facing mobile web loyalty app plus a separate simulated cashier/kiosk checkout screen, with mock products and simulated payments/fulfillment. Registration and card display are on the phone; scanning and the points selector are at the sales point. See the [current interface flow](docs/learning/milestone-01-product-definition/artifacts/02-mobile-web-flow.md). New points accrue only on the amount paid after a points discount. Current rules and worked examples are recorded in [step 01](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md).
 
+## Early setup checkpoint and next session
+
+At the learner's request, [scaffolding practice](docs/learning/milestone-02-language-and-http/01-project-scaffolding.md) began before milestone 1 was finished. Both npm workspaces, one root lockfile, and the Node version record are verified. The learner reported client browser/build/lint and server compiler/build results; Codex inspected artifacts and ran the empty compiled entry under Node 24 with exit 0. Watch reactions are learner-reported. The learner chose the compiler/Node watch pipeline and retained emission on compiler errors through the current default.
+
+Further setup is deferred. Next session returns to [milestone 1 step 03](docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md): essential customer mobile screens, one purpose each, before further product design and the first agreed feature slice. These setup checks do not complete product definition, business implementation, React practice, or the later quality milestones. The [five-technique toolkit](docs/concepts/product-engineering/00-requirements-analysis-toolkit.md) preserves the core requirements definitions for study.
+
 ## Starting stack
 
 These are starting choices from the original plan. Revisit them when you have a concrete reason.

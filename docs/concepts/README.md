@@ -23,6 +23,8 @@ Each guide includes a general explanation, a worked example outside the café do
 
 ## Study method
 
+The [personal study backlog](../learning/STUDY_GAPS.md) records which distinctions needed coaching and which skills remain unassessed. Use it to choose one of these general references for review; its statuses come from learner evidence, not from the existence of a guide.
+
 Read for one question you want to answer. Explain the idea in your own words, make an artifact for a different product, and ask the tutor to review it. Revisit the artifact with a changed condition. Record the explanation and evidence in the learning log only after that interaction occurs.
 
 Distinguish three kinds of progress: a reference exists; you can explain it; you can apply it in a new situation. Only the first is established merely by adding these guides.

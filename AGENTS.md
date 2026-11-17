@@ -66,6 +66,8 @@ Use the current milestone's architecture checkpoint. Connect the implementation 
 - Keep `docs/learning/README.md`, `MVP_PLAN.md`, and `LEARNING_LOG.md` consistent with those documents. The log is chronological; the step document presents the current rules. Explicit later learner decisions supersede earlier proposals.
 - Keep future exercises open for the learner. Writing requested study notes is authorized documentation work, not authorization to implement the application or complete the learner's diagram.
 - Preserve the deferred React hooks practice for milestones 6 and 6a until it is independently assessed.
+- Maintain `docs/learning/STUDY_GAPS.md` as the evidence-based review backlog. Distinguish coached concepts, unassessed future skills, retention checks, and open product decisions. Consult a relevant entry when reviewing; update it after meaningful evidence and introduce only one chosen exercise at a time. Keep the saved next curriculum task unless the learner chooses a review topic.
+- Follow the backlog's tutor-process improvements: ask live questions directly in chat, consolidate when evidence meets the small objective, and park later implementation details instead of repeating already-settled questions. Batch routine documentation at meaningful checkpoints.
 
 Separate implementation progress from demonstrated understanding. A milestone is complete when its acceptance criteria and architecture checkpoint are met, relevant checks have evidence, and the learner can explain and apply the key idea in a new case. If the learner chooses to move ahead with a gap, record it and continue without inventing mastery.
 

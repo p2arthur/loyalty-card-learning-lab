@@ -71,6 +71,7 @@ For a fresh exercise, leave the learner's artifact section open. A tutor may sum
 - `MVP_PLAN.md` defines the curriculum and current scope. Check tasks only when evidence supports them.
 - Each step document is the study explanation and current decision record for that topic.
 - `docs/learning/README.md` is the navigation and status index.
+- `docs/learning/STUDY_GAPS.md` is the personal review backlog, with observed evidence, status, a focused exercise, and a success criterion per topic. Keep coached concepts distinct from unassessed future skills and open product decisions; update status only after new evidence.
 - `docs/concepts/README.md` indexes the reusable study guides; project steps link to the concepts relevant to their decisions.
 - `LEARNING_LOG.md` records the chronology, support used, demonstrated understanding, gaps, and next task. It is not the only place concepts should live.
 - `AGENTS.md` requires future sessions to follow this structure.

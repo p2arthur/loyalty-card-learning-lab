@@ -30,6 +30,7 @@ Current position: milestone 1, product definition. Step 01, requirements elicita
 | Debugging | Help me form a hypothesis and predict an experiment before running it. |
 | Bounded assistance | Implement only this specific setup task, explain the change, and leave the next exercise to me. |
 | Close a step | Update its study file, the index, plan, and learning log using only observed evidence. |
+| Review a gap | Read docs/learning/STUDY_GAPS.md, choose one entry, assess my understanding, then give its transfer exercise with appropriate hints. |
 
 Every milestone includes architecture reasoning. Expect to explain who owns a responsibility or piece of data, what depends on what, which alternative was considered, and how to check the intended property.
 

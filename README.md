@@ -27,6 +27,7 @@ The demo pairs a mobile web loyalty app with a separate cashier/kiosk checkout s
 | --- | --- |
 | [MVP_PLAN.md](MVP_PLAN.md) | Curriculum, scope, milestone checks, and technical references |
 | [LEARNING_LOG.md](LEARNING_LOG.md) | Chronological evidence, gaps, and exact next task |
+| [Study gaps](docs/learning/STUDY_GAPS.md) | Evidence-based review topics, exercises, and success criteria |
 | [AGENTS.md](AGENTS.md) | Persistent tutor instructions |
 | [TUTOR_GUIDE.md](TUTOR_GUIDE.md) | How to start and resume a session |
 

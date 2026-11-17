@@ -8,6 +8,7 @@ This file carries learning context between Codex chats. Record observed evidence
 - Current milestone: 1. Define the product.
 - Study framework: `LEARNING_FRAMEWORK.md`; navigate via `docs/learning/README.md`. Use one numbered Markdown file per substantive step within its milestone.
 - Reusable concept library: `docs/concepts/README.md` indexes ten general product engineering guides with non-demo examples and transfer exercises. Maintain relevant guides alongside every milestone and step. Broader transfer and new adjacent topics remain unassessed until learner attempts provide evidence.
+- Personal review backlog: `docs/learning/STUDY_GAPS.md` records eight evidence-based topics, references, exercises, and success criteria. It separates coached concepts, unassessed skills, retention, and open decisions. Review one chosen entry at a time; the next live task remains the mobile screen inventory.
 - Completed study step: `docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md`.
 - Current study step: `docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md`. Latest context evidence: `artifacts/02-current-system-context.md` within that milestone directory.
 - Next learner task: list the essential customer mobile screens with one purpose each. Review this first attempt before designing layouts or inventorying the sales-point view.
@@ -15,7 +16,7 @@ This file carries learning context between Codex chats. Record observed evidence
 - Support by concept: points calculations at independent-with-feedback after a successful changed example; context boundaries at coached practice after learner reported confusion about external responsibilities. Module versus deployment versus system boundary distinction needs transfer assessment. Implementation skills remain unassessed.
 - Implementation evidence: no application implementation has been verified during tutor setup.
 - Architecture task: learner draws a context sketch and defines observable quality scenarios.
-- Known misconceptions: none assessed; do not invent them.
+- Known misconceptions: no persistent misconception diagnosed. Observed coached distinctions and unassessed areas are recorded in the study backlog; do not infer failure or mastery beyond the evidence.
 - Review topics for later sessions: retrieve the price-cap-before-balance rule and idempotency reasoning; assess atomicity and unknown checkout outcomes before implementation.
 
 ## Requested focused practice
@@ -38,7 +39,7 @@ Track implementation and understanding separately. Replace “Not assessed” wi
 
 | Milestone | Implementation / artifacts | Understanding / transfer |
 | --- | --- | --- |
-| 1. Product definition | Step 01 study notes and step 02 workbook created; journey, decision table, and learner acceptance criterion recorded; full brief pending | Correct changed example combines conversion, discount, net-spend earning, rounding, and final balance; failed-checkout balance preservation explained; context/screen sketches and remaining criteria pending |
+| 1. Product definition | Requirements, revised context/role artifacts, and study backlog recorded; step 03 screen inventory ready; full brief pending | Independent checkout arithmetic and scope reflection recorded; context/verification distinctions were coached; transfer, implementation, screens, and remaining criteria need further evidence |
 | 2. Language and HTTP fundamentals | Not verified | Not assessed |
 | 3. System boundaries and API contract | Not verified | Not assessed |
 | 4. PostgreSQL and Prisma modeling | Not verified | Not assessed |
@@ -327,3 +328,12 @@ Earlier concept to revisit:
 - Consolidated the learner's revised actor relationships and earlier payment/email exchanges into the current context artifact. No new service architecture was implemented. Context/actor plan items are supported by these learner artifacts; broader quality scenarios and implementation checks remain open.
 - Created step 03 screen inventory/sketch workbook with the learner's artifact left blank. Reused the existing general journey, acceptance-criteria, and scope guides; extended journey guide 02 with a non-demo explanation of screen inventory versus states and modal presentation.
 - Next small objective: essential mobile screens, one purpose per screen. Screen layout, sales-point inventory, full brief, remaining criteria, and quality scenarios are unfinished. No application code or tests completed; React hooks practice remains deferred.
+
+### 2026-11-16 — Evidence-based study-gap backlog
+
+- User requested that the gaps identified in the tutoring assessment be documented for later study. Created docs/learning/STUDY_GAPS.md with eight stable review entries and linked concept guides.
+- Separated coached distinctions (artifact abstraction, verification evidence, boundary choices) from unassessed implementation skills, unassessed retention/far transfer, open security/product tradeoffs, and self-reported deferred React practice. Preserved the learner's demonstrated strengths rather than relabeling the entire unfinished curriculum as weaknesses.
+- Each entry includes observed evidence, a focused non-answered practice task, a success criterion, and relevant references. No scores, completed exercises, persistent misconceptions, or new mastery claims were invented.
+- Updated the study index, concept index, project README, learning framework, tutor guide, and AGENTS.md so the backlog is discoverable and maintained at meaningful checkpoints. Product decisions remain separate from learner understanding; the current demo policies were not changed.
+- This was a documentation task, not a new teaching assessment. Current task remains milestone 1 step 03: list essential mobile screens with one purpose each. Review topics can be selected one at a time later; no reminders or new prerequisite sequence created. No application code or tests were run.
+- Also recorded tutor-process improvements: consolidate demonstrated learning sooner, reduce repetitive follow-ups, park later implementation detail, and ask live questions directly in chat. These are not learner weaknesses. Codex documentation checks passed for 28 Markdown files, 138 local links, eight review entries, and the React-practice reference; the initial backlog prose scan had no high-severity findings.

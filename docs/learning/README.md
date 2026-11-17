@@ -16,6 +16,8 @@ Step 03 covers screen planning. Later focused steps will cover the consolidated 
 
 ## Reusable concepts alongside the project
 
+For focused later review, use the [study gaps and practice backlog](STUDY_GAPS.md). It distinguishes coached concepts, skills not yet assessed, retention checks, and product decisions. Each entry has evidence, references, a practice task, and a success criterion. The live task remains step 03 unless a review topic is chosen.
+
 The separate [product engineering library](../concepts/README.md) expands the ideas beyond this demo. Step 01 links to discovery, journeys, business rules, scenario analysis, domain modeling, acceptance criteria, and related topics. Step 02 links to boundaries and quality requirements. General transfer exercises remain unassessed until the learner attempts them.
 
 For every future milestone and step, maintain both the project notes and relevant reusable guides. Extend existing topics rather than copying the same concept into several milestone folders.

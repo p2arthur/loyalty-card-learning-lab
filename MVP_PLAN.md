@@ -19,7 +19,7 @@ Build a loyalty program for one café and one rewards program.
 
 Automatic updates to an installed Wallet pass are a stretch goal. Keep real payments, multiple businesses, and elaborate reward tiers outside the first version.
 
-The learner revised the initial operator-led, fixed-product-reward idea during milestone 1. The current demo uses customer-controlled checkout, mock products, and simulated payments/fulfillment. New points accrue only on the amount paid after a points discount. Current rules and worked examples are recorded in [step 01](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md).
+The learner revised the initial operator-led, fixed-product-reward idea during milestone 1. The current demo uses a customer-facing mobile web loyalty app plus a separate simulated cashier/kiosk checkout screen, with mock products and simulated payments/fulfillment. Registration and card display are on the phone; scanning and the points selector are at the sales point. See the [current interface flow](docs/learning/milestone-01-product-definition/artifacts/02-mobile-web-flow.md). New points accrue only on the amount paid after a points discount. Current rules and worked examples are recorded in [step 01](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md).
 
 ## Starting stack
 
@@ -106,21 +106,21 @@ Study: [Fitness function-driven development](https://www.thoughtworks.com/insigh
 
 ## 1. Define the product
 
-- [ ] Write a one-page brief describing the customer, kiosk journey, and simulated checkout.
+- [ ] Write a one-page brief describing the mobile loyalty journey and separate simulated sales-point checkout.
 - [x] Decide which information registration requires.
 - [x] Choose points earning rules, purchase amount rounding, and the points-to-discount value.
-- [x] Decide who can initiate simulated purchases and points discounts.
+- [ ] Reconfirm who can initiate purchases and points discounts through the revised sales-point interface.
 - [ ] Describe duplicate registration, insufficient points, and unavailable-server behavior.
 - [ ] Sketch the main screens on paper.
 - [ ] Turn each user action into a short acceptance criterion.
 
-Evidence for the three checked decisions: learner explanations and scenarios consolidated in [requirements elicitation and analysis](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md), including an independent checkout acceptance criterion. These are product decisions, not passing application tests. The full brief, remaining criteria, screen sketches, and architecture checkpoint are unfinished. Continue in the [product-definition workbook](docs/learning/milestone-01-product-definition/02-product-definition.md).
+Evidence for the checked registration and points decisions: learner explanations and scenarios consolidated in [requirements elicitation and analysis](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md), including an independent checkout acceptance criterion. The earlier checkout-actor decision needs review after the mobile/sales-point scope change. These are product decisions, not passing application tests. The full brief, remaining criteria, screen sketches, and architecture checkpoint are unfinished. Continue in the [product-definition workbook](docs/learning/milestone-01-product-definition/02-product-definition.md).
 
 Questions to answer: What problem does the card solve? What should a first-time customer be able to do? What is the smallest complete demonstration?
 
 ### Architecture checkpoint: requirements that shape design
 
-- [x] Identify the system boundary, its users, and external dependencies. Draw a small context view. Evidence: [learner logical context sketch](docs/learning/milestone-01-product-definition/artifacts/02-system-context-sketch.md); simulated roles are labeled and implementation remains unverified.
+- [ ] Update the system boundary, users, and external dependencies for the mobile/sales-point flow. The [earlier learner context sketch](docs/learning/milestone-01-product-definition/artifacts/02-system-context-sketch.md) remains learning evidence; the revised interface/actor arrangement needs review.
 - [ ] Write measurable quality scenarios for correctness, access control, and changeability. For example, describe what must happen when a purchase is retried, then state how you will observe success.
 
 Study: [arc42 quality requirements](https://docs.arc42.org/section-10/). Explain which requirements influence your design and which can wait.

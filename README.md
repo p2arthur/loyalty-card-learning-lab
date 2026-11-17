@@ -18,7 +18,7 @@ Each milestone and learning step maintains both its project notes and related ge
 
 Milestone 1 is **product definition**. Its first step, requirements elicitation and analysis, has completed an initial discovery pass. Step 02 is in progress: the learner context sketch is recorded, and verification behavior and remaining product-definition artifacts are being refined. The milestone remains in progress; the learning log records the exact next task.
 
-The demo uses mock products and simulated payments. Customers can register, earn points on paid amounts, and choose a points discount at checkout. Apple Wallet issuance belongs to a later milestone; automatic pass updates are a stretch goal.
+The demo pairs a mobile web loyalty app with a separate cashier/kiosk checkout screen. Customers register and display their cards on a phone; the sales-point screen scans cards and hosts points selection. Products, payment, and email are simulated. Customers earn points on paid amounts and can choose a discount at checkout. Apple Wallet issuance belongs to a later milestone; automatic pass updates are a stretch goal.
 
 ## Project references
 

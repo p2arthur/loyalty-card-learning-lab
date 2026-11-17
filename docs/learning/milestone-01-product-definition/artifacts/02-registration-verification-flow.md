@@ -1,5 +1,7 @@
 # Learner draft: registration email verification
 
+Channel revision, 2026-11-16: kiosk-hosted registration and kiosk registration-success feedback in this draft are historical. Use the [current mobile-web flow](02-mobile-web-flow.md) for the accepted interface split. Other rules remain current unless explicitly superseded.
+
 Milestone 1, step 02. The learner added verification before initial card issuance and revised the message flow after distinguishing email delivery from customer confirmation. Email delivery remains simulated in this demo.
 
 ## Learner-proposed interactions

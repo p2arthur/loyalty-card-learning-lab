@@ -1,5 +1,7 @@
 # Learner draft: customer interaction flow
 
+Channel revision, 2026-11-16: kiosk-hosted registration and kiosk registration-success feedback in this draft are historical. Use the [current mobile-web flow](02-mobile-web-flow.md) for the accepted interface split. Other rules remain current unless explicitly superseded.
+
 Milestone 1, step 02. This records the learner's proposed registration and points-use flows from the tutoring conversation. Formatting is normalized for reading; unresolved details remain visible. It is a behavioral draft, not verified implementation or a completed context diagram.
 
 ## Registration

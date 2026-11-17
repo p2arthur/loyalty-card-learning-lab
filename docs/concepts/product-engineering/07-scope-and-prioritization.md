@@ -29,6 +29,14 @@ Supporting ten item categories, promotion codes, and a recommendation feed may a
 
 An MVP, a prototype, and a learning demo can have different goals. A prototype may test understanding of a flow while simulating persistence. A usable release needs the guarantees its users rely on. A learning demo can deliberately mock an external service while recording what that substitution does and does not verify.
 
+## Count coordination, not only screens
+
+A scope reduction should examine channels, devices, handoffs, and shared state as well as feature count. Moving an enrollment form to a phone does not remove every coordination question if a staff screen still completes the transaction.
+
+For example, a rental service can let a customer enroll on their phone, then present a membership reference to the desk. That explicit handoff may avoid keeping a shared desk screen subscribed to a registration process that could finish hours later. It still needs a clear rule for associating the member with the current rental.
+
+Compare automatic cross-device updates with an explicit handoff using the real task, accessibility, operating effort, and failure behavior. Separate the purposes of links or codes: a registration destination and an account reference do different work. An estimate such as a five-minute signup also needs evidence before it becomes a reliable product promise. The [journey-mapping guide](02-user-journey-mapping.md) helps expose these transitions.
+
 ## Make prioritization explainable
 
 Compare candidate work using the outcome served, strength of supporting evidence, uncertainty reduced, dependencies, effort, and consequence of failure. A scoring framework can help organize discussion, but numbers based on guesses do not make the choice objective.

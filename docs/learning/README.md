@@ -9,7 +9,7 @@ Status: **in progress**. No application implementation has been verified.
 | Step | Status | Study document |
 | --- | --- | --- |
 | 01. Requirements elicitation and analysis | Initial discovery pass complete; remaining questions carried forward | [Concepts, decisions, and examples](milestone-01-product-definition/01-requirements-elicitation-and-analysis.md) |
-| 02. Product definition | Delayed-verification scenario recorded; shared-kiosk behavior under review | [Product-definition workbook](milestone-01-product-definition/02-product-definition.md) |
+| 02. Product definition | Mobile registration/card view and separate sales-point scanning/selection confirmed; revised flow under review | [Product-definition workbook](milestone-01-product-definition/02-product-definition.md) |
 
 Later focused steps will cover screen sketches, the consolidated brief, remaining acceptance criteria, and quality scenarios. Create a separate numbered Markdown file when each step starts, and link it here.
 
@@ -29,4 +29,4 @@ Milestones 6 and 6a include `useState`, `useMemo`, and `useCallback`. Practice s
 
 ## Resume here
 
-Open step 02 and the learner's [verification-flow draft](milestone-01-product-definition/artifacts/02-registration-verification-flow.md). The learner revised the simulated demo to remove clock-based link expiry and supplied a delayed-verification success scenario. Next, review the kiosk response if verification happens after another customer starts using it. The [context sketch](milestone-01-product-definition/artifacts/02-system-context-sketch.md) is recorded; full quality scenarios and the rest of milestone 1 remain unfinished.
+Open step 02 and the learner's [current mobile-web flow](milestone-01-product-definition/artifacts/02-mobile-web-flow.md). Next, clarify how a registered customer earns points without spending any at the cashier/kiosk. Historical context and verification artifacts remain linked; the kiosk-registration question is superseded. Milestone 1 remains unfinished.

@@ -43,7 +43,7 @@ These activities use parts of **Behavior-Driven Development (BDD)**. BDD include
 
 The customer buys café products, accumulates loyalty points, and uses those points to reduce a later purchase price.
 
-The MVP is a customer-controlled demo with mock products, simulated payment success, and simulated fulfillment. A mock payment action may be labeled as an Apple Pay choice; real Apple Pay processing has not been requested or implemented. A kiosk is the main proposed shopping interface. Card scanning at a cashier was also described, but a separate staff application or real checkout integration is not an accepted implementation requirement.
+The MVP is a customer-controlled demo with mock products, simulated payment success, and simulated fulfillment. A mock payment action may be labeled as an Apple Pay choice; real Apple Pay processing has not been requested or implemented. On 2026-11-16, the learner moved registration and card presentation to a mobile web app and retained a separate cashier/kiosk sales-point screen for scanning, points selection, and checkout. The current [mobile-web flow](artifacts/02-mobile-web-flow.md) supersedes the earlier kiosk-hosted registration journey. A real checkout integration has not been requested.
 
 This revises the original curriculum's operator-led simulation. The customer drives the demo checkout. Authorization and account isolation still need design and tests; simulated payments do not establish those properties.
 
@@ -89,19 +89,11 @@ The intended value ratio is $10 of eligible spending for each $1 of reward value
 
 The earlier fixed-coffee reward has been replaced by a selectable checkout discount. A $4.50 coffee can still be fully covered by 450 points, but customers can also choose a smaller discount and pay the remainder.
 
-## The revised customer journey
+## The current customer journey
 
-This is a faithful summary of the learner's draft, not a completed interface design:
+Use the learner's [mobile-web and sales-point flow](artifacts/02-mobile-web-flow.md). The customer registers and displays their card on a phone; a separate cashier/kiosk screen offers enrollment or scans an existing card, selects points, and handles simulated checkout. The enrollment QR opens the web registration form, while the issued card QR identifies the account.
 
-1. A customer selects a mock coffee at the kiosk.
-2. Offer registration and explain the points available from the purchase. The learner's example used a $4.50 coffee earning 45 points.
-3. If the customer accepts, collect registration information. If they decline, allow the purchase to finish without enrollment.
-4. On a later purchase, offer use of loyalty points. Scan the card to identify the account and display its balance.
-5. Let the customer select a points amount using proposed +1, +10, and +100 controls and preview the new price.
-6. The customer can confirm or decline the discount, then proceed to checkout.
-7. On success, apply the points deduction, award points on the amount paid after the discount, and show confirmation with an order number.
-
-The selector also needs a way to reduce or reset a selection; that detail has not been designed. First-purchase registration timing and when its points are attached to the new account also remain open.
+The earlier customer/application interaction flow remains a historical artifact. The current design uses an explicit return to the sales point after registration instead of pushing a registration-success modal to an old shared-kiosk session. Earning-only purchases, operator permissions, and first-purchase points timing still need clarification.
 
 ## Client guidance and server enforcement
 

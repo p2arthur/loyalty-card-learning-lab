@@ -2,9 +2,15 @@
 
 Milestone: **1. Product definition**
 
-Status: **in progress; demo link-expiry rule revised and delayed-verification success scenario recorded; kiosk-session behavior next**
+Status: **in progress; mobile loyalty and separate sales-point responsibilities confirmed; revised purchase flow under review**
 
 This workbook starts the next activity after the [initial requirements discovery pass](01-requirements-elicitation-and-analysis.md). It turns the discussed behavior into an explicit product boundary and, through later focused steps, a brief that someone else can implement without inventing the rules.
+
+## Current scope revision
+
+The learner replaced kiosk-hosted registration with a [mobile web loyalty flow](artifacts/02-mobile-web-flow.md). Registration, verification, and card display happen on the customer's phone. A separate cashier/kiosk sales-point screen scans the card, hosts the points selector, and handles simulated checkout. The learner confirmed both screen choices directly.
+
+The new manual handoff supersedes the pending question about automatically showing a delayed registration-success modal on a shared kiosk. Earlier artifacts below preserve the learning history. Their higher-level payment/email roles remain useful, but the current journey and operator responsibilities require review under the new scope.
 
 ## First objective: system context
 
@@ -68,7 +74,7 @@ After the context exercise, create separate numbered step documents as the learn
 
 The milestone's remaining deliverables are:
 
-- [x] Learner-drawn context sketch and reviewed system boundary (logical study view; implementation unverified).
+- [ ] Update and review the context sketch for the current mobile/sales-point flow (earlier learner view retained as evidence).
 - [ ] Main screen sketches, including error and success states.
 - [ ] Consolidated one-page product brief.
 - [ ] Acceptance criteria for each main user action.
@@ -79,6 +85,6 @@ Some requirement decisions are already made in step 01. These unchecked items tr
 
 ## Resume with one question
 
-**If the customer verifies the next day while another customer is using the kiosk, what should happen on the kiosk?**
+**If a registered customer wants to earn points without spending any, how should the cashier/kiosk flow handle that purchase?**
 
 Wait for the learner's answer before supplying a diagram or introducing another question.

@@ -1,5 +1,7 @@
 # Learner draft: logical system context
 
+Scope revision, 2026-11-16: this is the first context artifact. Review its actors and relationships against the [current mobile-web and sales-point flow](02-mobile-web-flow.md); the earlier learning evidence is retained.
+
 Milestone 1, step 02. Consolidated from the learner's own arrows, with provider labels normalized to the agreed simulated scope. This is a logical study sketch; it does not describe deployed services or real external calls.
 
 ```text

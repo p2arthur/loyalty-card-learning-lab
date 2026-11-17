@@ -4,14 +4,14 @@ This file carries learning context between Codex chats. Record observed evidence
 
 ## Current position
 
-- Session status: milestone 1 step 02 in progress; learner explicitly removed clock-based verification-link expiry for the simulated demo and supplied a delayed-verification success scenario; shared-kiosk behavior is next.
+- Session status: milestone 1 step 02 in progress; learner replaced kiosk-hosted registration with a mobile web loyalty app and confirmed separate cashier/kiosk scanning, points selection, and checkout.
 - Current milestone: 1. Define the product.
 - Study framework: `LEARNING_FRAMEWORK.md`; navigate via `docs/learning/README.md`. Use one numbered Markdown file per substantive step within its milestone.
 - Reusable concept library: `docs/concepts/README.md` indexes ten general product engineering guides with non-demo examples and transfer exercises. Maintain relevant guides alongside every milestone and step. Broader transfer and new adjacent topics remain unassessed until learner attempts provide evidence.
 - Completed study step: `docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md`.
 - Current study step: `docs/learning/milestone-01-product-definition/02-product-definition.md`; learner draft saved in `artifacts/02-customer-interaction-flow.md` within that milestone directory.
-- Next learner task: examine delayed verification after the originating kiosk session has ended or another customer is using it; retain the production token-lifetime review gap and remaining retry/resend questions.
-- Next tutoring question: if the customer verifies the next day while another customer is using the kiosk, what should happen on the kiosk?
+- Next learner task: clarify the earn-without-spend path in the revised mobile/sales-point flow, then review operator permissions and consolidate the revised product artifacts. The earlier shared-kiosk registration-update question is superseded.
+- Next tutoring question: if a registered customer wants to earn points without spending any, how should the cashier/kiosk flow handle that purchase?
 - Support by concept: points calculations at independent-with-feedback after a successful changed example; context boundaries at coached practice after learner reported confusion about external responsibilities. Module versus deployment versus system boundary distinction needs transfer assessment. Implementation skills remain unassessed.
 - Implementation evidence: no application implementation has been verified during tutor setup.
 - Architecture task: learner draws a context sketch and defines observable quality scenarios.
@@ -301,3 +301,13 @@ Earlier concept to revisit:
 - Checked current OWASP primary guidance recommending time-limited, single-use verification tokens. Preserved that distinction in the general concept guide and recorded production security as an unresolved tradeoff; no permanent-link implementation or real provider integration has been built.
 - New product question: an arbitrary delay may outlast the original kiosk session. Assess which device/session should receive the confirmation and how to avoid showing a previous customer's state on a shared kiosk.
 - Next question: what should happen on the kiosk if the customer verifies the next day while another customer uses it? No application checks or implementation performed. Milestone 1 remains incomplete; deferred React hooks practice is unchanged.
+
+### 2026-11-16 — Mobile loyalty app and explicit sales-point handoff
+
+- Learner chose to simplify the demo by moving the loyalty experience to a mobile web app. Sales point offers enrollment/use of loyalty before checkout. New customers scan an enrollment QR to open the web registration form; registered customers present their card QR for scanning.
+- Clarification received: purchase/checkout modal is on a separate cashier/sales-point screen. In direct chat the learner also placed the points selector on the cashier/kiosk screen. Phone owns registration/card display; the sales point owns scanning, selection, and checkout presentation.
+- Captured the learner's new flow in 02-mobile-web-flow.md and marked older kiosk-registration artifacts as historical where appropriate. The explicit return and card scan replaces the question about pushing delayed registration success to a shared kiosk.
+- Existing mock-product/payment/email scope, points arithmetic, and prior verification choices remain in force. No new native app, actual POS integration, scanning library, staff-authentication implementation, or separate backend service has been chosen. The proposed five-minute onboarding copy is an untested estimate and is distinct from the removed verification-expiry limit.
+- Extended general scope guide 07 with channel/device coordination, manual handoffs versus automatic cross-device updates, and distinct purposes of codes. No new learner mastery claimed.
+- Reopened the checkout-actor plan item because sales-point operator permissions need review after this scope revision; preserved earlier learning evidence. First-purchase timing and earning without redemption remain open.
+- Next question: how should the sales-point flow handle a registered customer who wants to earn points without spending any? No application implementation or tests performed. React hooks practice remains deferred.

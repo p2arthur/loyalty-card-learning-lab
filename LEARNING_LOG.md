@@ -4,14 +4,14 @@ This file carries learning context between Codex chats. Record observed evidence
 
 ## Current position
 
-- Session status: milestone 1 step 02 in progress; learner chose pending-email correction, a new link on address change, and five-minute expiry; an expiry acceptance criterion is next.
+- Session status: milestone 1 step 02 in progress; learner explicitly removed clock-based verification-link expiry for the simulated demo and supplied a delayed-verification success scenario; shared-kiosk behavior is next.
 - Current milestone: 1. Define the product.
 - Study framework: `LEARNING_FRAMEWORK.md`; navigate via `docs/learning/README.md`. Use one numbered Markdown file per substantive step within its milestone.
 - Reusable concept library: `docs/concepts/README.md` indexes ten general product engineering guides with non-demo examples and transfer exercises. Maintain relevant guides alongside every milestone and step. Broader transfer and new adjacent topics remain unassessed until learner attempts provide evidence.
 - Completed study step: `docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md`.
 - Current study step: `docs/learning/milestone-01-product-definition/02-product-definition.md`; learner draft saved in `artifacts/02-customer-interaction-flow.md` within that milestone directory.
-- Next learner task: write a Given/When/Then criterion for a verification link followed six minutes after issuance; then continue the remaining product-definition artifacts while tracking open retry/resend rules.
-- Next tutoring question: using Given/When/Then, how would you describe a customer following a verification link six minutes after it was issued?
+- Next learner task: examine delayed verification after the originating kiosk session has ended or another customer is using it; retain the production token-lifetime review gap and remaining retry/resend questions.
+- Next tutoring question: if the customer verifies the next day while another customer is using the kiosk, what should happen on the kiosk?
 - Support by concept: points calculations at independent-with-feedback after a successful changed example; context boundaries at coached practice after learner reported confusion about external responsibilities. Module versus deployment versus system boundary distinction needs transfer assessment. Implementation skills remain unassessed.
 - Implementation evidence: no application implementation has been verified during tutor setup.
 - Architecture task: learner draws a context sketch and defines observable quality scenarios.
@@ -292,3 +292,12 @@ Earlier concept to revisit:
 - Evidence: learner applied the address-specific proof principle after a concrete changed-address example. No secure token generation, storage, single-use behavior, or implementation has been assessed; do not infer those properties from the unique-identifier proposal.
 - Updated current project rules and the registration artifact; extended reusable guide 08 with proof scope/lifetime using a non-demo example. Order-notification retries and registration verification retain separate purposes. Open retry stopping rules and first-purchase points timing are preserved.
 - Next task: learner writes an expiry acceptance criterion for a link opened six minutes after issuance. No application implementation or tests performed. React hooks practice remains deferred.
+
+### 2026-11-16 — Verification lifetime revision and delayed completion
+
+- Learner first supplied a successful-verification scenario for an exercise about an expired link. Tutor pointed out the mismatch with the then-current five-minute rule. This did not demonstrate expiry-case handling.
+- Learner then explicitly changed the product policy: remove the time limit so the same verification link can be followed after an arbitrary delay. Recorded as the current simulated-demo choice, superseding five-minute expiry; the previously chosen invalidation on email change remains in force. Behavior after first use is not inferred.
+- Revised learner criterion: after six minutes, valid verification shows a mobile congratulations page, newly issued QR card, and Add to Wallet button; the kiosk also shows a success modal and balance. Under the revised demo rule this is a success scenario, not an expired-link scenario.
+- Checked current OWASP primary guidance recommending time-limited, single-use verification tokens. Preserved that distinction in the general concept guide and recorded production security as an unresolved tradeoff; no permanent-link implementation or real provider integration has been built.
+- New product question: an arbitrary delay may outlast the original kiosk session. Assess which device/session should receive the confirmation and how to avoid showing a previous customer's state on a shared kiosk.
+- Next question: what should happen on the kiosk if the customer verifies the next day while another customer uses it? No application checks or implementation performed. Milestone 1 remains incomplete; deferred React hooks practice is unchanged.

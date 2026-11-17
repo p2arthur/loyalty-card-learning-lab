@@ -16,7 +16,7 @@ Each milestone and learning step maintains both its project notes and related ge
 
 ## Current position
 
-Milestone 1 is **product definition**. Its first step, requirements elicitation and analysis, has completed an initial discovery pass. The next step consolidates those findings into a product definition, starting with a system context view. The milestone remains in progress.
+Milestone 1 is **product definition**. Its first step, requirements elicitation and analysis, has completed an initial discovery pass. Step 02 is in progress: the learner context sketch is recorded, and verification behavior and remaining product-definition artifacts are being refined. The milestone remains in progress; the learning log records the exact next task.
 
 The demo uses mock products and simulated payments. Customers can register, earn points on paid amounts, and choose a points discount at checkout. Apple Wallet issuance belongs to a later milestone; automatic pass updates are a stretch goal.
 

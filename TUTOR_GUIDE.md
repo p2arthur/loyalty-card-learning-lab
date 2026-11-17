@@ -17,7 +17,7 @@ For each milestone and step, maintain separate reusable concept guides
 under docs/concepts/ with examples beyond the demo and transfer exercises.
 ```
 
-Current position: milestone 1, product definition. Step 01, requirements elicitation and analysis, completed its initial discovery pass. Step 02 starts with a learner-drawn system context sketch. No implementation has been verified.
+Current position: milestone 1, product definition. Step 01, requirements elicitation and analysis, completed its initial discovery pass. Step 02 is in progress with a learner-drawn context sketch recorded. Resume the exact next task in the learning log and workbook; do not restart that sketch. No implementation has been verified.
 
 ## Useful session requests
 

@@ -44,6 +44,8 @@ Verification evidence has a scope and a lifetime. Suppose a student changes the 
 
 Expiry, address changes, and resends are distinct cases. A product must decide which earlier requests remain usable and what recovery is offered. A new link does not by itself specify how the implementation handles the old one. Record the intended behavior and test it independently of the delivery mechanism. Secure generation, storage, and validation are later implementation responsibilities, not properties established by drawing the flow.
 
+A lifetime policy also balances usability against how long unused verification evidence remains usable. A short window may be inconvenient; increasing that window and removing expiry altogether have different consequences. [OWASP recommends time-limited, single-use verification tokens](https://cheatsheetseries.owasp.org/cheatsheets/Email_Validation_and_Verification_Cheat_Sheet.html). Choose an appropriate duration for the real product rather than treating one arbitrary short window as universal. A simulated learning policy does not establish production security.
+
 ## Source dependencies and runtime calls
 
 One component can call another at runtime while the code dependency points in a different direction through an interface. Keep diagram arrows labeled so readers know whether they mean a request, a data flow, or an import.

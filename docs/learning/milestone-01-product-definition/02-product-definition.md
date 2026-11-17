@@ -2,7 +2,7 @@
 
 Milestone: **1. Product definition**
 
-Status: **in progress; context and verification recovery rules recorded; expiry acceptance criterion next**
+Status: **in progress; demo link-expiry rule revised and delayed-verification success scenario recorded; kiosk-session behavior next**
 
 This workbook starts the next activity after the [initial requirements discovery pass](01-requirements-elicitation-and-analysis.md). It turns the discussed behavior into an explicit product boundary and, through later focused steps, a brief that someone else can implement without inventing the rules.
 
@@ -44,7 +44,7 @@ The proposed starting stack is recorded in the [MVP plan](../../../MVP_PLAN.md).
 
 The learner subsequently added a [registration verification flow](artifacts/02-registration-verification-flow.md): the app generates the link, the simulated email service delivers it, and the customer follows the link back to the app. Initial card issuance now requires verification, as well as reissuance. The app owns the verification decision. A provider delivery report does not establish completed verification.
 
-Registration verification and the order-confirmation email below have different purposes. A successful paid order can remain confirmed while its notification fails; a loyalty-card registration can still await its required verification. The customer may correct a pending registration's address, which requires a new verification link. The old address's link cannot verify the updated registration. Each link expires after five minutes, and an unverified customer can request another verification email. The timing of first-purchase points and detailed retry/resend policy remain open.
+Registration verification and the order-confirmation email below have different purposes. A successful paid order can remain confirmed while its notification fails; a loyalty-card registration can still await its required verification. The customer may correct a pending registration's address, which requires a new verification link. The old address's link cannot verify the updated registration. The learner removed clock-based expiry for the simulated demo on 2026-11-16, superseding the earlier five-minute policy; an unverified customer can request another email. No-clock expiry is a demo choice with a production-security review gap, not a recommendation to deploy permanent verification tokens. The timing of first-purchase points and detailed retry/resend policy remain open.
 
 The learner chose to confirm a successful checkout even when its confirmation email cannot be delivered. Show the receipt and order ID in the application so the customer can proceed independently of email delivery. Email processing can continue in the background.
 
@@ -79,6 +79,6 @@ Some requirement decisions are already made in step 01. These unchecked items tr
 
 ## Resume with one question
 
-**Using Given/When/Then, how would you describe a customer following a verification link six minutes after it was issued?**
+**If the customer verifies the next day while another customer is using the kiosk, what should happen on the kiosk?**
 
 Wait for the learner's answer before supplying a diagram or introducing another question.

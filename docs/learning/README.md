@@ -9,9 +9,10 @@ Status: **in progress**. No application implementation has been verified.
 | Step | Status | Study document |
 | --- | --- | --- |
 | 01. Requirements elicitation and analysis | Initial discovery pass complete; remaining questions carried forward | [Concepts, decisions, and examples](milestone-01-product-definition/01-requirements-elicitation-and-analysis.md) |
-| 02. Product definition | Interface split and earn-only flow recorded; revised context sketch next | [Product-definition workbook](milestone-01-product-definition/02-product-definition.md) |
+| 02. Product definition | Context and checkout-role pass complete; milestone deliverables still open | [Product-definition workbook](milestone-01-product-definition/02-product-definition.md) |
+| 03. Screen inventory and sketches | Ready to start; mobile screen inventory pending | [Screen-planning workbook](milestone-01-product-definition/03-screen-inventory-and-sketches.md) |
 
-Later focused steps will cover screen sketches, the consolidated brief, remaining acceptance criteria, and quality scenarios. Create a separate numbered Markdown file when each step starts, and link it here.
+Step 03 covers screen planning. Later focused steps will cover the consolidated brief, remaining acceptance criteria, and quality scenarios. Create a separate numbered Markdown file when each step starts, and link it here.
 
 ## Reusable concepts alongside the project
 
@@ -29,4 +30,4 @@ Milestones 6 and 6a include `useState`, `useMemo`, and `useCallback`. Practice s
 
 ## Resume here
 
-Open step 02 and the learner's [current mobile-web flow](milestone-01-product-definition/artifacts/02-mobile-web-flow.md). The earn-only path is recorded. Next, redraw the system context for the revised flow, including its human actors. Historical context and verification artifacts remain linked; the kiosk-registration question is superseded. Milestone 1 remains unfinished.
+Open [step 03](milestone-01-product-definition/03-screen-inventory-and-sketches.md). First list essential mobile screens and one purpose for each. The [current context](milestone-01-product-definition/artifacts/02-current-system-context.md) and public demo-checkout role are recorded. Milestone 1 remains unfinished.

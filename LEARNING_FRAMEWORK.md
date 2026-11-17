@@ -22,6 +22,7 @@ docs/learning/
   milestone-01-product-definition/
     01-requirements-elicitation-and-analysis.md
     02-product-definition.md
+    03-screen-inventory-and-sketches.md
 ```
 
 Create a separate numbered Markdown file for each new substantive step as it begins. Continue the numbering within its milestone. Add future milestone directories when work reaches them. Do not prefill exercises with finished solutions.

@@ -4,14 +4,14 @@ This file carries learning context between Codex chats. Record observed evidence
 
 ## Current position
 
-- Session status: milestone 1 step 02 in progress; learner replaced kiosk-hosted registration with a mobile web loyalty app and confirmed separate cashier/kiosk scanning, points selection, and checkout.
+- Session status: milestone 1 context/checkout-role pass complete; step 03 screen inventory is ready to start. The full milestone remains in progress.
 - Current milestone: 1. Define the product.
 - Study framework: `LEARNING_FRAMEWORK.md`; navigate via `docs/learning/README.md`. Use one numbered Markdown file per substantive step within its milestone.
 - Reusable concept library: `docs/concepts/README.md` indexes ten general product engineering guides with non-demo examples and transfer exercises. Maintain relevant guides alongside every milestone and step. Broader transfer and new adjacent topics remain unassessed until learner attempts provide evidence.
 - Completed study step: `docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md`.
-- Current study step: `docs/learning/milestone-01-product-definition/02-product-definition.md`; learner draft saved in `artifacts/02-customer-interaction-flow.md` within that milestone directory.
-- Next learner task: update the context sketch for the revised mobile loyalty and sales-point flow, including human actors, then review operator permissions and consolidate the remaining product artifacts.
-- Next tutoring question: can you update the system context sketch for the revised mobile loyalty and sales-point flow, including the people who interact with each part?
+- Current study step: `docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md`. Latest context evidence: `artifacts/02-current-system-context.md` within that milestone directory.
+- Next learner task: list the essential customer mobile screens with one purpose each. Review this first attempt before designing layouts or inventorying the sales-point view.
+- Next tutoring question: can you list the essential screens for the customer's mobile web app, giving each one a single purpose?
 - Support by concept: points calculations at independent-with-feedback after a successful changed example; context boundaries at coached practice after learner reported confusion about external responsibilities. Module versus deployment versus system boundary distinction needs transfer assessment. Implementation skills remain unassessed.
 - Implementation evidence: no application implementation has been verified during tutor setup.
 - Architecture task: learner draws a context sketch and defines observable quality scenarios.
@@ -319,3 +319,11 @@ Earlier concept to revisit:
 - Captured the current business meaning: Skip omits redemption, not account association or later earnings. Redeem zero, pay the undiscounted eligible amount, and credit earnings only after successful checkout, carrying forward the existing failure rule. No actual QR scan, balance mutation, or application test has run.
 - Added the accepted scenario to the mobile-flow artifact and extended general guide 03 with the broader rule that declining an optional step must preserve explicitly required context and downstream behavior, using a subscription example.
 - Next learner task: redraw the current context view with human actors for the revised mobile/sales-point arrangement. Operator authorization remains unresolved; milestone 1 is not complete. React hooks practice remains deferred.
+
+### 2026-11-16 — Backend authority, public demo checkout, and next screen-planning step
+
+- Learner's updated context described customer consent, card scanning, and sales-point requests to the loyalty app. On clarification, learner explicitly placed earned-points and final-balance calculations in the loyalty backend.
+- Asked whether the checkout interface should be open to demo participants or require cashier/staff login. Learner chose anyone may use it. Recorded as the public simulated-checkout role; this does not settle customer-account privacy or all API permissions.
+- Consolidated the learner's revised actor relationships and earlier payment/email exchanges into the current context artifact. No new service architecture was implemented. Context/actor plan items are supported by these learner artifacts; broader quality scenarios and implementation checks remain open.
+- Created step 03 screen inventory/sketch workbook with the learner's artifact left blank. Reused the existing general journey, acceptance-criteria, and scope guides; extended journey guide 02 with a non-demo explanation of screen inventory versus states and modal presentation.
+- Next small objective: essential mobile screens, one purpose per screen. Screen layout, sales-point inventory, full brief, remaining criteria, and quality scenarios are unfinished. No application code or tests completed; React hooks practice remains deferred.

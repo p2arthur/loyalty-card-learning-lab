@@ -109,18 +109,18 @@ Study: [Fitness function-driven development](https://www.thoughtworks.com/insigh
 - [ ] Write a one-page brief describing the mobile loyalty journey and separate simulated sales-point checkout.
 - [x] Decide which information registration requires.
 - [x] Choose points earning rules, purchase amount rounding, and the points-to-discount value.
-- [ ] Reconfirm who can initiate purchases and points discounts through the revised sales-point interface.
+- [x] Decide who can use simulated checkout: any demo participant, without a separate cashier/staff login. Backend rules still govern points changes.
 - [ ] Describe duplicate registration, insufficient points, and unavailable-server behavior.
 - [ ] Sketch the main screens on paper.
 - [ ] Turn each user action into a short acceptance criterion.
 
-Evidence for the checked registration and points decisions: learner explanations and scenarios consolidated in [requirements elicitation and analysis](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md), including an independent checkout acceptance criterion. The earlier checkout-actor decision needs review after the mobile/sales-point scope change. These are product decisions, not passing application tests. The full brief, remaining criteria, screen sketches, and architecture checkpoint are unfinished. Continue in the [product-definition workbook](docs/learning/milestone-01-product-definition/02-product-definition.md).
+Evidence for the checked registration and points decisions: learner explanations and scenarios consolidated in [requirements elicitation and analysis](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md), including an independent checkout acceptance criterion. The learner also confirmed public demo-checkout access and backend authority in the [current context](docs/learning/milestone-01-product-definition/artifacts/02-current-system-context.md). These are product decisions, not passing application tests. The full brief, remaining criteria, screen sketches, and architecture checkpoint are unfinished. The context pass is recorded in the [product-definition workbook](docs/learning/milestone-01-product-definition/02-product-definition.md). Continue in [screen inventory and sketches](docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md).
 
 Questions to answer: What problem does the card solve? What should a first-time customer be able to do? What is the smallest complete demonstration?
 
 ### Architecture checkpoint: requirements that shape design
 
-- [ ] Update the system boundary, users, and external dependencies for the mobile/sales-point flow. The [earlier learner context sketch](docs/learning/milestone-01-product-definition/artifacts/02-system-context-sketch.md) remains learning evidence; the revised interface/actor arrangement needs review.
+- [x] Update the system boundary, users, and simulated external dependencies for the mobile/sales-point flow. Evidence: [current learner context](docs/learning/milestone-01-product-definition/artifacts/02-current-system-context.md); implementation and broader permissions remain unverified.
 - [ ] Write measurable quality scenarios for correctness, access control, and changeability. For example, describe what must happen when a purchase is retried, then state how you will observe success.
 
 Study: [arc42 quality requirements](https://docs.arc42.org/section-10/). Explain which requirements influence your design and which can wait.

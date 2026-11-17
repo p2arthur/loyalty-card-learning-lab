@@ -38,8 +38,8 @@ The shared kiosk no longer hosts registration or needs an automatic registration
 
 Mock products, simulated payment/email behavior, and the mathematical points rules are unchanged. The earlier removal of clock-based verification expiry remains the demo decision, with its production-security review gap. The proposed statement that onboarding takes five minutes is an untested estimate, not a measured result or a restored link-expiry rule.
 
-Still open: exact sales-point operator permissions, purchase association while registration is pending, mock versus actual camera scanning, and the revised full context view. These are backlog items; discuss one at a time.
+Anyone may use the simulated checkout without staff login. The backend owns points calculations and final account updates. Still open: broader customer-account access rules, purchase association while registration is pending, mock versus actual camera scanning, and the revised full context view. These are backlog items; discuss one at a time.
 
-Next learner artifact: update the system context sketch for the revised mobile loyalty and sales-point flow, including the people who interact with each part.
+The [revised context](02-current-system-context.md) is recorded. Next learner artifact: the mobile screen inventory in [step 03](../03-screen-inventory-and-sketches.md).
 
 Return to [step 02](../02-product-definition.md). General background: [scope and coordination](../../../concepts/product-engineering/07-scope-and-prioritization.md).

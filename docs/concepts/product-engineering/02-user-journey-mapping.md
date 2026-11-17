@@ -48,6 +48,12 @@ Attach evidence to important difficulties. For a proposed experience, identify w
 
 Review the map by following one person through it. At every handoff, check whether they know what happened, what they can do next, and who can help. Link resulting requirements to [business rules](03-business-rules-and-decisions.md) and later [acceptance criteria](06-acceptance-criteria-and-bdd.md).
 
+## From a flow to a screen inventory
+
+A screen inventory gives each proposed view a purpose and connects it to the user's task. Group related actions before deciding which require separate pages. A loading indicator, a rejected form, and a successful result can be states of a view rather than three new screens. A modal is a presentation choice, not automatically another product capability.
+
+For a library reservation, reviewing availability, confirming a chosen item, and retrieving a reservation reference are distinct goals. They could be organized into several pages or a smaller set of changing views. The useful review asks whether each goal has a clear place, whether the transitions are understandable, and what happens when the action fails. Sketch after establishing that structure; do not select a screen count merely to match a template.
+
 ## Common mistakes
 
 A list of screens can omit the task that brought the person to the product. A journey assembled from several incompatible actors can hide conflicting needs. Happy-path-only maps miss the moments that drive support cost and abandonment.

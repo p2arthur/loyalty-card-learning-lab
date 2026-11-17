@@ -2,7 +2,7 @@
 
 Milestone: **1. Product definition**
 
-Status: **in progress; revised interface split and earn-only flow recorded; current context sketch is next**
+Status: **context and checkout-role pass complete; overall milestone 1 continues in step 03**
 
 This workbook starts the next activity after the [initial requirements discovery pass](01-requirements-elicitation-and-analysis.md). It turns the discussed behavior into an explicit product boundary and, through later focused steps, a brief that someone else can implement without inventing the rules.
 
@@ -10,7 +10,9 @@ This workbook starts the next activity after the [initial requirements discovery
 
 The learner replaced kiosk-hosted registration with a [mobile web loyalty flow](artifacts/02-mobile-web-flow.md). Registration, verification, and card display happen on the customer's phone. A separate cashier/kiosk sales-point screen scans the card, hosts the points selector, and handles simulated checkout. The learner confirmed both screen choices directly.
 
-The learner also defined the earn-only path: scan the card, skip redemption, preserve account association, and award points after successful checkout. The new manual handoff supersedes the pending question about automatically showing a delayed registration-success modal on a shared kiosk. Earlier artifacts below preserve the learning history. Their higher-level payment/email roles remain useful, but the current journey and operator responsibilities require review under the new scope.
+The learner also defined the earn-only path: scan the card, skip redemption, preserve account association, and award points after successful checkout. The new manual handoff supersedes the pending question about automatically showing a delayed registration-success modal on a shared kiosk. Earlier artifacts below preserve the learning history. Their payment/email relationships are retained in the revised context. The checkout operator is a public demo role; broader customer-account permissions remain unassessed.
+
+The learner confirmed that the backend calculates points and final balances and that anyone may operate the simulated checkout without a cashier login. The [current context artifact](artifacts/02-current-system-context.md) consolidates the revised actor relationships and the earlier simulated-provider exchanges. The next exercise is [step 03: screen inventory](03-screen-inventory-and-sketches.md).
 
 ## First objective: system context
 
@@ -74,7 +76,7 @@ After the context exercise, create separate numbered step documents as the learn
 
 The milestone's remaining deliverables are:
 
-- [ ] Update and review the context sketch for the current mobile/sales-point flow (earlier learner view retained as evidence).
+- [x] Update and review the context sketch for the current mobile/sales-point flow (learner arrows and clarifications consolidated; implementation unverified).
 - [ ] Main screen sketches, including error and success states.
 - [ ] Consolidated one-page product brief.
 - [ ] Acceptance criteria for each main user action.
@@ -85,6 +87,6 @@ Some requirement decisions are already made in step 01. These unchecked items tr
 
 ## Resume with one question
 
-**Can you update the system context sketch for the revised mobile loyalty and sales-point flow, including the people who interact with each part?**
+Continue in [step 03](03-screen-inventory-and-sketches.md): **can you list the essential screens for the customer's mobile web app, giving each one a single purpose?**
 
 Wait for the learner's answer before supplying a diagram or introducing another question.

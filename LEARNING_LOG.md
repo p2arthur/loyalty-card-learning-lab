@@ -10,8 +10,8 @@ This file carries learning context between Codex chats. Record observed evidence
 - Reusable concept library: `docs/concepts/README.md` indexes ten general product engineering guides with non-demo examples and transfer exercises. Maintain relevant guides alongside every milestone and step. Broader transfer and new adjacent topics remain unassessed until learner attempts provide evidence.
 - Completed study step: `docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md`.
 - Current study step: `docs/learning/milestone-01-product-definition/02-product-definition.md`; learner draft saved in `artifacts/02-customer-interaction-flow.md` within that milestone directory.
-- Next learner task: clarify the earn-without-spend path in the revised mobile/sales-point flow, then review operator permissions and consolidate the revised product artifacts. The earlier shared-kiosk registration-update question is superseded.
-- Next tutoring question: if a registered customer wants to earn points without spending any, how should the cashier/kiosk flow handle that purchase?
+- Next learner task: update the context sketch for the revised mobile loyalty and sales-point flow, including human actors, then review operator permissions and consolidate the remaining product artifacts.
+- Next tutoring question: can you update the system context sketch for the revised mobile loyalty and sales-point flow, including the people who interact with each part?
 - Support by concept: points calculations at independent-with-feedback after a successful changed example; context boundaries at coached practice after learner reported confusion about external responsibilities. Module versus deployment versus system boundary distinction needs transfer assessment. Implementation skills remain unassessed.
 - Implementation evidence: no application implementation has been verified during tutor setup.
 - Architecture task: learner draws a context sketch and defines observable quality scenarios.
@@ -311,3 +311,11 @@ Earlier concept to revisit:
 - Extended general scope guide 07 with channel/device coordination, manual handoffs versus automatic cross-device updates, and distinct purposes of codes. No new learner mastery claimed.
 - Reopened the checkout-actor plan item because sales-point operator permissions need review after this scope revision; preserved earlier learning evidence. First-purchase timing and earning without redemption remain open.
 - Next question: how should the sales-point flow handle a registered customer who wants to earn points without spending any? No application implementation or tests performed. React hooks practice remains deferred.
+
+### 2026-11-16 — Separation-of-concerns reflection and earn-only checkout
+
+- Learner explicitly recognized that merging checkout and loyalty onboarding had introduced unnecessary complexity and that separating those flows made the design easier. Tutor named the separation-of-concerns principle; this does not imply separate backend services or complete architectural mastery.
+- Learner independently described the earn-only scenario: ask for the card, scan it, show the balance and a redemption selector, allow confirmation or Skip, and add earned points after checkout when Skip is chosen.
+- Captured the current business meaning: Skip omits redemption, not account association or later earnings. Redeem zero, pay the undiscounted eligible amount, and credit earnings only after successful checkout, carrying forward the existing failure rule. No actual QR scan, balance mutation, or application test has run.
+- Added the accepted scenario to the mobile-flow artifact and extended general guide 03 with the broader rule that declining an optional step must preserve explicitly required context and downstream behavior, using a subscription example.
+- Next learner task: redraw the current context view with human actors for the revised mobile/sales-point arrangement. Operator authorization remains unresolved; milestone 1 is not complete. React hooks practice remains deferred.

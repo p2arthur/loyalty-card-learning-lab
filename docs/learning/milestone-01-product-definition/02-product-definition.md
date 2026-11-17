@@ -2,7 +2,7 @@
 
 Milestone: **1. Product definition**
 
-Status: **in progress; mobile loyalty and separate sales-point responsibilities confirmed; revised purchase flow under review**
+Status: **in progress; revised interface split and earn-only flow recorded; current context sketch is next**
 
 This workbook starts the next activity after the [initial requirements discovery pass](01-requirements-elicitation-and-analysis.md). It turns the discussed behavior into an explicit product boundary and, through later focused steps, a brief that someone else can implement without inventing the rules.
 
@@ -10,7 +10,7 @@ This workbook starts the next activity after the [initial requirements discovery
 
 The learner replaced kiosk-hosted registration with a [mobile web loyalty flow](artifacts/02-mobile-web-flow.md). Registration, verification, and card display happen on the customer's phone. A separate cashier/kiosk sales-point screen scans the card, hosts the points selector, and handles simulated checkout. The learner confirmed both screen choices directly.
 
-The new manual handoff supersedes the pending question about automatically showing a delayed registration-success modal on a shared kiosk. Earlier artifacts below preserve the learning history. Their higher-level payment/email roles remain useful, but the current journey and operator responsibilities require review under the new scope.
+The learner also defined the earn-only path: scan the card, skip redemption, preserve account association, and award points after successful checkout. The new manual handoff supersedes the pending question about automatically showing a delayed registration-success modal on a shared kiosk. Earlier artifacts below preserve the learning history. Their higher-level payment/email roles remain useful, but the current journey and operator responsibilities require review under the new scope.
 
 ## First objective: system context
 
@@ -85,6 +85,6 @@ Some requirement decisions are already made in step 01. These unchecked items tr
 
 ## Resume with one question
 
-**If a registered customer wants to earn points without spending any, how should the cashier/kiosk flow handle that purchase?**
+**Can you update the system context sketch for the revised mobile loyalty and sales-point flow, including the people who interact with each part?**
 
 Wait for the learner's answer before supplying a diagram or introducing another question.

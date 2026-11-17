@@ -93,7 +93,7 @@ The earlier fixed-coffee reward has been replaced by a selectable checkout disco
 
 Use the learner's [mobile-web and sales-point flow](artifacts/02-mobile-web-flow.md). The customer registers and displays their card on a phone; a separate cashier/kiosk screen offers enrollment or scans an existing card, selects points, and handles simulated checkout. The enrollment QR opens the web registration form, while the issued card QR identifies the account.
 
-The earlier customer/application interaction flow remains a historical artifact. The current design uses an explicit return to the sales point after registration instead of pushing a registration-success modal to an old shared-kiosk session. Earning-only purchases, operator permissions, and first-purchase points timing still need clarification.
+The earlier customer/application interaction flow remains a historical artifact. The current design uses an explicit return to the sales point after registration instead of pushing a registration-success modal to an old shared-kiosk session. A customer can scan the card and skip redemption while still earning points after successful checkout. Operator permissions and first-purchase points timing still need clarification.
 
 ## Client guidance and server enforcement
 

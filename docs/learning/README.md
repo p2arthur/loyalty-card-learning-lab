@@ -9,7 +9,7 @@ Status: **in progress**. No application implementation has been verified.
 | Step | Status | Study document |
 | --- | --- | --- |
 | 01. Requirements elicitation and analysis | Initial discovery pass complete; remaining questions carried forward | [Concepts, decisions, and examples](milestone-01-product-definition/01-requirements-elicitation-and-analysis.md) |
-| 02. Product definition | Mobile registration/card view and separate sales-point scanning/selection confirmed; revised flow under review | [Product-definition workbook](milestone-01-product-definition/02-product-definition.md) |
+| 02. Product definition | Interface split and earn-only flow recorded; revised context sketch next | [Product-definition workbook](milestone-01-product-definition/02-product-definition.md) |
 
 Later focused steps will cover screen sketches, the consolidated brief, remaining acceptance criteria, and quality scenarios. Create a separate numbered Markdown file when each step starts, and link it here.
 
@@ -29,4 +29,4 @@ Milestones 6 and 6a include `useState`, `useMemo`, and `useCallback`. Practice s
 
 ## Resume here
 
-Open step 02 and the learner's [current mobile-web flow](milestone-01-product-definition/artifacts/02-mobile-web-flow.md). Next, clarify how a registered customer earns points without spending any at the cashier/kiosk. Historical context and verification artifacts remain linked; the kiosk-registration question is superseded. Milestone 1 remains unfinished.
+Open step 02 and the learner's [current mobile-web flow](milestone-01-product-definition/artifacts/02-mobile-web-flow.md). The earn-only path is recorded. Next, redraw the system context for the revised flow, including its human actors. Historical context and verification artifacts remain linked; the kiosk-registration question is superseded. Milestone 1 remains unfinished.

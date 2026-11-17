@@ -39,6 +39,12 @@ Review the rules with someone responsible for the policy. Then connect each rule
 
 Do not introduce a rule engine solely because a table exists. A small explicit calculation or decision function may be sufficient. More complex policy tooling needs a reason, such as frequent changes by policy owners and a practical way to review them.
 
+## Define what skipping an optional action preserves
+
+An optional step needs a precise outcome when declined. For an illustrative subscription renewal, identifying the customer's account and buying extra storage are different decisions. Skipping the storage upgrade can preserve the account and continue the base renewal; cancelling the renewal is another outcome entirely.
+
+State which association remains, which change is omitted, and which later rules still execute. A generic Skip label does not define those effects by itself. Include the unchanged state in acceptance criteria so an implementation cannot accidentally discard the context needed for the rest of the workflow. This distinction also appears in booking without extras, saving without publishing, and purchasing without redeeming a benefit.
+
 ## Common mistakes
 
 Vague words such as eligible, recent, and valid need definitions. Hidden ordering can make results depend on which conditional happens to execute first. Client-only enforcement can fail when requests arrive through another route. Confusing a rule with a temporary implementation restriction can also make an accidental limitation permanent.

@@ -68,6 +68,18 @@ A separately deployed service can still be part of the software system being des
 
 Reasons to consider a separate service include independent release needs, distinct operational ownership, or an established platform that already provides the responsibility. Weigh those against network failures, coordination, observability, and consistency work. Having two responsibilities is enough reason to discuss a module boundary; it does not automatically justify a network boundary.
 
+### Repository, package, and process boundaries
+
+A repository groups source files under version control. A package groups code, declared dependencies, and commands for a package manager. A process is a running program. These boundaries answer different questions; putting two packages in one repository does not require them to run in one process or be deployed together.
+
+For example, a workshop-booking product might keep its browser interface and HTTP server in one repository. Each has its own `package.json`. A root manifest can register both as [npm workspaces](https://docs.npmjs.com/cli/v11/using-npm/workspaces/), enabling root-level dependency installation and commands targeted at one package. The server declares its HTTP framework; the browser package declares its UI dependencies. npm may reuse a root `node_modules` directory, while dependency ownership is still declared per manifest.
+
+Workspaces coordinate package management. They do not create the HTTP communication between the browser and server or enforce all architectural import restrictions. Keeping packages independent without workspaces is also valid; compare maintenance convenience with the extra root configuration. A shared repository is often called a monorepo, but that term does not establish a microservice architecture.
+
+The root coordinator can use [`"private": true`](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#private) to make npm refuse to publish it. This field governs that package's npm publication, not the visibility of its Git repository or the publication settings of other workspace packages.
+
+For later transfer practice, consider a university browser portal and a background reminder worker in the same repository. Explain their package dependencies and how many running processes a proposed deployment would need. Success means distinguishing dependency installation from runtime execution without assuming that workspace membership decides deployment. This exercise is preparation, not demonstrated learning.
+
 ### Distinguish a simulated role from a real integration
 
 A prototype can simulate an interaction that a later product would have with an external provider. For example, a booking demo may display a confirmation-email preview rather than send a message. That does not establish a working connection to an email service or prove control of a real inbox.

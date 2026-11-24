@@ -3,6 +3,7 @@ import { products } from "../../data/products";
 import ProductsList from "./ProductList";
 import ScreenSection from "./ScreenSection";
 import SearchInput from "./SearchInput";
+import RewardsHelpProvider from "./RewardsHelpProvider";
 
 type ProductTab = "regular" | "rewards" | undefined;
 
@@ -32,7 +33,9 @@ export default function ProductSelectionScreen() {
         <p>Instructions</p>
       ) : (
         <ScreenSection title={productTab}>
-          <ProductsList productList={products} />
+          <RewardsHelpProvider>
+            <ProductsList productList={products} />
+          </RewardsHelpProvider>
         </ScreenSection>
       )}
     </>

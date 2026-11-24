@@ -1,3 +1,4 @@
+import { useState } from "react";
 import useCounter from "../../counter";
 import type { ProductList } from "./interfaces";
 import ProductCard from "./ProductCard";
@@ -6,6 +7,7 @@ type ProductListProps = { productList: ProductList };
 
 export default function ProductsList({ productList }: ProductListProps) {
   const { count, addCount } = useCounter();
+  const [modalTarget, setModalTarget] = useState<HTMLDivElement | null>(null);
 
   return (
     <>
@@ -19,9 +21,11 @@ export default function ProductsList({ productList }: ProductListProps) {
               key={i}
               cardTitle={product.productTitle}
               cardDescription={product.productDescription}
+              modalTarget={modalTarget}
             />
           ))}
         </ul>
+        <div id="rewards-help-target" ref={setModalTarget} />
       </section>
     </>
   );

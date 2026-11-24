@@ -24,6 +24,12 @@ The demo pairs a mobile web loyalty app with a separate cashier/kiosk checkout s
 
 The [scaffolding checkpoint](docs/learning/milestone-02-language-and-http/01-project-scaffolding.md) records the early setup practice, alternatives, and evidence. Both npm workspaces share one root lockfile. The learner chose the existing compiler pipeline for development and retained emission on compiler errors. Further setup is deferred; this does not complete the later implementation or quality milestones.
 
+## React practice
+
+The mock checkout is for practicing React fundamentals. Use the tabs to try conditional rendering, type into the controlled input, and press the focus button to see a ref access the input. The list and cards each get their own count from the same custom hook. Each card also starts an interval and cleans it up when it unmounts.
+
+The rewards help experiment uses context and a reducer to share one open flag. Each card sends its help panel through a portal into a div owned by the list. Opening help from either card shows both panels because the cards read the same flag.
+
 ## Run the scaffold
 
 Select the Node version recorded in .nvmrc using fnm or nvm, then install from the repository root:
@@ -32,7 +38,7 @@ Select the Node version recorded in .nvmrc using fnm or nvm, then install from t
 npm ci
 ```
 
-Start the generated client:
+Start the React client from the repository root.
 
 ```sh
 npm run dev -w client
@@ -56,7 +62,7 @@ The server entry currently contains only a comment, so execution does not create
 
 The learner reported the client starter in the browser, successful client build/lint, successful server compiler checks/build, and reactions from both watchers. Codex inspected artifacts and ran the compiled entry and final server typecheck under Node 24 with exit code 0. Exact errors from the learner's temporary failure experiment were not captured. The learning log distinguishes who ran each check and what remains unverified; clean-machine installation, CI, business behavior, and deployment remain open.
 
-Use the [study-gap backlog](docs/learning/STUDY_GAPS.md) for later review. React practice distinguishing useState, useMemo, and useCallback remains deferred to milestones 6 and 6a; the generated counter is not an assessment of learner hooks implementation.
+Use the [study-gap backlog](docs/learning/STUDY_GAPS.md) for later review. Independent assessment of `useState`, `useMemo`, and `useCallback` is planned for milestones 6 and 6a.
 
 ## Project references
 

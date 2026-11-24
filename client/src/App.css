@@ -19,6 +19,7 @@
 
 .hero {
   position: relative;
+  color: red;
 
   .base,
   .framework,

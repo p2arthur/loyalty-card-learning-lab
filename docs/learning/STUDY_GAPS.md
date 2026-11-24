@@ -81,9 +81,9 @@ References: [scaffolding evidence](milestone-02-language-and-http/01-project-sca
 
 ## G07. Retention and transfer across products
 
-Evidence: after correcting an early calculation, the learner independently solved the changed $5.55/150-point example and reached 390 remaining points from a starting 500. That demonstrates near transfer of conversion, discounting, net-spend earning, and rounding. Long-term retention and broad transfer have not been checked.
+Evidence: after correcting an early calculation, the learner independently solved the changed $5.55/150-point example and reached 390 remaining points from a starting 500. That demonstrates near transfer of conversion, discounting, net-spend earning, and rounding. Long-term retention and broad transfer remain open. A short next-day check on 2026-11-17 sampled two concepts: the learner correctly applied business rules versus acceptance criteria to appointment booking without a hint; tooling recall initially mixed target, lib, and module. After an explicit correction, the learner correctly applied the target/module distinction to a changed-target scenario. This is supported recovery, not independent retention of all compiler concepts; lib was not independently rechecked.
 
-Practice in a later session: without reading the demo rules first, explain one earlier principle and apply it to another product, such as metered subscription credits or a limited-capacity reservation. State units and the rule before calculating. Then compare the explanation with the saved notes and identify any needed correction.
+Practice in a later session: choose one earlier principle for cold retrieval, prioritizing target/lib/module when technical practice resumes. Without reading the demo rules first, explain that principle and apply it to another product, such as metered subscription credits or a limited-capacity reservation. State units and the rule before calculating. Then compare the explanation with the saved notes and identify any needed correction.
 
 Success criterion: the reasoning survives a changed domain or condition without relying on memorized numbers. Record the date, support used, and explanation. One successful review is evidence at that point, not a guarantee of permanent mastery.
 

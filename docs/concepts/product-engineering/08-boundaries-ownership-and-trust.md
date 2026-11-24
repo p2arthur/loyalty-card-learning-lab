@@ -46,6 +46,21 @@ Expiry, address changes, and resends are distinct cases. A product must decide w
 
 A lifetime policy also balances usability against how long unused verification evidence remains usable. A short window may be inconvenient; increasing that window and removing expiry altogether have different consequences. [OWASP recommends time-limited, single-use verification tokens](https://cheatsheetseries.owasp.org/cheatsheets/Email_Validation_and_Verification_Cheat_Sheet.html). Choose an appropriate duration for the real product rather than treating one arbitrary short window as universal. A simulated learning policy does not establish production security.
 
+## People, interfaces, and channels
+
+Keep the actor's role distinct from the interface they operate and the system that owns the decision. These are useful working distinctions:
+
+| Concept | Question |
+| --- | --- |
+| Role | Who is acting in this situation, and with what responsibility? |
+| User interface | What information and controls does that person use to accomplish the task? |
+| Channel or device context | Where and through what medium does the interaction happen? |
+| System boundary | Which software capabilities and authoritative decisions are in scope? |
+
+For an illustrative theatre-booking product, a customer may retrieve tickets on a phone while a box-office operator selects seats and completes checkout on a counter screen. A self-service station can expose related purchase capabilities to the customer. These interface and role differences do not automatically require separate backend services. Define permissions and decision ownership independently rather than assuming the screen or device makes a caller authoritative.
+
+Naming the interface by its user task helps keep scope understandable: ticket access and purchase checkout have related data but different immediate goals. A list of responsibilities also does not dictate an equal number of pages; a workflow can use states within a view. See [journeys and screen inventories](02-user-journey-mapping.md).
+
 ## Source dependencies and runtime calls
 
 One component can call another at runtime while the code dependency points in a different direction through an interface. Keep diagram arrows labeled so readers know whether they mean a request, a data flow, or an import.

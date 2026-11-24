@@ -18,7 +18,7 @@ Each substantive learning step maintains project notes and separate reusable con
 
 ## Current position
 
-Next session returns to **milestone 1: product definition**, beginning with the essential customer mobile screens and one purpose per screen. Initial discovery and the revised context/checkout roles are recorded; screen sketches, the consolidated brief, remaining acceptance criteria, and quality scenarios are unfinished. Continue product design before implementing the first agreed feature slice.
+Current work is **milestone 1: product definition**. The short retention warm-up is complete; the next task is essential customer mobile screens with one purpose per screen. Initial discovery and the revised context/checkout roles are recorded; screen sketches, the consolidated brief, remaining acceptance criteria, and quality scenarios are unfinished. Continue product design before implementing the first agreed feature slice.
 
 The demo pairs a mobile web loyalty app with a separate cashier/kiosk checkout screen. Customers register and display their cards on a phone; the sales-point screen scans cards and hosts points selection. Products, payment, and email are simulated. Points accrue on paid amounts after loyalty discounts. Apple Wallet issuance belongs to a later milestone; automatic pass updates are a stretch goal.
 

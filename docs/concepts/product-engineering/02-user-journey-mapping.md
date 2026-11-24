@@ -50,9 +50,13 @@ Review the map by following one person through it. At every handoff, check wheth
 
 ## From a flow to a screen inventory
 
-A screen inventory gives each proposed view a purpose and connects it to the user's task. Group related actions before deciding which require separate pages. A loading indicator, a rejected form, and a successful result can be states of a view rather than three new screens. A modal is a presentation choice, not automatically another product capability.
+A screen inventory gives each proposed view a purpose and connects it to the user's task. Group related actions before deciding which require separate pages. A loading indicator, a rejected form, and a successful result can be states of a view rather than three new screens. A modal is a presentation choice, not automatically another product capability. A single purpose does not require a single field or component. An illustrative rental overview can bring together its reference, current status, and activity history because those details support one account or reservation task. State the coherent user goal, then review whether the grouped information helps it; avoid splitting views solely because they display different data.
 
 For a library reservation, reviewing availability, confirming a chosen item, and retrieving a reservation reference are distinct goals. They could be organized into several pages or a smaller set of changing views. The useful review asks whether each goal has a clear place, whether the transitions are understandable, and what happens when the action fails. Sketch after establishing that structure; do not select a screen count merely to match a template.
+
+A waiting period also needs a place in the interface. In an illustrative library flow that requires staff approval, pending and confirmed can be states of the same reservation view. A separate page is another possible presentation choice; identify the task, required information, and recovery actions before deciding. A success outcome can also be a state before navigation to an existing view rather than a separate confirmation page. In the illustrative reservation example, approval could produce a confirmation state and then open the reservation overview. The automatic transition belongs in the interaction flow; it does not by itself add another screen to the inventory. Recording a waiting state does not by itself settle what the user can do if the external action never completes.
+
+Recovery also has context to preserve. In an illustrative equipment-rental form, returning to correct a collection date can keep the previous choice visible and editable rather than requiring the renter to reconstruct it from memory. Specify which draft values are retained and how the correction affects the pending request. The desired interaction and actual behavior on a mobile keyboard are separate matters to check during implementation.
 
 ## Common mistakes
 

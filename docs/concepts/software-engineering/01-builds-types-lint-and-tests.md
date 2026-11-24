@@ -52,6 +52,16 @@ For example, a booking client may build successfully in one terminal while anoth
 
 TypeScript's [target](https://www.typescriptlang.org/tsconfig/target.html) controls the language level of emitted JavaScript. ESNext follows the newest level supported by the installed compiler; upgrading the compiler can therefore change this baseline. A fixed runtime-compatible target is one way to make that choice explicit. It is not a universal rule: some pipelines delegate transformation or compatibility to another tool.
 
+These settings answer separate questions:
+
+| Setting | Primary concern | Example |
+| --- | --- | --- |
+| target | JavaScript syntax level emitted by the compiler | Whether a syntax feature is preserved or transformed for an older language level |
+| lib | Standard API declarations used in checking | Whether TypeScript has definitions for an array API or the browser DOM |
+| module | Import/export behavior modeled and emitted for the loader | Node module rules and ES-module/CommonJS interpretation |
+
+A language target such as ES2023 does not itself select ES-module syntax or install an API into the runtime. Module and package settings have their own role; API declarations describe expected capabilities rather than creating them.
+
 The [lib setting](https://www.typescriptlang.org/tsconfig/lib.html) selects standard API declarations, while [types](https://www.typescriptlang.org/tsconfig/types.html) controls automatically loaded global declarations from selected type packages. These describe capabilities; they do not provide runtime implementations or polyfills. For a Node application, avoid granting DOM types merely because a browser client also lives in the repository. Confirm the chosen runtime supports the APIs the code actually uses.
 
 A runtime-specific preset can inform the choice. The [community Node 24 preset](https://github.com/tsconfig/bases/blob/main/bases/node24.json), linked through TypeScript's target guidance, uses an ES2024 target. Treat such a preset as an explicit reference to review, rather than assuming every option applies unchanged to every delivery pipeline.

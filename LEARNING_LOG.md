@@ -4,17 +4,17 @@ This file carries learning context between Codex chats. Record observed evidence
 
 ## Current position
 
-- Session status: ended on 2026-11-16 at the learner's request. Next session returns to product design; additional setup practice is deferred.
+- Session status: product design continued on 2026-11-18. The learner requested a direct definition of the kiosk/cashier interface. The 2026-11-17 retention warm-up and mobile inventory are recorded; additional setup practice remains deferred.
 - Current milestone: 1. Define the product. Initial requirements discovery and the revised context/roles are recorded; the full milestone is unfinished.
-- Current study step: docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md. The learner has not supplied its mobile screen inventory yet.
-- Next learner task: list the essential screens for the customer's mobile web app, with one purpose per screen. Review that attempt before sales-point screens, sketches, the remaining brief/criteria, and the first agreed implementation slice.
-- Next tutoring question: can you list the essential screens for the customer's mobile web app, giving each one a single purpose?
+- Current study step: docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md. The initial mobile inventory pass is reviewed and revised: onboarding, registration with pending/recovery/success states, and loyalty home with card/balance/history. Success automatically opens the home; the separate confirmation-screen candidate was superseded. Sales-point inventory is next; sketches and detailed criteria remain open.
+- Next learner task: define the loyalty choices offered at sales-point checkout after mock product selection and before payment. The learner chose product selection as the starting view; remaining sales-point structure and mobile verification timing/update details are open.
+- Next tutoring question: once the customer selects products and proceeds to checkout, which loyalty choices should the sales-point interface offer before payment?
 - Setup checkpoint: docs/learning/milestone-02-language-and-http/01-project-scaffolding.md records the learner-built workspace/client/server scaffold, checks, guided corrections, decisions, and remaining setup. Do not resume another compiler exercise as the next live task.
 - Emission decision: learner chose to keep emitting JavaScript despite compiler errors. Preserve the current unset noEmitOnError option (documented default false). Error diagnostics do not become passing checks; a controlled type-only-error experiment and future CI acceptance policy remain unassessed.
 - Study framework: LEARNING_FRAMEWORK.md and docs/learning/README.md. Use a numbered document per substantive step and separate reusable concept guides.
 - Reusable references: docs/concepts/README.md includes the requested five-technique requirements overview, ten detailed product-engineering guides, and software-engineering foundations with non-demo examples. These are references, not mastery claims.
 - Personal review backlog: docs/learning/STUDY_GAPS.md separates coached concepts, unassessed skills, retention, and open decisions. Keep the saved product-design task unless the learner chooses a review topic.
-- Support by concept: independent changed-example points arithmetic, source/artifact freshness, and a reasoned development-pipeline preference are recorded. Compiler configuration, module/target distinctions, CLI forwarding, and script writing were coached and need retention/transfer. Business-feature implementation remains unassessed.
+- Support by concept: independent changed-example points arithmetic, source/artifact freshness, and a reasoned development-pipeline preference are recorded. On 2026-11-17, the business-rule/acceptance-criterion distinction was applied unaided to appointment booking. Initial tooling recall mixed target/lib/module; explicit correction enabled a correct target-versus-module application. Later cold retrieval remains needed. CLI/config/scripts were coached; business-feature implementation remains unassessed.
 - Implementation evidence: Codex inspected manifests/lockfile, runtime record, generated client, tailored server config, scripts, and comment-only source/output. Learner supplied client browser/build/lint and server no-emit/build results; Codex ran compiled-entry start and a final publication-preparation no-emit typecheck under Node 24 with exit 0. Learner reported watch reactions; exact introduced-error diagnostics were not captured. No loyalty features, behavior tests, or HTTP listener exist.
 - Architecture task: translate the established mobile/sales-point boundary into screen responsibilities, then finish the remaining quality scenarios and first feature slice. Do not restart the completed context/role discussion.
 - React practice: useState/useMemo/useCallback and related needs remain deferred to milestones 6 and 6a; the generated counter is not an assessment of learner hooks implementation.
@@ -479,3 +479,65 @@ Earlier concept to revisit:
 - Codex ran the current server typecheck script under Node 24 after the temporary error had been removed; exit code 0. The client source was not changed during session-close documentation, so prior learner-run client build/lint evidence was retained rather than represented as new checks.
 - Documentation validation checked 32 Markdown files and 164 relative links with no missing targets or unbalanced fences. Package JSON, the Node version record, single-lockfile setup, and generated-output ignore rules were checked. The new definitions guide's prose scanner reported no findings; this is a style aid, not proof of teaching quality.
 - The first next-session task remains the learner's mobile screen inventory. No reminder, implementation exercise, or extra setup prerequisite was created for tomorrow.
+
+### 2026-11-16 — Retention warm-up requested for next session
+
+- After the five requested commits were published, the learner asked to test retention next session as well. Start with a short retrieval check of product concepts and one coached tooling distinction, asking one question at a time and assessing the unaided answer before explaining or giving hints.
+- First pending question: distinguish a business rule from an acceptance criterion using an appointment-booking example. Later choose one tooling topic based on the recorded gaps, such as module versus target or static checks versus behavior. Do not print the answers before the learner attempts them or impose a long exam/question quota.
+- Record unaided explanation, support needed, and any changed-example result after the review occurs. Retention is currently unassessed; this request is not new evidence of mastery.
+- Then resume the saved mobile screen inventory. This warm-up does not replace product design or reopen the entire scaffold exercise. No reminder/automation was requested or created.
+
+### 2026-11-17 — Short retention warm-up completed
+
+- Objective: retrieve one product distinction and one coached tooling distinction before returning to product design. Learner was asked to begin without notes; no answer was supplied before the first attempts.
+- Product evidence: learner gave a rule limiting appointments to business days, 09:00–18:00, and a Given/When/Then example rejecting a Saturday-evening request. This correctly applied the business-rule versus acceptance-criterion distinction to another product without a hint. Tutor refined the outcome to rejection with no appointment created. This is one sampled retention/application result, not mastery of all five techniques.
+- Tooling evidence: learner recalled target concerns emitted JavaScript, but described it as an API version and module as the accepted API version enabling imports. Tutor separated target syntax output, lib API declarations, and module import/export/loading rules using primary TypeScript references. Initial cold recall was partial; no persistent misconception is diagnosed from this attempt.
+- After that explicit correction, learner correctly explained that lowering target alone would not turn imports into require when module/package settings stay unchanged. Record this as supported recovery/application, not successful unaided tooling retention. The lib distinction was explained but not independently rechecked.
+- Updated G07 with these concept-specific results and the general tooling reference with a side-by-side distinction. No scores, code changes, checks, or completed milestones were invented. Future cold retrieval of module/lib remains for a later technical session.
+- Warm-up ends here to preserve the requested product-design session. Next task is the learner's essential mobile screens, one purpose each; leave the inventory blank until their attempt. Deferred React hooks needs remain unchanged.
+
+### 2026-11-17 — First mobile screen inventory
+
+- Learner proposed onboarding to explain earning/redemption/advantages, registration, confirmation after following the email verification link, and a loyalty-card view with balance and Apple Wallet action.
+- Recorded the learner's proposal without adding a completed layout, extra screen list, or implementation. It stays within the requested customer-mobile scope; no checkout UI was mixed into the inventory. This supports initial screen-responsibility reasoning, not completed design validation.
+- First review focuses on the transition between registration submission and email verification. Ask what the customer sees while pending, without assuming another screen is required. Broader coverage, states/recovery, sales-point screens, sketches, and acceptance criteria remain open.
+- Existing general journey/screen-inventory guide remains the relevant reference. Do not restart email-provider responsibility analysis or settled link-lifetime policy merely to design the pending state. No application code or checks were changed.
+
+### 2026-11-17 — Pending verification within registration
+
+- Learner specified that after submitting registration, the app should guide the customer to open email and follow the verification link. When asked where this belongs, learner chose a state of the registration screen rather than a separate screen.
+- Recorded the choice within the four-screen inventory without imposing a new page or generating UI. The learner did not yet supply a rationale; do not infer independent mastery of screen-versus-state design from the selection alone.
+- Next review asks about available recovery actions if email does not arrive. Keep previously settled verification rules intact and map them into the interface; broader mobile coverage and sales-point screens remain pending. No code or checks changed.
+
+### 2026-11-17 — Pending-state recovery and preserved email input
+
+- Learner proposed a one-minute countdown before offering resend verification. Tutor named this a resend cooldown and distinguished it from the previously settled verification-link lifetime. Exact cooldown start/reset conditions were not independently decided or tested.
+- For an incorrect address, learner proposed a Return action from the pending/check-email state to the form, preserving the previous email and selecting its text so it can be seen and cleared/replaced easily. This records learner interaction detail and context preservation; it does not establish working mobile selection behavior.
+- Kept existing address-change/link rules intact rather than reopening email-provider architecture. Other form-field retention and cooldown interaction with a corrected address remain later criterion details; they are not blockers for continuing the inventory.
+- Next coverage check is the existing MVP requirement to view points transaction history. Let the learner place that capability; do not assume it needs a separate screen. Sales-point inventory, sketches, and the first feature slice are still pending. No UI implementation or checks occurred.
+
+### 2026-11-17 — Loyalty home grouping and initial mobile pass complete
+
+- Learner placed points transaction history on the home screen together with the card and current balance. Recorded this as the existing card view becoming the loyalty home, rather than inventing another screen. The account-overview purpose is a tutor summary of the learner's grouping, not a separately elicited architecture rationale.
+- The initial mobile inventory now covers program explanation, registration, verification confirmation, and ongoing card/account access, with pending-registration resend/correction behavior recorded. Marked only the step's initial inventory/review subtask complete. Detailed states, timing/recovery criteria, final coverage walkthrough, sketches, and the full product milestone remain open.
+- Next task is the learner's separate sales-point inventory with one purpose per view. Keep the current context/role decisions intact and leave its artifact blank until the learner attempts it. No UI code or application checks changed.
+
+### 2026-11-17 — Registration success becomes a state, then opens home
+
+- While the sales-point inventory was pending, learner refined registration: show email-verification instructions with an indicator, update to success once verification is confirmed, then automatically close that state and show the main/card screen.
+- Interpreted this as the customer-mobile flow, consistent with the existing card/home boundary. Learner did not explicitly answer the device question; the follow-up destination supplies the working context. Do not invent a new cashier-side registration or card screen from this reply.
+- Updated the current inventory: the original separate verification-confirmation candidate is superseded by an in-registration success state followed by navigation to the existing home. Onboarding, registration, and loyalty home are the current three views. No arbitrary success duration or verification-detection mechanism was chosen.
+- Next task returns to the separate sales-point interface using a narrower first-view question. The broader inventory question had not yet received a sales-point proposal. No UI or backend implementation occurred.
+
+### 2026-11-18 — Sales-point interface definition requested
+
+- Learner asked the tutor to define the kiosk/cashier interface. Provided a concrete point-of-sale role/workflow reference using prior decisions: mock order, loyalty identification/enrollment handoff, points choice, simulated checkout, and order/loyalty result.
+- Clarified that cashier-operated and self-service are ways to use the sales-point interface; mobile registration and card/account display remain on the customer's phone. Any demo participant may operate the checkout, while backend authority remains unchanged.
+- The reference was explicitly requested support, not a learner-created inventory or evidence of independent boundary mastery. It does not prescribe five screens, a second backend, or implemented payment/scanning hardware.
+- Next focused scope choice is mock product selection versus a prefilled coffee order as the starting view. Neither was silently selected. No code, application checks, commits, or external publication occurred in this definition task.
+
+### 2026-11-18 — Mock product selection chosen
+
+- After the requested sales-point definition, learner chose mock product selection instead of a prefilled coffee order as the demo's starting view. Recorded that first view and its order-building purpose.
+- This is a learner scope preference following tutor-provided alternatives; no independent rationale or complete sales-point design was supplied yet. Product data, quantity/cart interactions, and layout remain for later design rather than being invented here.
+- Next task is the loyalty-entry choices when the selected order proceeds toward checkout, before payment. Existing mobile enrollment/card display and backend authority boundaries remain intact. No code, application checks, commits, or publication occurred.

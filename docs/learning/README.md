@@ -4,19 +4,19 @@ Start with the [learning framework](../../LEARNING_FRAMEWORK.md). The [MVP plan]
 
 ## Milestone 1: product definition
 
-Status: **in progress; next session resumes product design**. Starter/tooling checks are recorded below; no loyalty feature has been implemented.
+Status: **in progress; product design resumed on 2026-11-17**. Starter/tooling checks are recorded below; no loyalty feature has been implemented.
 
 | Step | Status | Study document |
 | --- | --- | --- |
 | 01. Requirements elicitation and analysis | Initial discovery pass complete; remaining questions carried forward | [Concepts, decisions, and examples](milestone-01-product-definition/01-requirements-elicitation-and-analysis.md) |
 | 02. Product definition | Context and checkout-role pass complete; milestone deliverables still open | [Product-definition workbook](milestone-01-product-definition/02-product-definition.md) |
-| 03. Screen inventory and sketches | Ready to start; mobile screen inventory pending | [Screen-planning workbook](milestone-01-product-definition/03-screen-inventory-and-sketches.md) |
+| 03. Screen inventory and sketches | Initial mobile pass reviewed; sales-point product selection chosen | [Screen-planning workbook](milestone-01-product-definition/03-screen-inventory-and-sketches.md) |
 
 Step 03 covers screen planning. Later focused steps will cover the consolidated brief, remaining acceptance criteria, and quality scenarios. Create a separate numbered Markdown file when each step starts, and link it here.
 
 ## Reusable concepts alongside the project
 
-For focused later review, use the [study gaps and practice backlog](STUDY_GAPS.md). It distinguishes coached concepts, skills not yet assessed, retention checks, and product decisions. Each entry has evidence, references, a practice task, and a success criterion. The next live task is the mobile screen inventory. Setup notes and review exercises remain available for later.
+For focused later review, use the [study gaps and practice backlog](STUDY_GAPS.md). It distinguishes coached concepts, skills not yet assessed, retention checks, and product decisions. Each entry has evidence, references, a practice task, and a success criterion. The short retention warm-up is complete; the next task is the mobile screen inventory. Results and remaining technical review needs are recorded in the log and backlog. Setup notes and review exercises remain available for later.
 
 The separate [product engineering library](../concepts/README.md) expands the ideas beyond this demo. Step 01 links to discovery, journeys, business rules, scenario analysis, domain modeling, acceptance criteria, and related topics. Step 02 links to boundaries and quality requirements. General transfer exercises remain unassessed until the learner attempts them.
 
@@ -38,4 +38,4 @@ Remaining tooling is deferred at the learner's request. This is a saved checkpoi
 
 ## Resume here
 
-Open [step 03 screen planning](milestone-01-product-definition/03-screen-inventory-and-sketches.md). Ask the learner for the essential customer mobile screens, with one purpose each, and wait for their attempt. Continue product design before the first agreed implementation slice. The [five-technique toolkit](../concepts/product-engineering/00-requirements-analysis-toolkit.md) is a study reference, not another prerequisite assignment. Do not restart completed discovery/context work or mark milestone 1 complete.
+The 2026-11-17 retention warm-up is complete. Open [step 03 screen planning](milestone-01-product-definition/03-screen-inventory-and-sketches.md), review the saved mobile inventory, then continue the separate cashier/kiosk inventory from its chosen mock-product starting view; the next question concerns loyalty choices before payment. Continue product design before the first agreed implementation slice. The [five-technique toolkit](../concepts/product-engineering/00-requirements-analysis-toolkit.md) is a study reference, not another prerequisite assignment. Do not restart completed discovery/context work or mark milestone 1 complete.

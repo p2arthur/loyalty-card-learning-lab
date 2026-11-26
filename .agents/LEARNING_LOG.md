@@ -541,3 +541,30 @@ Earlier concept to revisit:
 - After the requested sales-point definition, learner chose mock product selection instead of a prefilled coffee order as the demo's starting view. Recorded that first view and its order-building purpose.
 - This is a learner scope preference following tutor-provided alternatives; no independent rationale or complete sales-point design was supplied yet. Product data, quantity/cart interactions, and layout remain for later design rather than being invented here.
 - Next task is the loyalty-entry choices when the selected order proceeds toward checkout, before payment. Existing mobile enrollment/card display and backend authority boundaries remain intact. No code, application checks, commits, or publication occurred.
+
+### 2026-11-24 — Product catalog contract exercise opened
+
+- Learner reported a basic frontend-to-backend connection, identified mismatched product shapes, and proposed a feature-oriented frontend and one Express backend with internal service modules. The proposal is pending learner review.
+- Codex inspected the product fixture, routes, and React consumers. A direct HTTP request to the running `GET /products` returned `200` and an array of two objects with `id` and `name`. The browser list rendering has yet to be verified. The React `Product` type declares title, description, and price, while the fetched state declares `id` and `name`.
+- Codex ran both TypeScript checks. The server passed and the client reported the incompatible card fields, the unused list prop, and fixture entries missing a required price.
+- Opened [milestone 3 step 01](../docs/learning/milestone-03-system-boundaries-and-api-contract/01-product-catalog-contract-and-boundaries.md) and linked the general [API contracts guide](../docs/concepts/software-engineering/02-api-contracts-and-module-boundaries.md). The next learner task is to draft one response example for the product-selection screen and explain why it needs each field.
+- The catalog scope, module exports, and runtime validation approach are still open. No milestone checkboxes advanced. Resume the pre-payment loyalty question when returning to screen planning.
+- Learner proposed a concrete frontend folder split, deferring the rewards-help prototype, and sharing a product interface through a workspace. Codex inspected the dependents and reviewed how screen ownership, component reuse, and the HTTP shape constrain those moves. The first contract payload and completed refactor remain to be reviewed.
+
+### 2026-11-24 — Catalog boundaries implemented and terminology reviewed
+
+- Codex inspected the learner's Products router, shared `@badge/contracts` dependency, frontend API client, and card props. The live HTTP list returned `200` with each of the three `ProductSummary` fields. The server type check passed. The client type check reported an obsolete fixture import. Browser rendering and the detail route's missing-ID behavior were outside these checks.
+- The learner requested vocabulary for explaining the architecture choices. The [workbook](../docs/learning/milestone-03-system-boundaries-and-api-contract/01-product-catalog-contract-and-boundaries.md) now grounds those terms in the code and preserves Checkout and Loyalty module plans as proposals. Independent explanation is pending.
+- Next task is the learner's catalog walkthrough and rendering check, followed by an explanation of where a change to an internal field name should be absorbed.
+
+### 2026-11-24 — Design pattern practice planned
+
+- Learner requested opportunities to practice Repository, Factory, Singleton, Strategy, Observer, Builder, Adapter, Decorator, CQRS, and Circuit Breaker on the loyalty app.
+- Codex inspected the Products router and the existing checkout, Prisma, and Wallet plans. Added the [project exercises](../docs/learning/milestone-03-system-boundaries-and-api-contract/02-design-pattern-practice.md) and a [general guide](../docs/concepts/software-engineering/03-choosing-design-patterns.md). The ideas are practice proposals and await learner implementation and assessment.
+- Next design exercise is to propose the input and output of the catalog list and detail operations, then review the JSON-backed repository against the public response contract.
+
+### 2026-11-25 — API collaboration and growth review
+
+- The learner asked whether the API's current design supports collaboration and feature growth. Codex reviewed router ownership, shared payload types, and route-scoped middleware, and ran the server type check successfully.
+- Codex observed three live catalog responses with status `200`. The unfiltered list returned two records, `id=1` returned one, and `id=100` returned an empty array. The shared `ProductsResponse` wrapper is out of sync with the published array shape. The frontend single-product helper's return type also leaves out the empty-result case.
+- The login route validates field presence and returns a demo acknowledgment. The current source still logs a password. Resolving that log and adding status/body checks are proposed follow-up work. Repository practice and the learner walkthrough remain open.

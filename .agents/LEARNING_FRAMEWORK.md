@@ -29,7 +29,7 @@ Create a separate numbered Markdown file for each new substantive step as it beg
 
 The current step 02 file is a product-definition workbook beginning with system context. Later focused activities, such as screen sketches and quality scenarios, receive their own step files when they start; the workbook can link to those artifacts.
 
-Keep a separate [concept library](docs/concepts/README.md) under `docs/concepts/`. These guides explain product engineering broadly, with examples outside the demo. The project step records a particular application's decisions; its linked concept guides explain the reusable ideas behind that work.
+Keep a separate [concept library](../docs/concepts/README.md) under `docs/concepts/`. These guides explain product engineering broadly, with examples outside the demo. The project step records a particular application's decisions; its linked concept guides explain the reusable ideas behind that work.
 
 ```text
 docs/concepts/
@@ -41,7 +41,7 @@ docs/concepts/
     ...
 ```
 
-The [five-technique requirements toolkit](docs/concepts/product-engineering/00-requirements-analysis-toolkit.md) preserves our core definitions for journeys, business rules, scenarios and boundaries, domain modeling, and acceptance criteria. Use these iteratively within a broader product process rather than treating them as a universal checklist.
+The [five-technique requirements toolkit](../docs/concepts/product-engineering/00-requirements-analysis-toolkit.md) preserves our core definitions for journeys, business rules, scenarios and boundaries, domain modeling, and acceptance criteria. Use these iteratively within a broader product process rather than treating them as a universal checklist.
 
 ## Required habit at every milestone and step
 

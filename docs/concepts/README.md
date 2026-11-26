@@ -28,6 +28,9 @@ Each guide includes a general explanation, a worked example outside the café do
 | Guide | What you should be able to do after practice |
 | --- | --- |
 | [Builds, type checks, linting, and behavior tests](software-engineering/01-builds-types-lint-and-tests.md) | Explain what each successful check establishes and choose evidence for a business rule |
+| [API contracts and module boundaries](software-engineering/02-api-contracts-and-module-boundaries.md) | Define an HTTP payload and explain how it relates to server ownership, UI props, and runtime checks |
+| [Choosing design patterns](software-engineering/03-choosing-design-patterns.md) | Match a pattern to a design problem and verify its benefit with a focused exercise |
+| [System design interview patterns](software-engineering/04-system-design-interview-patterns.md) | Recognize 25 recurring problems and explain a pattern, tradeoff, and failure case for each |
 
 ## Study method
 
@@ -44,6 +47,6 @@ At each meaningful learning checkpoint, keep two connected artifacts:
 - A project step document under `docs/learning/` with the demo decisions and learner evidence.
 - Relevant reusable guides under `docs/concepts/`, linked from that step, with principles and examples that work beyond the demo.
 
-Extend an existing guide when it already covers the concept. Create a new focused guide when the subject is distinct. Link back to where a concept arose without copying the demo's rules into the general explanation. Follow the [concept template](TEMPLATE.md) and [learning framework](../../LEARNING_FRAMEWORK.md).
+Extend an existing guide when it already covers the concept. Create a new focused guide when the subject is distinct. Link back to where a concept arose without copying the demo's rules into the general explanation. Follow the [concept template](TEMPLATE.md) and [learning framework](../../.agents/LEARNING_FRAMEWORK.md).
 
 The first library was prompted by milestone 1's [requirements discovery discussion](../learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md). New guides about adjacent topics provide preparation; they do not imply those topics have already been assessed.

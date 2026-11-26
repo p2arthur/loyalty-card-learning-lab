@@ -119,7 +119,7 @@ Milestone 1 screen inventory and product-definition deliverables remain open. Re
 
 ## General study and primary references
 
-Separate reusable explanations are in [boundaries and ownership](../../concepts/product-engineering/08-boundaries-ownership-and-trust.md) and [builds, types, lint, and tests](../../concepts/software-engineering/01-builds-types-lint-and-tests.md). These guides include non-demo examples and future transfer exercises; their existence does not demonstrate mastery. The [starting stack](../../../MVP_PLAN.md#starting-stack) remains the curriculum reference.
+Separate reusable explanations are in [boundaries and ownership](../../concepts/product-engineering/08-boundaries-ownership-and-trust.md) and [builds, types, lint, and tests](../../concepts/software-engineering/01-builds-types-lint-and-tests.md). These guides include non-demo examples and future transfer exercises; their existence does not demonstrate mastery. The [starting stack](../../../.agents/MVP_PLAN.md#starting-stack) remains the curriculum reference.
 
 - [npm workspaces](https://docs.npmjs.com/cli/v11/using-npm/workspaces/)
 - [TypeScript CLI](https://www.typescriptlang.org/docs/handbook/compiler-options.html) and [rootDir](https://www.typescriptlang.org/tsconfig/rootDir.html)

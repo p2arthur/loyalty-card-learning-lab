@@ -7,12 +7,12 @@ The learner writes the application. The tutor asks one question at a time, revie
 ## Start reading
 
 1. [Learning framework](LEARNING_FRAMEWORK.md): the tutoring workflow and study-artifact habit.
-2. [Study index](docs/learning/README.md): milestones, artifacts, and the saved next task.
-3. [Five-technique requirements toolkit](docs/concepts/product-engineering/00-requirements-analysis-toolkit.md): the core definitions for journeys, rules, scenarios, domain modeling, and acceptance criteria.
-4. [Requirements study](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md): demo decisions and worked examples.
-5. [Product-definition workbook](docs/learning/milestone-01-product-definition/02-product-definition.md): context, roles, and unfinished deliverables.
-6. [Screen-planning workbook](docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md): the next learner exercise.
-7. [Concept library](docs/concepts/README.md): broader product and software engineering guides with non-demo examples and transfer exercises.
+2. [Study index](../docs/learning/README.md): milestones, artifacts, and the saved next task.
+3. [Five-technique requirements toolkit](../docs/concepts/product-engineering/00-requirements-analysis-toolkit.md): the core definitions for journeys, rules, scenarios, domain modeling, and acceptance criteria.
+4. [Requirements study](../docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md): demo decisions and worked examples.
+5. [Product-definition workbook](../docs/learning/milestone-01-product-definition/02-product-definition.md): context, roles, and unfinished deliverables.
+6. [Screen-planning workbook](../docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md): the next learner exercise.
+7. [Concept library](../docs/concepts/README.md): broader product and software engineering guides with non-demo examples and transfer exercises.
 
 Each substantive learning step maintains project notes and separate reusable concept guides. References preserve learning material; they do not establish mastery. [LEARNING_LOG.md](LEARNING_LOG.md) records learner explanations, support, checks, corrections, and gaps.
 
@@ -22,7 +22,7 @@ Current work is **milestone 1: product definition**. The short retention warm-up
 
 The demo pairs a mobile web loyalty app with a separate cashier/kiosk checkout screen. Customers register and display their cards on a phone; the sales-point screen scans cards and hosts points selection. Products, payment, and email are simulated. Points accrue on paid amounts after loyalty discounts. Apple Wallet issuance belongs to a later milestone; automatic pass updates are a stretch goal.
 
-The [scaffolding checkpoint](docs/learning/milestone-02-language-and-http/01-project-scaffolding.md) records the early setup practice, alternatives, and evidence. Both npm workspaces share one root lockfile. The learner chose the existing compiler pipeline for development and retained emission on compiler errors. Further setup is deferred; this does not complete the later implementation or quality milestones.
+The [scaffolding checkpoint](../docs/learning/milestone-02-language-and-http/01-project-scaffolding.md) records the early setup practice, alternatives, and evidence. Both npm workspaces share one root lockfile. The learner chose the existing compiler pipeline for development and retained emission on compiler errors. Further setup is deferred; this does not complete the later implementation or quality milestones.
 
 ## React practice
 
@@ -30,7 +30,7 @@ The mock checkout is for practicing React fundamentals. Use the tabs to try cond
 
 The rewards help experiment uses context and a reducer to share one open flag. Each card sends its help panel through a portal into a div owned by the list. Opening help from either card shows both panels because the cards read the same flag.
 
-## Run the scaffold
+## Run locally
 
 Select the Node version recorded in .nvmrc using fnm or nvm, then install from the repository root:
 
@@ -38,31 +38,25 @@ Select the Node version recorded in .nvmrc using fnm or nvm, then install from t
 npm ci
 ```
 
-Start the React client from the repository root.
-
-```sh
-npm run dev -w client
-```
-
-For the server development loop, keep the compiler running in one terminal:
-
-```sh
-npm run dev:build -w server
-```
-
-After its initial compilation, run the compiled-file watcher in another terminal:
+Set `SERVER_PORT=3000` in `server/.env` and `VITE_API_ORIGIN=http://localhost:3000` in `client/.env`. Start Express from the repository root:
 
 ```sh
 npm run dev -w server
 ```
 
-The server entry currently contains only a comment, so execution does not create an HTTP listener. One-shot server scripts are typecheck, build, and start. Compiler errors remain errors even when JavaScript is emitted; emitted output does not establish correct behavior. The generated test scripts are still placeholders, and there is no behavior test suite.
+Start the React client in a second terminal:
+
+```sh
+npm run dev -w client
+```
+
+The development server runs TypeScript directly. For the compiled server, run `npm run build -w server` followed by `npm start -w server`. Run `npm run typecheck -w server` to check types without emitting files. The Login endpoint is a demo acknowledgment, and the test scripts are placeholders.
 
 ## Recorded checks and study gaps
 
 The learner reported the client starter in the browser, successful client build/lint, successful server compiler checks/build, and reactions from both watchers. Codex inspected artifacts and ran the compiled entry and final server typecheck under Node 24 with exit code 0. Exact errors from the learner's temporary failure experiment were not captured. The learning log distinguishes who ran each check and what remains unverified; clean-machine installation, CI, business behavior, and deployment remain open.
 
-Use the [study-gap backlog](docs/learning/STUDY_GAPS.md) for later review. Independent assessment of `useState`, `useMemo`, and `useCallback` is planned for milestones 6 and 6a.
+Use the [study-gap backlog](../docs/learning/STUDY_GAPS.md) for later review. Independent assessment of `useState`, `useMemo`, and `useCallback` is planned for milestones 6 and 6a.
 
 ## Project references
 

@@ -41,7 +41,7 @@ References: [ownership and verification evidence](../concepts/product-engineerin
 
 ## G03. Module, deployment, and system boundaries
 
-Evidence: the learner chose internal order handling for the demo and asked whether production would require a separate ordering service. Tutoring explained that a production application can retain modules within one backend and that separate deployment does not automatically mean an external business system. An independent explanation of the tradeoff has not yet been assessed.
+Evidence: the learner chose internal order handling for the demo and asked whether production would require a separate ordering service. Tutoring explained that a production application can retain modules within one backend and that separate deployment does not automatically mean an external business system. The learner has since implemented the Products router inside the existing Express backend and requested the vocabulary for explaining that boundary. An independent explanation of the tradeoff has not yet been assessed.
 
 Practice: compare one backend with booking and membership modules against two independently deployed services for a fictional club. Name one concrete reason for separation and the coordination cost it introduces. Then explain where an existing third-party booking platform appears in the context view.
 
@@ -77,7 +77,7 @@ Practice when language/HTTP work resumes after product definition: write a small
 
 Success criterion: the learner writes and explains the work, existing appropriate checks provide recorded results, and a changed example still behaves correctly. Do not invent package scripts, passing tests, or prerequisites that have not been created.
 
-References: [scaffolding evidence](milestone-02-language-and-http/01-project-scaffolding.md), [build/type/lint distinctions](../concepts/software-engineering/01-builds-types-lint-and-tests.md), [scenario analysis](../concepts/product-engineering/04-scenarios-and-boundaries.md), [acceptance criteria](../concepts/product-engineering/06-acceptance-criteria-and-bdd.md), [MVP plan](../../MVP_PLAN.md).
+References: [scaffolding evidence](milestone-02-language-and-http/01-project-scaffolding.md), [build/type/lint distinctions](../concepts/software-engineering/01-builds-types-lint-and-tests.md), [scenario analysis](../concepts/product-engineering/04-scenarios-and-boundaries.md), [acceptance criteria](../concepts/product-engineering/06-acceptance-criteria-and-bdd.md), [MVP plan](../../.agents/MVP_PLAN.md).
 
 ## G07. Retention and transfer across products
 
@@ -87,7 +87,7 @@ Practice in a later session: choose one earlier principle for cold retrieval, pr
 
 Success criterion: the reasoning survives a changed domain or condition without relying on memorized numbers. Record the date, support used, and explanation. One successful review is evidence at that point, not a guarantee of permanent mastery.
 
-References: [business rules](../concepts/product-engineering/03-business-rules-and-decisions.md), [learning framework](../../LEARNING_FRAMEWORK.md).
+References: [business rules](../concepts/product-engineering/03-business-rules-and-decisions.md), [learning framework](../../.agents/LEARNING_FRAMEWORK.md).
 
 ## G08. React hooks and derived state
 
@@ -97,7 +97,7 @@ Practice at milestones 6 and 6a: start with transaction history and a search inp
 
 Success criterion: the learner can predict state and dependency behavior, write a correct implementation, and justify using or omitting each hook in a new example. Performance claims need evidence; a memoization hook is not proof of correctness.
 
-References: the [focused React checklist](../../MVP_PLAN.md#focused-practice-state-calculated-values-and-function-references) and the requested-practice section of [the learning log](../../LEARNING_LOG.md).
+References: the [focused React checklist](../../.agents/MVP_PLAN.md#focused-practice-state-calculated-values-and-function-references) and the requested-practice section of [the learning log](../../.agents/LEARNING_LOG.md).
 
 ## Evidence worth preserving
 
@@ -127,4 +127,4 @@ Ask live tutoring questions directly in chat, one at a time. Reduce support afte
 
 At a relevant learning checkpoint, add the learner's new evidence, support used, and date to the matching entry. Move a coached topic to independently demonstrated only after an explanation and changed example support that status. Keep later retrieval separate from implementation evidence.
 
-Record product changes in their project step, and learning evidence in [LEARNING_LOG.md](../../LEARNING_LOG.md). Do not close entries because a reference was written or mark a topic failed simply because it has not yet been taught. The tutor introduces one selected review task at a time.
+Record product changes in their project step, and learning evidence in [LEARNING_LOG.md](../../.agents/LEARNING_LOG.md). Do not close entries because a reference was written or mark a topic failed simply because it has not yet been taught. The tutor introduces one selected review task at a time.

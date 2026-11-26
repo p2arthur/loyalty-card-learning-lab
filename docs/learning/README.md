@@ -1,6 +1,6 @@
 # Study index
 
-Start with the [learning framework](../../LEARNING_FRAMEWORK.md). The [MVP plan](../../MVP_PLAN.md) contains the full curriculum; the [learning log](../../LEARNING_LOG.md) preserves evidence and the exact next task.
+Start with the [learning framework](../../.agents/LEARNING_FRAMEWORK.md). The [MVP plan](../../.agents/MVP_PLAN.md) contains the full curriculum, and the [learning log](../../.agents/LEARNING_LOG.md) preserves evidence and the exact next task.
 
 ## Milestone 1: product definition
 
@@ -24,7 +24,12 @@ For every future milestone and step, maintain both the project notes and relevan
 
 ## Future milestones
 
-Follow the sequence in the MVP plan: language and HTTP practice; system boundaries and API contracts; PostgreSQL and Prisma; backend features and checks; React and client checks; purchases and concurrency; access control; CI; Wallet; and deployment. Add study files as these activities begin.
+Follow the sequence in the MVP plan for the remaining milestones. The learner chose to start an early milestone 3 exercise after connecting the frontend to the backend.
+
+| Step | Status | Study document |
+| --- | --- | --- |
+| Milestone 3, step 01. Product catalog contract and module boundaries | Products module and live shared response verified. Client check and learner walkthrough pending. | [Catalog contract workbook](milestone-03-system-boundaries-and-api-contract/01-product-catalog-contract-and-boundaries.md) |
+| Milestone 3, step 02. Design pattern practice | Opportunities recorded. First repository sketch pending. | [Practice plan](milestone-03-system-boundaries-and-api-contract/02-design-pattern-practice.md) |
 
 ## Practice preserved for later
 
@@ -38,4 +43,6 @@ Remaining tooling is deferred at the learner's request. This is a saved checkpoi
 
 ## Resume here
 
-The 2026-11-17 retention warm-up is complete. Open [step 03 screen planning](milestone-01-product-definition/03-screen-inventory-and-sketches.md), review the saved mobile inventory, then continue the separate cashier/kiosk inventory from its chosen mock-product starting view; the next question concerns loyalty choices before payment. Continue product design before the first agreed implementation slice. The [five-technique toolkit](../concepts/product-engineering/00-requirements-analysis-toolkit.md) is a study reference, not another prerequisite assignment. Do not restart completed discovery/context work or mark milestone 1 complete.
+For the learner's design pattern exercise, open the [practice plan](milestone-03-system-boundaries-and-api-contract/02-design-pattern-practice.md) and sketch the Products repository's two reads. The [catalog walkthrough](milestone-03-system-boundaries-and-api-contract/01-product-catalog-contract-and-boundaries.md) remains available for review.
+
+When returning to product design, continue the cashier/kiosk inventory in [step 03 screen planning](milestone-01-product-definition/03-screen-inventory-and-sketches.md). The saved question concerns loyalty choices before payment. The [five-technique toolkit](../concepts/product-engineering/00-requirements-analysis-toolkit.md) remains available for focused review.

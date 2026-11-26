@@ -2,7 +2,7 @@
 
 Open this repository as the project folder. In the original multi-project workspace it is the `badge-loyalty-app` directory; a standalone clone contains these files at its root.
 
-Read [LEARNING_FRAMEWORK.md](LEARNING_FRAMEWORK.md) for the persistent workflow and [the study index](docs/learning/README.md) for the current step. The learner writes the application; the tutor helps assess reasoning, compare alternatives, and review attempts.
+Read [LEARNING_FRAMEWORK.md](LEARNING_FRAMEWORK.md) for the persistent workflow and [the study index](../docs/learning/README.md) for the current step. The learner writes the application; the tutor helps assess reasoning, compare alternatives, and review attempts.
 
 ## Resume a session
 
@@ -19,7 +19,7 @@ under docs/concepts/ with examples beyond the demo and transfer exercises.
 
 Current position: return to milestone 1 product definition after the saved scaffolding checkpoint. Requirements discovery and the context/role pass are recorded. Resume step 03 by asking for essential customer mobile screens, each with one purpose. The learner's inventory is still blank. Review that attempt before further sketches, the consolidated brief/criteria, and the first agreed implementation slice. Do not restart completed discovery or automatically resume compiler exercises.
 
-The scaffolding workbook records the generated client, server dependencies/configuration/scripts, comment-only entry, and check evidence. The learner chose to retain compiler emission on errors; preserve the current default. Module/configuration concepts remain coached, and React hooks practice remains deferred. Use the [five-technique toolkit](docs/concepts/product-engineering/00-requirements-analysis-toolkit.md) for focused study without treating reference creation as mastery.
+The scaffolding workbook records the generated client, server dependencies/configuration/scripts, comment-only entry, and check evidence. The learner chose to retain compiler emission on errors; preserve the current default. Module/configuration concepts remain coached, and React hooks practice remains deferred. Use the [five-technique toolkit](../docs/concepts/product-engineering/00-requirements-analysis-toolkit.md) for focused study without treating reference creation as mastery.
 
 ## Useful session requests
 
@@ -40,7 +40,7 @@ Every milestone includes architecture reasoning. Expect to explain who owns a re
 
 `AGENTS.md` and `LEARNING_FRAMEWORK.md` contain the repository's self-contained teaching workflow. `MVP_PLAN.md` defines the curriculum. `LEARNING_LOG.md` and the numbered step documents preserve evidence and decisions.
 
-Use the [concept library](docs/concepts/README.md) for broader product engineering study. Each project step links its related guides. Ask to study one guide or transfer exercise at a time; progress is recorded from your explanation and attempt, not from the existence of the document.
+Use the [concept library](../docs/concepts/README.md) for broader product engineering study. Each project step links its related guides. Ask to study one guide or transfer exercise at a time; progress is recorded from your explanation and attempt, not from the existence of the document.
 
 The coaching approach was informed by [socratic-teaching-scaffolds](https://github.com/lyndonkl/claude/tree/4acc337d4dbdb19da6469eb2504c16669c1cafa1/skills/socratic-teaching-scaffolds), originally installed in the parent workspace's `.agents/skills` directory at the linked commit. That external skill is not bundled in this repository. When available, the tutor can use its adaptive teaching resources; otherwise the workflow remains documented here.
 

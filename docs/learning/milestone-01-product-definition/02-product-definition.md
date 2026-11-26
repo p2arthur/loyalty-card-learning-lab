@@ -44,7 +44,7 @@ Do not fill this section with a completed tutor-designed architecture before the
 
 Use the current decisions in [step 01](01-requirements-elicitation-and-analysis.md), especially the demo scope, registration/reissuance behavior, and checkout rules. The project has a customer-controlled checkout, simulated payments, and mock products. Apple Wallet issuance remains a later milestone.
 
-The proposed starting stack is recorded in the [MVP plan](../../../MVP_PLAN.md). A context diagram describes people and systems; the stack does not by itself settle the system boundary.
+The proposed starting stack is recorded in the [MVP plan](../../../.agents/MVP_PLAN.md). A context diagram describes people and systems; the stack does not by itself settle the system boundary.
 
 ## Questions to resolve through the sketch
 

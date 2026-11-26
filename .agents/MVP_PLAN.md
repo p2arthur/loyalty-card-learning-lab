@@ -19,13 +19,13 @@ Build a loyalty program for one café and one rewards program.
 
 Automatic updates to an installed Wallet pass are a stretch goal. Keep real payments, multiple businesses, and elaborate reward tiers outside the first version.
 
-The learner revised the initial operator-led, fixed-product-reward idea during milestone 1. The current demo uses a customer-facing mobile web loyalty app plus a separate simulated cashier/kiosk checkout screen, with mock products and simulated payments/fulfillment. Registration and card display are on the phone; scanning and the points selector are at the sales point. See the [current interface flow](docs/learning/milestone-01-product-definition/artifacts/02-mobile-web-flow.md). New points accrue only on the amount paid after a points discount. Current rules and worked examples are recorded in [step 01](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md).
+The learner revised the initial operator-led, fixed-product-reward idea during milestone 1. The current demo uses a customer-facing mobile web loyalty app plus a separate simulated cashier/kiosk checkout screen, with mock products and simulated payments/fulfillment. Registration and card display are on the phone; scanning and the points selector are at the sales point. See the [current interface flow](../docs/learning/milestone-01-product-definition/artifacts/02-mobile-web-flow.md). New points accrue only on the amount paid after a points discount. Current rules and worked examples are recorded in [step 01](../docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md).
 
 ## Early setup checkpoint and next session
 
-At the learner's request, [scaffolding practice](docs/learning/milestone-02-language-and-http/01-project-scaffolding.md) began before milestone 1 was finished. Both npm workspaces, one root lockfile, and the Node version record are verified. The learner reported client browser/build/lint and server compiler/build results; Codex inspected artifacts and ran the empty compiled entry under Node 24 with exit 0. Watch reactions are learner-reported. The learner chose the compiler/Node watch pipeline and retained emission on compiler errors through the current default.
+At the learner's request, [scaffolding practice](../docs/learning/milestone-02-language-and-http/01-project-scaffolding.md) began before milestone 1 was finished. Both npm workspaces, one root lockfile, and the Node version record are verified. The learner reported client browser/build/lint and server compiler/build results; Codex inspected artifacts and ran the empty compiled entry under Node 24 with exit 0. Watch reactions are learner-reported. The learner chose the compiler/Node watch pipeline and retained emission on compiler errors through the current default.
 
-Further setup is deferred. The 2026-11-17 retention warm-up is complete; current work returns to [milestone 1 step 03](docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md): essential customer mobile screens, one purpose each, before further product design and the first agreed feature slice. These setup checks do not complete product definition, business implementation, React practice, or the later quality milestones. The [five-technique toolkit](docs/concepts/product-engineering/00-requirements-analysis-toolkit.md) preserves the core requirements definitions for study.
+Further setup is deferred. The 2026-11-17 retention warm-up is complete; current work returns to [milestone 1 step 03](../docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md): essential customer mobile screens, one purpose each, before further product design and the first agreed feature slice. These setup checks do not complete product definition, business implementation, React practice, or the later quality milestones. The [five-technique toolkit](../docs/concepts/product-engineering/00-requirements-analysis-toolkit.md) preserves the core requirements definitions for study.
 
 ## Starting stack
 
@@ -48,9 +48,9 @@ These are starting choices from the original plan. Revisit them when you have a 
 
 For guided practice in Codex, use `TUTOR_GUIDE.md`. The project's `AGENTS.md` sets the default teaching workflow, and `LEARNING_LOG.md` preserves your current task and learning evidence between chats.
 
-Follow [LEARNING_FRAMEWORK.md](LEARNING_FRAMEWORK.md) and the [study index](docs/learning/README.md): each substantive learning step has its own numbered Markdown file within its milestone. Milestone 1 step 01 has completed its initial requirements discovery pass; step 02 begins product definition with the system context exercise. Completing that first step does not complete milestone 1.
+Follow [LEARNING_FRAMEWORK.md](LEARNING_FRAMEWORK.md) and the [study index](../docs/learning/README.md): each substantive learning step has its own numbered Markdown file within its milestone. Milestone 1 step 01 has completed its initial requirements discovery pass; step 02 begins product definition with the system context exercise. Completing that first step does not complete milestone 1.
 
-At each milestone and step, also maintain linked general study guides in the separate [concept library](docs/concepts/README.md). Explain principles beyond the demo using other domains, common mistakes, and transfer exercises. Reuse existing guides and record mastery only after learner evidence, following the persistent learning framework.
+At each milestone and step, also maintain linked general study guides in the separate [concept library](../docs/concepts/README.md). Explain principles beyond the demo using other domains, common mistakes, and transfer exercises. Reuse existing guides and record mastery only after learner evidence, following the persistent learning framework.
 
 For each milestone, write your proposed approach, read the relevant documentation, and make your own first attempt. Use AI for a hint, review, or counterexample after you have something to discuss. Finish by explaining the result aloud without reading your code.
 
@@ -120,13 +120,13 @@ Study: [Fitness function-driven development](https://www.thoughtworks.com/insigh
 - [ ] Sketch the main screens on paper.
 - [ ] Turn each user action into a short acceptance criterion.
 
-Evidence for the checked registration and points decisions: learner explanations and scenarios consolidated in [requirements elicitation and analysis](docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md), including an independent checkout acceptance criterion. The learner also confirmed public demo-checkout access and backend authority in the [current context](docs/learning/milestone-01-product-definition/artifacts/02-current-system-context.md). These are product decisions, not passing application tests. The full brief, remaining criteria, screen sketches, and architecture checkpoint are unfinished. The context pass is recorded in the [product-definition workbook](docs/learning/milestone-01-product-definition/02-product-definition.md). Continue in [screen inventory and sketches](docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md).
+Evidence for the checked registration and points decisions: learner explanations and scenarios consolidated in [requirements elicitation and analysis](../docs/learning/milestone-01-product-definition/01-requirements-elicitation-and-analysis.md), including an independent checkout acceptance criterion. The learner also confirmed public demo-checkout access and backend authority in the [current context](../docs/learning/milestone-01-product-definition/artifacts/02-current-system-context.md). These are product decisions, not passing application tests. The full brief, remaining criteria, screen sketches, and architecture checkpoint are unfinished. The context pass is recorded in the [product-definition workbook](../docs/learning/milestone-01-product-definition/02-product-definition.md). Continue in [screen inventory and sketches](../docs/learning/milestone-01-product-definition/03-screen-inventory-and-sketches.md).
 
 Questions to answer: What problem does the card solve? What should a first-time customer be able to do? What is the smallest complete demonstration?
 
 ### Architecture checkpoint: requirements that shape design
 
-- [x] Update the system boundary, users, and simulated external dependencies for the mobile/sales-point flow. Evidence: [current learner context](docs/learning/milestone-01-product-definition/artifacts/02-current-system-context.md); implementation and broader permissions remain unverified.
+- [x] Update the system boundary, users, and simulated external dependencies for the mobile/sales-point flow. Evidence: [current learner context](../docs/learning/milestone-01-product-definition/artifacts/02-current-system-context.md); implementation and broader permissions remain unverified.
 - [ ] Write measurable quality scenarios for correctness, access control, and changeability. For example, describe what must happen when a purchase is retried, then state how you will observe success.
 
 Study: [arc42 quality requirements](https://docs.arc42.org/section-10/). Explain which requirements influence your design and which can wait.
@@ -158,6 +158,10 @@ Finish when you can write a points calculation and an asynchronous request yours
 Study: [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide), [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html), and [HTTP overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview). Read the sections you need as you encounter them.
 
 ## 3. Design system boundaries and the API contract
+
+Early architecture practice is underway in the [product catalog contract and module boundaries workbook](../docs/learning/milestone-03-system-boundaries-and-api-contract/01-product-catalog-contract-and-boundaries.md). The catalog response and server type check passed. The browser walkthrough and checkout design exercises are still open.
+
+The [design pattern practice plan](../docs/learning/milestone-03-system-boundaries-and-api-contract/02-design-pattern-practice.md) begins with a catalog repository exercise and connects later exercises to the existing milestones.
 
 - [ ] Sketch the browser, Node server, PostgreSQL database, and Wallet integration.
 - [ ] Describe the responsibility of each part.

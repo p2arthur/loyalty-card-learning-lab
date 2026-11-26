@@ -1,12 +1,15 @@
 import "./App.css";
-
-import ProductSelectionScreen from "./features/checkout/ProductSelectionScreen";
+import LoginForm from "./features/login/LoginForm";
+import ProductsList from "./features/products/ProductList";
 
 function App() {
   return (
     <>
       <section>
-        <ProductSelectionScreen />
+        <LoginForm />
+      </section>
+      <section>
+        <ProductsList />
       </section>
     </>
   );

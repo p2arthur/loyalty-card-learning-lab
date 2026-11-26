@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "productName": "Skate shoes",
+        "productQuantity": 100
+    },
+    {
+        "id": 2,
+        "productName": "Skate Decks",
+        "productQuantity": 120
+    }
+]

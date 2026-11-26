@@ -23,6 +23,7 @@
   "homepage": "https://github.com/p2arthur/loyalty-card-learning-lab#readme",
   "workspaces": [
     "server",
-    "client"
+    "client",
+    "packages/contracts"
   ]
 }
